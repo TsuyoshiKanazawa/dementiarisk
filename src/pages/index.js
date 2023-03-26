@@ -1,9 +1,11 @@
-import React, { useState, useEffect, useLayoutEffect, useRef } from "react"
-import { graphql, Link } from "gatsby"
+import React, { useState, useEffect, useRef, useCallback } from "react"
+import { useLocation } from "@reach/router"
+import { Link } from "gatsby"
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import Search from "../components/search";
+import Search from "../components/search"
+import { Helmet } from "react-helmet"
 
 import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
@@ -26,11 +28,13 @@ import number2 from '../images/02.png'
 import number3 from '../images/03.png'
 import pointLine from '../images/pointLine.png'
 import logoFooter from '../images/logoFooter.svg'
+import ogpToc from '../images/ogpToc.jpg'
 
 
 gsap.registerPlugin(ScrollTrigger);
 
-export const Index = (props) => {
+export const Index = () => {
+
   //ヘッダーが表示・非表示になる/////////////////
   const [isHeaderShown, setIsHeaderShown] = useState(true);
   const [lastPosition, setLastPosition] = useState(0);
@@ -52,7 +56,7 @@ export const Index = (props) => {
     setLastPosition(offset);
   }, [lastPosition]);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     window.addEventListener('scroll', scrollEvent);
 
     return () => {
@@ -61,28 +65,52 @@ export const Index = (props) => {
   }, [scrollEvent]);
   ///////////////////////////////////////////
 
-  //ハンバーガーメニューの開閉/////////////////
+  //翻訳プルダウンメニューの開閉////////////////
+  const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef();
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleOutsideClick);
+    return () => document.removeEventListener("mousedown", handleOutsideClick);
+  }, []);
+
+  const handleOutsideClick = (e) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+      setIsOpen(false);
+    }
+  };
+  const location = useLocation();
+  const URL = location["href"]
+  const englishURL = "https://translate.google.com/translate?sl=ja&tl=en&u=" + URL;
+  const chineseURL = "https://translate.google.com/translate?sl=ja&tl=zh&u=" + URL;
+
+  ///////////////////////////////////////////
+
+  //ハンバーガーメニューの開閉////////////////
+  const handle = useCallback((e) => { 
+    e.preventDefault();
+  }, []);
+
+  const scrollLock = () => {//ハンバーガーメニューを空けた時はスクロール禁止
+    document.addEventListener('touchmove', handle, { passive: false });
+    document.addEventListener('mousewheel', handle, { passive: false });
+  }
+
+  const scrollLockLift = () => {//ハンバーガーメニューを閉じたらスクロール禁止解除
+    document.removeEventListener('touchmove', handle,);
+    document.removeEventListener('mousewheel', handle,);
+  }
+
+
   const [isShow, setIsShow] = useState(false);
   const closeWithClickOutSideMethod = (e, setter) => {
     if (e.target === e.currentTarget) {//メニュー外側をクリックしたら
       setter(false);//メニューを閉じる
-      document.body.style.overflow = "auto"; //スクロール禁止解除
+      document.body.style.overflow = "auto";
+      scrollLockLift();
     }
   };
-
   ///////////////////////////////////////////
-
-  //ドロップダウンメニューの開閉////////////////
-  const [clicked, setClicked] = useState(100);
-
-  const handleClick = (index) => {
-    if (clicked === index) {
-      return setClicked(100);
-    }
-    setClicked(index);
-  };
-  //ドロップダウンメニューの開閉////////////////
-
 
   //アニメーション専用/////////////////////////////////////////
   const div = useRef();
@@ -95,6 +123,50 @@ export const Index = (props) => {
   let mm = gsap.matchMedia();
 
   const setAnimation = () => {
+    //header/////////////////////
+    gsap.fromTo(
+      '#hamberger',
+      { filter: 'brightness(1)' }, //fromの設定
+      {  //toの設定
+        filter: 'brightness(0.7)',
+        duration: 0.3,
+        scrollTrigger: {
+          trigger: '#about',
+          start: 'top 0%',
+          end: 'bottom 0%',
+          toggleActions: 'play reset play reset',
+        },
+      }
+    )
+    gsap.fromTo(
+      '#hamberger',
+      { filter: 'brightness(1)' }, //fromの設定
+      {  //toの設定
+        filter: 'brightness(0.7)',
+        duration: 0.3,
+        scrollTrigger: {
+          trigger: '#questionContainer1',
+          start: 'top 0%',
+          end: 'bottom 0%',
+          toggleActions: 'play reset play reset',
+        },
+      }
+    )
+    gsap.fromTo(
+      '#hamberger',
+      { filter: 'brightness(1)' }, //fromの設定
+      {  //toの設定
+        filter: 'brightness(0.7)',
+        duration: 0.3,
+        scrollTrigger: {
+          trigger: '#introduce',
+          start: 'top 0%',
+          end: 'bottom 0%',
+          toggleActions: 'play reset play reset',
+        },
+      }
+    )
+  //header/////////////////////
 
     //KV/////////////////////////
     gsap.fromTo(
@@ -507,7 +579,7 @@ export const Index = (props) => {
         '#voiceImageMask',
         { width: 0 }, //fromの設定
         {  //toの設定
-          width: 363,
+          width: "100%",
           opacity: 1,
           duration: 1.2,
           scrollTrigger: {
@@ -729,11 +801,8 @@ export const Index = (props) => {
         duration: 0.5,
         scrollTrigger: {
           trigger: '#introduceTitle',
-          start: 'top 90%', //要素のトップが、画面の中央まできたら開始
+          start: 'top 90%',
         },
-        stagger: {
-          each: 0.2,
-        }
       }
     )
 
@@ -759,33 +828,65 @@ export const Index = (props) => {
   //アニメーション専用/////////////////////////////////////////
 
 
-  //テスト/////////////////////////////////////////
+  // scriptを埋め込む処理👇
+  let script = null;
 
-  const [active, setActive] = useState(false);
+  useEffect(() => {
+  // 同じscriptが量産されるのを防ぐため同じscriptタグがある場合は処理しない
+    if (document.querySelector('#crazy_script') === null) {
+      script = document.createElement('script');
+      script.id = 'crazy_script';
 
-    
-    if (active === false){
-      setActive(!active)
+      // innerHTMLでやりたい内容を書く
+      script.innerHTML = `
+              window.gtranslateSettings = {"default_language":"ja","detect_browser_language":true,"languages":["ja","en","zh-CN"],"wrapper_selector":".gtranslate_wrapper"}
+          `;
     }
-
-  //テスト/////////////////////////////////////////
-
+  })
+  // reactのレンダリング後にscriptを埋め込みたいのでuseEffectで埋め込む
+  useEffect(() => {
+    if (script !== null) {
+      document.body.appendChild(script);
+    }
+  })
 
   return (
     <Layout>
+      <Helmet>
+        <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+      </Helmet>
+
       <body id="body">
+        <div class="gtranslate_wrapper"></div>
         <header className={style.headerWrapper}>
           <div className={isHeaderShown ? "index-module--container--defd5" : "index-module--show--051e9"}>
             <div className={style.flexContainer}>
-              <a
+              <Link
                 target="_blank"
                 rel="noreferrer"
-                href="https://www.erisa.co.jp/">
+                to="https://www.erisa.co.jp/">
                 <img src={logoWhite} className={`index-module--logoWhite--2bd0c ${isShow ? "index-module--logoWhite__active--7787c" : ""}`} alt="logo" />
                 <img src={logoColor} className={`index-module--logoColor--f67bf ${isShow ? "index-module--logoColor__active--bad48" : ""}`} alt="logo" />
-              </a>
+              </Link>
+
               <div className={style.headerRight}>
-                < Link to="/healthcare">
+                <div ref={dropdownRef} className={style.translation}>
+                  <span className={style.translationContainer}>
+                    <button translate="no" onClick={() => setIsOpen(!isOpen)} type="button" className={style.translationButton} id="options-menu" aria-haspopup="true" aria-expanded={isOpen}>
+                      Language
+                    </button>
+                  </span>
+                  {isOpen && (
+                    <div className={style.translationMenu}>
+                      <ul>
+                        <li><a href={englishURL} translate="no">English</a></li>
+                        <li><a href={chineseURL} translate="no">Chinese</a></li>
+                      </ul>
+                    </div>
+                  )}
+                </div>
+
+                <Link to="/confirmation">
                   <span className={style.switchButton}>
                     <p>医療関係者の方はこちら</p>
                     <span className={style.playButton}></span>
@@ -794,9 +895,10 @@ export const Index = (props) => {
 
                 <button
                   className={style.hmb}
+                  id="hamberger"
                   onClick={() => {
                     setIsShow(!isShow);
-                    document.body.style.overflow = "hidden"; //スクロール禁止
+                    scrollLock();
                   }}
                 >
                   <StaticImage src="../images/hamberger.svg" alt=" profile" quality={90} placeholder="none" formats={["AUTO", "WEBP", "AVIF"]} className={style.hamberger} />
@@ -809,19 +911,19 @@ export const Index = (props) => {
                 }}
                 style={{ '-webkit-tap-highlight-color': 'rgba(0,0,0,0)' }}
               >
-                <div className={style.menu}>
+                <div id="menu" className={style.menu}>
                   <div className={style.menuTop}>
-                    < Link to="/">
+                    <a href="/confirmation" onClick={scrollLockLift}>
                       <span className={style.menuSwitchButton} >
                         <p>医療関係者の方はこちら</p>
                         <span className={style.playButton}></span>
                       </span>
-                    </Link>
+                    </a>
                     <button
                       className={style.close}
                       onClick={() => {
                         setIsShow(!isShow);
-                        document.body.style.overflow = "auto";
+                        scrollLockLift();
                       }}>
                     </button>
                   </div>
@@ -831,7 +933,7 @@ export const Index = (props) => {
                       className={style.list}
                       onClick={() => {
                         setIsShow(!isShow);
-                        document.body.style.overflow = "auto";
+                        scrollLockLift();
                       }}>
                       <hr /><p>認知症リスク検査とは？</p>
                     </AnchorLink>
@@ -839,7 +941,7 @@ export const Index = (props) => {
                       className={style.list}
                       onClick={() => {
                         setIsShow(!isShow);
-                        document.body.style.overflow = "auto";
+                        scrollLockLift();
                       }}>
                       <hr /><p>検査の流れ</p>
                     </AnchorLink>
@@ -847,7 +949,7 @@ export const Index = (props) => {
                       className={style.list}
                       onClick={() => {
                         setIsShow(!isShow);
-                        document.body.style.overflow = "auto";
+                        scrollLockLift();
                       }}>
                       <hr /><p>よくあるご質問</p>
                     </AnchorLink>
@@ -855,7 +957,7 @@ export const Index = (props) => {
                       className={style.list}
                       onClick={() => {
                         setIsShow(!isShow);
-                        document.body.style.overflow = "auto";
+                        scrollLockLift();
                       }}>
                       <hr /><p>導入医療機関</p>
                     </AnchorLink>
@@ -865,7 +967,7 @@ export const Index = (props) => {
                       className={style.list}
                       onClick={() => {
                         setIsShow(!isShow);
-                        document.body.style.overflow = "auto";
+                        scrollLockLift();
                       }}>
                       <hr /><p>お問い合わせ</p>
                     </a>
@@ -875,7 +977,7 @@ export const Index = (props) => {
                       className={style.list}
                       onClick={() => {
                         setIsShow(!isShow);
-                        document.body.style.overflow = "auto";
+                        scrollLockLift();
                       }}>
                       <hr /><p>株式会社ERISA</p>
                     </a>
@@ -1014,7 +1116,7 @@ export const Index = (props) => {
 
           <div id="aboutText" className={style.mask}>
             <div id="aboutText0" className={style.aboutText0}>
-              高い精度を実現。将来を見据えた認知症予防の検討材料として、
+              高い精度を実現。将来を見据えた認知症予防に取り組むきっかけを提供し、
             </div>
           </div>
 
@@ -1071,12 +1173,17 @@ export const Index = (props) => {
           </div>
           <div id="aboutText" className={style.mask}>
             <div id="aboutText0" className={style.aboutText0Sp}>
-              知症予防の検討材料として、受診者様の
+              知症予防に取り組むきっかけを提供し、
             </div>
           </div>
           <div id="aboutText" className={style.mask}>
             <div id="aboutText0" className={style.aboutText0Sp}>
-              ライフスタイル見直しに貢献します。
+              受診者様のライフスタイル見直しに貢
+            </div>
+          </div>
+          <div id="aboutText" className={style.mask}>
+            <div id="aboutText0" className={style.aboutText0Sp}>
+              献します。
             </div>
           </div>
 
@@ -1159,7 +1266,7 @@ export const Index = (props) => {
 
         </div>
 
-        <div id="feature" className={style.featureContainer} loading="lazy">
+        <div id="feature" className={style.featureContainer}>
           <StaticImage src="../images/featureBack.png" quality={90} placeholder=" blurred" formats={["AUTO", "WEBP", "AVIF"]} className={style.featureBack} loading="lazy" alt="background" />
           <StaticImage src="../images/featureBackBottom.png" quality={90} placeholder=" blurred" formats={["AUTO", "WEBP", "AVIF"]} className={style.featureBackBottom} loading="lazy" alt="background" />
 
@@ -1176,7 +1283,7 @@ export const Index = (props) => {
             <div id="mri" className={style.mri}>
               <div id="mriImageAnime" className={style.mriImageAnime}>
                 <div id="mriImageMask" className={style.mriImageMask}>
-                  <StaticImage id="mriImage" src="../images/mriImage.jpg" quality={90} placeholder=" blurred" formats={["AUTO", "WEBP", "AVIF"]} className={style.mriImage} alt="mriImage" />
+                  <StaticImage id="mriImage" src="../images/mriImage.jpg" quality={90} loading="eager" formats={["AUTO", "WEBP", "AVIF"]} className={style.mriImage} alt="mriImage" />
                 </div>
               </div>
 
@@ -1198,21 +1305,22 @@ export const Index = (props) => {
             <div id="examination" className={style.examination}>
               <div id="examinationImageAnime" className={style.examinationImageAnime}>
                 <div id="examinationImageMask" className={style.examinationImageMask}>
-                  <StaticImage src="../images/examination.jpg" quality={90} placeholder=" blurred" formats={["AUTO", "WEBP", "AVIF"]} className={style.examinationImageSp} alt="examinationImage" />
+                  <StaticImage src="../images/examination.jpg" quality={90} loading="eager" formats={["AUTO", "WEBP", "AVIF"]} className={style.examinationImageSp} alt="examinationImage" />
                 </div>
               </div>
               <div id="examinationTextMask" className={style.examinationTextMask}>
                 <div className={style.examinationText}>
-                  <h1>3年後の脳状態を予測し<br />
-                    認知症リスクを検査</h1>
-                  <hr />
-                  <p>脳全体の状態から3年後の脳状態を予測することで、受診者様それぞれの認知症リスクを検査。解説付きの検査レポートを通じて、早期対策・予防に活用できます。</p>
-                  <p className={style.textSp}>脳全体の状態から3年後の脳状態を予測することで、受診者様それぞれの認知症リスクを検査。解説付きの検査レポートを通じて、早期対策・予防に活用できます。</p>
+                  <div className={style.examinationTextContainer}>
+                    <h1>3年後の脳状態を予測し<br />
+                      認知症リスクを検査</h1>
+                    <hr />
+                    <p>脳全体の状態から3年後の脳状態を予測することで、受診者様それぞれの認知症リスクを検査。解説付きの検査レポートを通じて、早期対策・予防に活用できます。</p>
+                  </div>
                 </div>
               </div>
               <div id="examinationImageAnime" className={style.examinationImageAnime}>
                 <div className={style.examinationImageMask}>
-                  <StaticImage src="../images/examination.jpg" quality={90} placeholder=" blurred" formats={["AUTO", "WEBP", "AVIF"]} className={style.examinationImage} alt="examinationImage" />
+                  <StaticImage src="../images/examination.jpg" quality={90} loading="eager" formats={["AUTO", "WEBP", "AVIF"]} className={style.examinationImage} alt="examinationImage" />
                 </div>
               </div>
             </div>
@@ -1220,7 +1328,7 @@ export const Index = (props) => {
             <div id="prevention" className={style.prevention}>
               <div id="preventionImageAnime" className={style.preventionImageAnime}>
                 <div id="preventionImageMask" className={style.preventionImageMask}>
-                  <StaticImage src="../images/prevention.jpg" quality={90} placeholder=" blurred" formats={["AUTO", "WEBP", "AVIF"]} className={style.preventionImage} alt="preventionImage" />
+                  <StaticImage src="../images/prevention.jpg" quality={90} loading="eager" formats={["AUTO", "WEBP", "AVIF"]} className={style.preventionImage} alt="preventionImage" />
                 </div>
               </div>
 
@@ -1322,7 +1430,7 @@ export const Index = (props) => {
 
         <div id="question" className={style.questionContainer0} loading="lazy">
 
-          <div className={style.questionContainer1}>
+          <div id="questionContainer1" className={style.questionContainer1}>
             <div id="questionImageMask" className={style.questionImageMask}>
               <img src={questionImage} className={style.questionImage} loading="lazy" alt="questionImage" />
             </div>
@@ -1406,13 +1514,13 @@ export const Index = (props) => {
 
         <div id="introduce" className={style.Introduce} loading="lazy">
 
-          <div id="questionTitle" className={style.title}>
+          <div id="introduceTitle" className={style.title}>
             <h1>導入医療機関</h1>
           </div>
           <Search />
+          <StaticImage src="../images/search.png" alt="searchImage" quality={90} placeholder="none" formats={["AUTO", "WEBP", "AVIF"]} className={style.searchImage} />
 
         </div>
-        <StaticImage src="../images/search.png" alt="searchImage" quality={90} placeholder="none" formats={["AUTO", "WEBP", "AVIF"]} className={style.searchImage} />
 
         <footer className={style.footer}>
           <div className={style.footerContainer}>
@@ -1466,38 +1574,20 @@ export const Index = (props) => {
 
 export default Index
 
-export const query = graphql`
-query MicrocmsRegionQuery{
-  allMicrocmsRegion {
-    edges {
-      node {
-        prefectures
-        region
-        prefectures0 {
-          prefecture
-        }
-      }
-    }
-  }
-  allMicrocmsIntroduce {
-    edges {
-      node {
-        address
-        name
-        number
-        prefectures
-        url
-      }
-    }
-  }
-}
-`
 
 export const Head = () => {
   return (
     <>
-      <title>ERISA 認知症リスク検査</title>
-      <description>世界で唯一のAI解析技術で、3年後の認知症リスクを知る。</description>
+      <title>認知症リスク検査 - 株式会社ERISA</title>
+      <meta name="description" content="認知症リスクを把握する脳ドックのオプション - MR画像から脳全体をAIが分析し3年後のリスクを予測" />
+      <meta property="og:image" content={ogpToc} />
+      <meta property="og:title;" content="認知症リスク検査 - 株式会社ERISA" />
+      <meta property="og:site-name;" content="認知症リスク検査 - 株式会社ERISA" />
+      <meta property="og:type" content="website" />
+      <meta property="og:locale" content="ja_JP" />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:title" content="認知症リスク検査 - 株式会社ERISA" />
+      <meta name="twitter:description" content="認知症リスクを把握する脳ドックのオプション - MR画像から脳全体をAIが分析し3年後のリスクを予測" />
     </>
   )
 }

@@ -1,6 +1,7 @@
 @import './variables.scss';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
 
+
 body {
     background-color: #ffffff;
 }
@@ -27,7 +28,7 @@ body::-webkit-scrollbar {
         width: 80px;
 
         &__active {
-            visibility: visible;
+            visibility: hidden;
         }
     }
 
@@ -38,7 +39,7 @@ body::-webkit-scrollbar {
     }
 
     .logoWhite__active {
-        visibility: hidden;
+        visibility: visible;
     }
 
     .switchButton {
@@ -56,12 +57,14 @@ body::-webkit-scrollbar {
             color: black;
             text-align: center;
             margin: 0;
-            margin-left: 40px;
+            margin-left: 15px;
             font-size: 14px;
             font-weight: 300;
             letter-spacing: 0.16rem;
             line-height: 36px;
             transition: .3s;
+            width: 190px;
+            overflow: hidden;
         }
     
         .playButton {
@@ -143,8 +146,10 @@ body::-webkit-scrollbar {
             letter-spacing: 0.16rem;
             line-height: 36px;
             margin: 0;
-            margin-left: 40px;
+            margin-left: 15px;
             transition: .3s;
+            width: 190px;
+            overflow: hidden;
         }
 
         .playButton {
@@ -231,7 +236,6 @@ body::-webkit-scrollbar {
         opacity: 0;
         transform: translateX(100%);
         transition: 0.8s;
-        
         border-color: #B0EA0A;
 
         &__active {
@@ -275,7 +279,7 @@ body::-webkit-scrollbar {
                 display: flex;
                 justify-content: flex-end;
                 gap: 12px;
-                margin-right: 70px;
+                padding-right: 3.5vw;
                 position: relative;
                 z-index: 1;
 
@@ -375,6 +379,7 @@ body::-webkit-scrollbar {
                     line-height: 12px;
                     font-size: 12px;
                     font-family: 'Montserrat', sans-serif;
+                    font-style: italic
                 }
             }
 
@@ -432,6 +437,40 @@ body::-webkit-scrollbar {
                 display: flex;
                 justify-content: space-between;
                 gap: 10px;
+            }
+        }
+    }
+
+    .translation {
+        height: 36px;
+        display: none;
+
+        .translationContainer {
+            height: 36px;
+        }
+
+        .translationButton {
+            height: 36px;
+            width: 100px;
+            background-color: #fff;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            color: #595959;
+        }
+        .translationMenu {
+            height: auto;
+            width: 100px;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 15px;
+            margin-top: 10px;
+            padding: 10px 0;
+
+            li {
+                font-size: 14px;
+                line-height: 30px;
+                color: #595959;
             }
         }
     }
@@ -529,7 +568,7 @@ body::-webkit-scrollbar {
     .document {
         height: 90px;
         width: 180px;
-        position: absolute;
+        position: fixed;
         right: 0;
         bottom: 10%;
         background-color: #fff;
@@ -541,7 +580,7 @@ body::-webkit-scrollbar {
 
         .documentLine {
             display: block;
-            height: 84px;
+            height: 66px;
             width: 177px;
             border-style: solid;
             border-width: 1px;
@@ -549,10 +588,12 @@ body::-webkit-scrollbar {
             border-bottom-left-radius: 45px;
             border-color: #74B6F2;
             margin: 2px 2px;
+            padding-top: 18px;
 
             p {
                 color: #74B6F2;
-                margin-left: 40px;
+                margin: 0;
+                margin-left: 32px;
                 font-weight: 500;
             }
         }
@@ -582,7 +623,7 @@ body::-webkit-scrollbar {
     
             p {
                 color: #ffffff;
-                margin-left: 40px;
+                margin-left: 32px;
                 font-weight: 500;
             }
         }
@@ -615,11 +656,17 @@ body::-webkit-scrollbar {
         }
     }
 
+    .aboutCopyContainer {
+        position: relative;
+        width: 1100px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
     .lineMask {
         position: absolute;
         top: 0;
-        left: 22%;
+        left: -20px;
         overflow: hidden;
         hr {
             margin: 0;
@@ -638,7 +685,7 @@ body::-webkit-scrollbar {
             letter-spacing: 0.16rem;
             margin-top: 110px;
             margin-bottom: 20px;
-            margin-left: 23%;
+            margin-left: 0;
         }
     
         h2 {
@@ -646,7 +693,7 @@ body::-webkit-scrollbar {
             color: #fff;
             font-weight: 400;
             letter-spacing: 0.12rem;
-            margin-left: 23%;
+            margin-left: 0;
         }
     }
 
@@ -655,9 +702,9 @@ body::-webkit-scrollbar {
     }
 
     .aboutText {
-        position: absolute;
-        top: 245px;
-        left: 63%;
+        margin-left: 66%;
+        transform: translateY(-150px);
+        height: 50px;
 
         h3 {
             font-size: 16px;
@@ -665,6 +712,11 @@ body::-webkit-scrollbar {
             color: #fff;
             letter-spacing: 0.12rem;
             margin-bottom: 5px;
+            width: 400px;
+            small {
+                vertical-align: super;
+                font-size: 6px;
+            }
         }
     }
 
@@ -718,6 +770,7 @@ body::-webkit-scrollbar {
                 width: 350px;
                 height: 79px;
                 margin-top: 10px;
+                overflow: hidden;
             }
         
             hr {
@@ -746,6 +799,7 @@ body::-webkit-scrollbar {
     padding-top: 100px;
     padding-bottom: 100px;
     position: relative;
+    overflow: hidden;
 
     .meritImageMask {
         .meritTitleImage {
@@ -764,6 +818,8 @@ body::-webkit-scrollbar {
         border-radius: 10px;
         margin: 0 auto 0 auto;
         text-align: center;
+        z-index: 1;
+        position: relative;
 
         h1 {
             font-size: 20px;
@@ -784,6 +840,8 @@ body::-webkit-scrollbar {
         margin-left: auto;
         margin-right: auto;
         border-radius: 10px;
+        z-index: 1;
+        position: relative;
 
         .contents {
             margin-top: 60px;
@@ -802,6 +860,7 @@ body::-webkit-scrollbar {
                 margin-top: 10px;
                 width: 320px;
                 height: 35px;
+                overflow: hidden;
             }
         
             h2 {
@@ -811,6 +870,7 @@ body::-webkit-scrollbar {
                 width: 320px;
                 height: 108px;
                 margin-top: 10px;
+                overflow: hidden;
             }
         
             hr {
@@ -829,15 +889,20 @@ body::-webkit-scrollbar {
         margin: 60px auto 0 auto;
         padding-top: 30px;
         border-radius: 10px;
+        z-index: 1;
+        position: relative;
 
-        h1 {
-            font-size: 23px;
-            font-weight: 400;
-            color: #fff;
-            letter-spacing: 0.12rem;
-            text-align: center;
-            display: block;
+        .voiceTitle {
+            h1 {
+                font-size: 23px;
+                font-weight: 400;
+                color: #fff;
+                letter-spacing: 0.12rem;
+                text-align: center;
+                display: block;
+            }
         }
+
 
         hr {
             border: none;
@@ -885,6 +950,20 @@ body::-webkit-scrollbar {
                 }
             }
         }
+    }
+
+    .meritBack {
+        position: absolute;
+        top: 0;
+        left: -5%;
+        width: 110vw;
+        -webkit-user-drag: none;
+        animation-name: huwahuwa;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration: 3s;
+        z-index: 0;
     }
 }
 
@@ -1037,8 +1116,8 @@ body::-webkit-scrollbar {
 
             .flowNumber {
                 position: absolute;
-                top: -15px;
-                left: -15px;
+                top: -13px;
+                left: -13px;
                 width: 52px;
                 height: 52px;
                 border: none;
@@ -1051,12 +1130,13 @@ body::-webkit-scrollbar {
                     font-size: 10px;
                     font-family: 'Montserrat', sans-serif;
                     letter-spacing: 0.05rem;
+                    line-height: 10px;
                     color: #fff;
                     width: 30px;
                     display: block;
                     margin-left: auto;
                     margin-right: auto;
-                    margin-top: 5px;
+                    margin-top: 11px;
                 }
 
                 h2 {
@@ -1066,6 +1146,8 @@ body::-webkit-scrollbar {
                     color: #fff;
                     width: 30px;
                     height: 26px;
+                    overflow: hidden;
+                    line-height: 26px;
                     display: block;
                     margin-left: auto;
                     margin-right: auto;
@@ -1094,6 +1176,7 @@ body::-webkit-scrollbar {
                     font-weight: 400;
                     width: 215px;
                     height: 52px;
+                    overflow: hidden;
                     margin: auto;
                     margin-bottom: 0;
                     color: #fff;
@@ -1310,6 +1393,7 @@ body::-webkit-scrollbar {
             }
             .toTop {
                 transition: 0.3s;
+                width: 15px;
             }
 
             .toTop:hover {
@@ -1337,13 +1421,67 @@ body::-webkit-scrollbar {
             line-height: 12px;
             font-size: 12px;
             font-family: 'Montserrat', sans-serif;
+            font-style: italic;
             margin-left: 4px;
             margin-top: 3px;
         }
     }
 }
 
-@media screen and (max-width: 500px) {
+.confirmation {
+    height: 100vh;
+    
+    h1 {
+        margin-top: 40vh;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    h2 {
+        margin-top: 20px;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .buttonContainer {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+
+        .noButton {
+            background-color: transparent;
+            border: #595959 solid 2px;
+            border-radius: 20px;
+            height: 36px;
+            width: 200px;
+            text-align: center;
+
+            p {
+                line-height: 36px;
+                margin: 0;
+            }
+        }
+
+        .yesButton {
+            background-color: transparent;
+            border: #595959 solid 2px;
+            border-radius: 20px;
+            height: 36px;
+            width: 200px;
+            text-align: center;
+
+            p {
+                line-height: 36px;
+                margin: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
 .headerWrapper {
     width: 100vw;
 
@@ -1356,14 +1494,21 @@ body::-webkit-scrollbar {
                 margin-right: auto;
                 position: relative;
                 z-index: 1;
+                &__active {
+                    visibility: hidden;
+                }
             }
         
             .logoColor {
                 width: 50px;
                 position: absolute;
+                visibility: hidden;
                 top: 0;
                 left: 80px;
                 z-index: 1;
+            }
+            .logoColor__active {
+                visibility: visible;
             }
         }
     }
@@ -1387,7 +1532,6 @@ body::-webkit-scrollbar {
             margin-left: 10px;
         }
     }
-
 
     .menuWrapper {
         .menu {
@@ -1572,6 +1716,10 @@ body::-webkit-scrollbar {
         }
     }
 
+    .aboutCopyContainer {
+        position: static;
+        width: auto;
+    }
 
     .lineMask {
         position: absolute;
@@ -1629,17 +1777,6 @@ body::-webkit-scrollbar {
 
     .aboutText {
         display: none;
-        position: static;
-        margin-top: 20px;
-        margin-left: auto;
-        margin-right: auto;
-        width: 313px;
-
-        h3 {
-            font-size: 14px;
-            letter-spacing: 0.08rem;
-            margin-bottom: 5px;
-        }
     }
 
     .aboutTextSp {
@@ -1657,6 +1794,12 @@ body::-webkit-scrollbar {
             line-height: 190%;
             letter-spacing: 0.08rem;
             margin-bottom: 5px;
+
+            small {
+                vertical-align: super;
+                font-size: 3px;
+                line-height: 20px;
+            }
         }
     }
 
@@ -2008,8 +2151,8 @@ body::-webkit-scrollbar {
 
             .flowNumber {
                 position: absolute;
-                top: -15px;
-                left: -15px;
+                top: -12px;
+                left: -12px;
                 width: 52px;
                 height: 52px;
                 border: none;
@@ -2027,7 +2170,7 @@ body::-webkit-scrollbar {
                     display: block;
                     margin-left: auto;
                     margin-right: auto;
-                    margin-top: 5px;
+                    margin-top: 9px;
                 }
 
                 h2 {

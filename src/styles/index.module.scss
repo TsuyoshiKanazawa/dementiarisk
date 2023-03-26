@@ -1,4 +1,5 @@
 @import './variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,400&display=swap');
 
 body {
     background-color: #EDEDED !important;
@@ -59,12 +60,14 @@ body::-webkit-scrollbar {
             color: black;
             text-align: center;
             margin: 0;
-            margin-left: 20px;
+            margin-left: 15px;
             font-size: 14px;
             font-weight: 300;
             letter-spacing: 0.16rem;
             line-height: 36px;
             transition: .3s;
+            width: 190px;
+            overflow: hidden;
         }
     
         .playButton {
@@ -146,8 +149,10 @@ body::-webkit-scrollbar {
             letter-spacing: 0.16rem;
             line-height: 36px;
             margin: 0;
-            margin-left: 20px;
+            margin-left: 15px;
             transition: .3s;
+            width: 190px;
+            overflow: hidden;
         }
 
         .playButton {
@@ -234,7 +239,6 @@ body::-webkit-scrollbar {
         opacity: 0;
         transform: translateX(100%);
         transition: 0.8s;
-        
         border-color: #B0EA0A;
 
         &__active {
@@ -277,7 +281,7 @@ body::-webkit-scrollbar {
                 display: flex;
                 justify-content: flex-end;
                 gap: 12px;
-                margin-right: 70px;
+                padding-right: 3.5vw;
                 position: relative;
                 z-index: 1;
 
@@ -377,6 +381,7 @@ body::-webkit-scrollbar {
                     line-height: 12px;
                     font-size: 12px;
                     font-family: 'Montserrat', sans-serif;
+                    font-style: italic;
                 }
             }
 
@@ -434,6 +439,40 @@ body::-webkit-scrollbar {
                 display: flex;
                 justify-content: space-between;
                 gap: 10px;
+            }
+        }
+    }
+
+    .translation {
+        height: 36px;
+        display: none;
+
+        .translationContainer {
+            height: 36px;
+        }
+
+        .translationButton {
+            height: 36px;
+            width: 100px;
+            background-color: #fff;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            color: #595959;
+        }
+        .translationMenu {
+            height: auto;
+            width: 100px;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 15px;
+            margin-top: 10px;
+            padding: 10px 0;
+
+            li {
+                font-size: 14px;
+                line-height: 30px;
+                color: #595959;
             }
         }
     }
@@ -498,14 +537,9 @@ body::-webkit-scrollbar {
             overflow: hidden;
             display: inline-block;
         }
-        .KvText {
-            width: 533px;
-            opacity: 0;
-        }
 
         .KvTextSp0 {
             display: none;
-
         }
 
         .KvTextSp1 {
@@ -527,6 +561,8 @@ body::-webkit-scrollbar {
             text-align: left;
             line-height: 170%;
             letter-spacing: 0.16em;
+            opacity: 0;
+            width: 533px;
             opacity: 0;
         }
     }
@@ -622,6 +658,7 @@ body::-webkit-scrollbar {
         line-height: 190%;
         margin-left: 45%;
         letter-spacing: 0.12em;
+        width: 620px;
     }
 
     .aboutText0Sp {
@@ -727,9 +764,10 @@ body::-webkit-scrollbar {
                 .mriImageMask {
                     margin-top: 69px;
                     width: 1040px !important;
-                    height: 480px;
+                    min-height: 480px;
                     overflow: hidden;
                     border-top-right-radius: 20px;
+                    z-index: 1;
             
                     .mriImage {
                         height: 480px;
@@ -746,7 +784,6 @@ body::-webkit-scrollbar {
 
             .mriTextMask {
                 width: 480px;
-                height: 377px;
                 margin-left: 850px;
                 overflow: hidden;
                 transform: translate(0%, -90%);
@@ -758,9 +795,13 @@ body::-webkit-scrollbar {
                     background-color: #fff;
                     width: 480px;
                     height: 377px;
+                    position: relative;
 
                     .mriTexttextContainer {
-                        padding-top: 30px;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
             
                         h1 {
                             font-size: 26px;
@@ -778,7 +819,7 @@ body::-webkit-scrollbar {
                             height: 1px;
                             margin-top: 20px;
                             margin-bottom: 15px;
-                            margin-left: 60px;
+                            margin: 20px 0 15px 0;
                             background-color: #595959;
                             border: none;
                         }
@@ -851,61 +892,63 @@ body::-webkit-scrollbar {
 
             .examinationTextMask {
                 overflow: hidden;
-                z-index: 2;
-                width: 480px;
                 height: 377px;
                 position: absolute;
                 right: 880px;
                 top: 140px;
+                border-top-left-radius: 20px;
+                border-bottom-left-radius: 20px;
+                z-index: 2;
 
                 .examinationText {
+                    position: relative;
                     background-color: #fff;
-                    border-top-left-radius: 20px;
-                    border-bottom-left-radius: 20px;
                     width: 480px;
-                    height: 307px;
-                    padding-top: 70px;
-                    z-index: 2;
-                    position: absolute;
-                    right: 0;
+                    height: 377px;
 
-                    h1 {
-                        font-size: 26px;
-                        font-weight: 400;
-                        color: #595959;
-                        letter-spacing: 0.12rem;
-                        line-height: 160%;
-                        display: block;
-                        width: 365px;
-                        margin: auto;
+                    .examinationTextContainer {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+
+                        h1 {
+                            font-size: 26px;
+                            font-weight: 400;
+                            color: #595959;
+                            letter-spacing: 0.12rem;
+                            line-height: 160%;
+                            display: block;
+                            width: 365px;
+                            margin: auto;
+                        }
+                
+                        hr {
+                            width: 60px;
+                            height: 1px;
+                            margin: 20px 0 15px 0;
+                            background-color: #595959;
+                            border: none;
+                        }
+                
+                        p {
+                            font-size: 16px;
+                            font-weight: 400;
+                            color: #595959;
+                            letter-spacing: 0.12rem;
+                            line-height: 190%;
+                            display: block;
+                            width: 365px;
+                            margin: auto;
+                        }
+                
+                        .textSp {
+                            display: none;
+                        }
+                
                     }
-            
-                    hr {
-                        width: 60px;
-                        height: 1px;
-                        margin-top: 20px;
-                        margin-bottom: 15px;
-                        margin-left: 60px;
-                        background-color: #595959;
-                        border: none;
-                    }
-            
-                    p {
-                        font-size: 16px;
-                        font-weight: 400;
-                        color: #595959;
-                        letter-spacing: 0.12rem;
-                        line-height: 190%;
-                        display: block;
-                        width: 365px;
-                        margin: auto;
-                    }
-            
-                    .textSp {
-                        display: none;
-                    }
-            
                 }
+
             }
 
         }
@@ -923,6 +966,7 @@ body::-webkit-scrollbar {
                         height: 480px;
                         overflow: hidden;
                         border-top-right-radius: 20px;
+                        z-index: 1;
             
                         .preventionImage {
                             width: 1040px;
@@ -947,14 +991,19 @@ body::-webkit-scrollbar {
                 transform: translate(0%, -90%);
                 border-top-right-radius: 20px;
                 border-bottom-right-radius: 20px;
+                z-index: 1;
 
                 .preventionText {
                     background-color: #fff;
                     width: 480px;
                     height: 377px;
+                    position: relative;
             
                     .preventionTextContainer {
-                        padding-top: 70px;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
             
                         h1 {
                             font-size: 26px;
@@ -970,9 +1019,7 @@ body::-webkit-scrollbar {
                         hr {
                             width: 60px;
                             height: 1px;
-                            margin-top: 20px;
-                            margin-bottom: 15px;
-                            margin-left: 60px;
+                            margin: 20px 0 15px 0;
                             background-color: #595959;
                             border: none;
                         }
@@ -999,10 +1046,10 @@ body::-webkit-scrollbar {
     }
     .featureBack {
         position: absolute;
-        top: 0;
+        top: -5%;
         right: -25%;
         width: 130vw;
-        height: 100vh;
+        height: 115vh;
         z-index: 0;
         pointer-events: none;
         animation-name: huwahuwa;
@@ -1090,6 +1137,8 @@ body::-webkit-scrollbar {
                     margin-top: 40px;
                     margin-left: 40px;
                     width: 300px;
+                    height: 90px;
+                    overflow: hidden;
                 }
 
                 hr {
@@ -1164,16 +1213,21 @@ body::-webkit-scrollbar {
                     font-size: 24px;
                     text-align: center;
                     letter-spacing: 0.12rem;
+                    height: 38px;
+                    overflow: hidden;
                 }
 
                 h4 {
                     color: #fff;
                     font-size: 16px;
                     text-align: center;
-                    margin-top: 15px;
+                    margin: 15px auto 0 auto;
                     font-weight: 300;
                     letter-spacing: 0.12rem;
                     line-height: 170%;
+                    overflow: hidden;
+                    height: 81px;
+                    width: 283px;
                 }
 
                 .brainImage {
@@ -1205,13 +1259,15 @@ body::-webkit-scrollbar {
                     p {
                         color: black;
                         margin: 0;
-                        margin-left: 30px;
+                        margin-left: 20px;
                         text-align: center;
                         font-size: 14px;
                         font-weight: 300;
                         letter-spacing: 0.16rem;
                         line-height: 36px;
                         transition: .3s;
+                        width: 190px;
+                        overflow: hidden;
                     }
 
                     .playButton {
@@ -1380,7 +1436,6 @@ body::-webkit-scrollbar {
 
 .Introduce {
     margin-top: 90px;
-    padding-bottom: 70px;
     background-color: #fff;
     position: relative;
 
@@ -1406,12 +1461,10 @@ body::-webkit-scrollbar {
     }
 
     .region {
-        width: 885px;
         margin-left: auto;
         margin-right: auto;
 
         .spacey2 {
-            width: 885px;
             display: flex;
             justify-content: center;
             gap: 15px;
@@ -1421,8 +1474,7 @@ body::-webkit-scrollbar {
                 cursor: pointer;
                 display: block;
                 border-radius: 25px;
-                border-style: solid;
-                border-color: #595959;
+                border: 1px solid #595959;
                 color: #595959;
                 height: 35px;
                 text-Align: center;
@@ -1431,8 +1483,6 @@ body::-webkit-scrollbar {
                 padding-right: 15px;
                 font-size: 16px;
                 font-weight: 500;
-                line-height: 0px;
-                border-width: 1px;
                 display: flex;
                 justify-content: flex-start;
                 gap: 10px;
@@ -1444,6 +1494,11 @@ body::-webkit-scrollbar {
                     border-color: #565656 #565656 transparent transparent;
                     transform: rotate(-45deg);
                     transition: 0.3s;
+                }
+
+                p {
+                    margin: 0;
+                    line-height: 35px;
                 }
             }
 
@@ -1617,8 +1672,8 @@ body::-webkit-scrollbar {
     }
 
     .searchImage {
-        transform: translateY(80%);
-        display: none;
+        transform: translate(-8%, 20%);
+        opacity: 0.3;
     }
 }
 
@@ -1711,6 +1766,7 @@ body::-webkit-scrollbar {
             }
             .toTop {
                 transition: 0.3s;
+                width: 15px;
             }
 
             .toTop:hover {
@@ -1738,13 +1794,14 @@ body::-webkit-scrollbar {
             line-height: 12px;
             font-size: 12px;
             font-family: 'Montserrat', sans-serif;
+            font-style: italic;
             margin-left: 4px;
             margin-top: 3px;
         }
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 900px) {
 .headerWrapper {
     width: 100vw;
 
@@ -2092,16 +2149,23 @@ body::-webkit-scrollbar {
         .mri {
             display: block;
             margin-top: 10%;
+            height: 670px;
 
             .mriImageAnime {
-                overflow: hidden;
-            
+                
                 .mriImageMask {
                     width: 97vw !important;
                     height: 250px;
+                    border-top-right-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                    position: relative;
+                    z-index: 0;
+
                     .mriImage {
-                        height: 320px;
+                        height: 300px;
                         transform: translateY(-30px);
+                        border-top-right-radius: 10px;
+                        border-bottom-right-radius: 10px;
                     }
                 }
                 .mriImageMask:hover {
@@ -2111,11 +2175,10 @@ body::-webkit-scrollbar {
                 }
             }
             .mriTextMask {
-                width: 95vw;
                 height: 340px;
                 margin-left: 0;
                 overflow: hidden;
-                transform: translate(0, -20px);
+                transform: translate(0, -240px);
                 z-index: 1;
 
                 .mriText {
@@ -2127,7 +2190,10 @@ body::-webkit-scrollbar {
                     z-index: 1;
 
                     .mriTexttextContainer {
-                        padding-top: 30px;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
 
                         h1 {
                             font-size: 20px;
@@ -2160,46 +2226,47 @@ body::-webkit-scrollbar {
             height: 510px;
 
             .examinationTextMask {
-                width: 88vw;
-                height: 340px;
-                margin-left: 0;
-                overflow: hidden;
-                z-index: 1;
-                top: 230px;
                 right: 0;
+                top: 45%;
+                height: 300px;
+                margin-right: 0;
+                margin-left: auto;
+                overflow: auto;
 
                 .examinationText {
-                    width: 88vw;
-                    height: 230px;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    width: 95vw;
+                    height: 250px;
+                    overflow: hidden;
+                    z-index: 1;
                     border-top-left-radius: 10px;
                     border-bottom-left-radius: 10px;
-                    right: 0;
-                    padding-left: 5%;
-                    padding-top: 20px;
-                    z-index: 1;
+
+                    .examinationTextContainer {
+                        width: 78vw;
+
+                        h1 {
+                            font-size: 20px;
+                        }
             
-                    h1 {
-                        font-size: 20px;
-                    }
+                        hr {
+                            margin-left: 0;
+                            margin-right: auto;
+                        }
             
-                    hr {
-                        margin-left: 0;
-                        margin-right: auto;
-                    }
-            
-                    p {
-                        display: none;
-                    }
-            
-                    .textSp {
-                        display: block !important;
-                        font-size: 14px;
-                        width: 97%;
-                        margin-left: 0;
-                        margin-right: auto;
+                        p {
+                            display: block !important;
+                            width: 78vw;
+                            font-size: 14px;
+                            margin-left: 0;
+                            margin-right: auto;
+                        }
                     }
                 }
             }
+
 
 
             .examinationImage {
@@ -2225,11 +2292,13 @@ body::-webkit-scrollbar {
             height: auto;
 
             .preventionImageAnime {
-                overflow: hidden;
         
                 .preventionImageMask {
                     width: 97vw !important;
                     height: 250px;
+                    border-top-right-radius: 20px;
+                    border-bottom-right-radius: 20px;
+                    z-index: 0;
         
                     .preventionImage {
                         width: 97vw;
@@ -2262,7 +2331,10 @@ body::-webkit-scrollbar {
                     z-index: 1;
         
                     .preventionTextContainer {
-                        padding-top: 30px;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
         
                         h1 {
                             font-size: 20px;
@@ -2317,7 +2389,7 @@ body::-webkit-scrollbar {
 
             .voiceImageSp {
                 display: block;
-                width: 363px;
+                height: 90px;
                 position: absolute;
                 top: 0;
                 right: 0;
@@ -2660,7 +2732,6 @@ body::-webkit-scrollbar {
 
 
     .region {
-        width: 100vw;
         border-style: solid;
         border-width: 1px;
         border-color: #E6E6E6;
@@ -2671,32 +2742,31 @@ body::-webkit-scrollbar {
         .spacey2 {
             gap: 5px;
             margin: 0;
+            justify-content: flex-start;
 
-            li {
-                .button {
-                    p {
-                        display: inline-block;
-                    }
+            .button {
+                p {
+                    white-space: nowrap;
                 }
             }
-
 
             .menus {
                 margin-top: 15px;
                 position: absolute;
-                top: 4.4%;
+                top: 100px;
                 left: 50%;
-                width: 98vw;
-                padding-left: 0;
+                width: 350px;
+                padding-left: 10px;
                 text-align: center;
                 transition: 0.3s;
                 line-height: 85px;
                 display: flex;
+                justify-content: flex-start;
                 font-size: 14px;
 
-                li {
+                p {
                     cursor: pointer;
-                    margin-left: 40px;
+                    margin-left: 10px;
                 }
             }
 
@@ -2793,7 +2863,7 @@ body::-webkit-scrollbar {
     }
 
     .searchImage {
-        transform: translateY(80%);
+        transform: translate(-8%, 95%);
         opacity: 0.2;
     }
 }

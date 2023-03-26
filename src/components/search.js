@@ -22,7 +22,6 @@ const SearchResult = () => {
                         address
                         name
                         number
-                        prefectures
                         url
                     }
                 }
@@ -32,9 +31,6 @@ const SearchResult = () => {
                     node {
                         prefectures
                         region
-                        prefectures0 {
-                        prefecture
-                        }
                     }
                 }
             }
@@ -93,7 +89,6 @@ const SearchResult = () => {
                                             : { borderColor: "#565656 #565656 transparent transparent", marginTop: "15px" }
                                     }
                                 >
-
                                 </div>
                             </div>
 
@@ -122,12 +117,12 @@ const SearchResult = () => {
                                 <p key={index} id={region.node.prefectures[1]} onClick={handleInputChange}>{region.node.prefectures[1]}</p>
                                 <p key={index} id={region.node.prefectures[2]} onClick={handleInputChange}>{region.node.prefectures[2]}</p>
                                 <p key={index} id={region.node.prefectures[3]} onClick={handleInputChange}>{region.node.prefectures[3]}</p>
-                                <p key={index} id={region.node.prefectures[4]}>{region.node.prefectures[4]}</p>
-                                <p key={index} id={region.node.prefectures[5]}>{region.node.prefectures[5]}</p>
-                                <p key={index} id={region.node.prefectures[6]}>{region.node.prefectures[6]}</p>
-                                <p key={index} id={region.node.prefectures[7]}>{region.node.prefectures[7]}</p>
-                                <p key={index} id={region.node.prefectures[8]}>{region.node.prefectures[8]}</p>
-                                <p key={index} id={region.node.prefectures[9]}>{region.node.prefectures[9]}</p>
+                                <p key={index} id={region.node.prefectures[4]} onClick={handleInputChange}>{region.node.prefectures[4]}</p>
+                                <p key={index} id={region.node.prefectures[5]} onClick={handleInputChange}>{region.node.prefectures[5]}</p>
+                                <p key={index} id={region.node.prefectures[6]} onClick={handleInputChange}>{region.node.prefectures[6]}</p>
+                                <p key={index} id={region.node.prefectures[7]} onClick={handleInputChange}>{region.node.prefectures[7]}</p>
+                                <p key={index} id={region.node.prefectures[8]} onClick={handleInputChange}>{region.node.prefectures[8]}</p>
+                                <p key={index} id={region.node.prefectures[9]} onClick={handleInputChange}>{region.node.prefectures[9]}</p>
                             </div>
                         </div>
                     ))}
@@ -142,7 +137,7 @@ const SearchResult = () => {
                                 <h3>Tel：{post.number}</h3>
                                 <a href={post.url}>
                                     <span className={style.hospitalButton}>
-                                        <p>VIEW WEB</p>
+                                        <p translate="no">VIEW WEB</p>
                                         <span className={style.playButton}></span>
                                     </span>
                                 </a>

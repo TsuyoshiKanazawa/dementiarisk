@@ -15,11 +15,7 @@ require('dotenv').config({
 });
 
 module.exports = {
-  siteMetadata: {
-    defaultTitle: `ERISA 認知症リスク検査`,
-    defaultDescription: `モダン開発を得意とするJack of All Tradesの公式サイトです。`,
 
-  },
   plugins: [
     `gatsby-plugin-sass`,
     `gatsby-transformer-remark`, 
@@ -29,7 +25,7 @@ module.exports = {
     {
       resolve: `gatsby-source-microcms`,
       options: {
-        apiKey: `E4IlIqsobIKK67NGUFD8qfb5O0xDVFlse6cX`,
+        apiKey: process.env.MICROCMS_APIKEY,
         serviceId: `erisaproduct`,
         apis: [
           {
@@ -41,23 +37,11 @@ module.exports = {
     {
       resolve: `gatsby-source-microcms`,
       options: {
-        apiKey: `E4IlIqsobIKK67NGUFD8qfb5O0xDVFlse6cX`,
+        apiKey: process.env.MICROCMS_APIKEY,
         serviceId: `erisaproduct`,
         apis: [
           {
             endpoint: `region`,
-          },
-        ],
-      },
-    },
-    {
-      resolve: `gatsby-source-microcms`,
-      options: {
-        apiKey: `E4IlIqsobIKK67NGUFD8qfb5O0xDVFlse6cX`,
-        serviceId: `erisaproduct`,
-        apis: [
-          {
-            endpoint: `ken`,
           },
         ],
       },
