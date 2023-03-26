@@ -25,7 +25,7 @@ module.exports = {
     {
       resolve: `gatsby-source-microcms`,
       options: {
-        apiKey: process.env.MICROCMS_APIKEY,
+        apiKey: `E4IlIqsobIKK67NGUFD8qfb5O0xDVFlse6cX`,
         serviceId: `erisaproduct`,
         apis: [
           {
