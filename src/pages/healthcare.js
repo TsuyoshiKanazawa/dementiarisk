@@ -248,7 +248,7 @@ const setAnimation = () => {
 
     gsap.fromTo(
       '#aboutText',
-      { y: 100 }, //fromの設定
+      { y: 100, opacity: 0 }, //fromの設定
       {  //toの設定
         y: 0,
         opacity: 1,
@@ -479,14 +479,14 @@ const setAnimation = () => {
     )
 
     gsap.fromTo(
-      '#aboutTextSp',
+      '#aboutText',
       { y: 50, opacity: 0 }, //fromの設定
       {  //toの設定
         y: 0,
         opacity: 1,
         duration: 0.5,
         scrollTrigger: {
-          trigger: '#aboutTextSp',
+          trigger: '#aboutText',
           start: 'top 80%',
         },
       }
@@ -879,10 +879,6 @@ const setAnimation = () => {
               <div className={style.mask}>
                 <h3 id="aboutText">認知症リスク検査は、島根大学医学部、滋賀医科大学、株式会社ERISAで共同開発された、世界で唯一の脳画像解析技術で、脳の状態を検査し3年後の認知症リスクを予測します。<small>（1）</small>脳の一部だけではなく、脳全体を膨大なデータと比較することで、高い精度を実現。将来を見据えた認知症予防に取り組むきっかけを提供し、受診者様のライフスタイル見直しに貢献します。</h3>
               </div>
-            </div>
-
-            <div className={style.aboutTextSp}>
-              <h3 id="aboutTextSp">認知症リスク検査は、島根大学医学部、滋賀医科大学、株式会社ERISAで共同開発された、世界で唯一の脳画像解析技術で、脳の状態を検査し３年後の認知症リスクを予測します。<small>（1）</small>脳の一部だけではなく、脳全体を膨大なデータと比較することで、高い精度を実現。将来を見据えた認知症予防に取り組むきっかけを提供し、受診者様のライフスタイル見直しに貢献します。</h3>
             </div>
           </div>
           

@@ -661,10 +661,6 @@ body::-webkit-scrollbar {
         width: 553px;
     }
 
-    .aboutText0Sp {
-        display: none;
-    }
-
     .reference {
         margin-left: 20%;
         display: flex;
@@ -689,13 +685,11 @@ body::-webkit-scrollbar {
             letter-spacing: 0.12em;
             margin-top: auto;
             margin-left: 25px;
-        }
-        .aboutText1Sp {
-            display: none;
+            width: 429px;
         }
         
         .referenceImage {
-            width: 145px;
+            width: 148px;
             height: 148px;
             padding-top: 3px;
             
@@ -2130,16 +2124,13 @@ body::-webkit-scrollbar {
     }
 
     .aboutText0 {
-        display: none;
-    }
-
-    .aboutText0Sp {
         font-size: 14px;
         display: block;
         margin-left: 10%;
         color: #595959;
         letter-spacing: 0.08em;
         line-height: 190%;
+        width: 75vw;
     }
 
     .reference {
@@ -2158,14 +2149,12 @@ body::-webkit-scrollbar {
         }
         
         .aboutText1{
-            display: none;
-        }
-        .aboutText1Sp {
-            display: block;
             font-size: 14px;
             color: #595959;
             letter-spacing: 0.08em;
             line-height: 190%;
+            width: 75vw;
+            margin: 0;
         }
     }
 
@@ -2229,7 +2218,7 @@ body::-webkit-scrollbar {
             .mriImageAnime {
                 
                 .mriImageMask {
-                    width: 97vw !important;
+                    width: 93vw !important;
                     height: 250px;
                     border-top-right-radius: 10px;
                     border-bottom-right-radius: 10px;
@@ -2245,7 +2234,7 @@ body::-webkit-scrollbar {
                 }
                 .mriImageMask:hover {
                     .mriImage {
-                        transform: scale(1);
+                        transform: scale(1, 1);
                     }
                 }
             }
@@ -2258,7 +2247,7 @@ body::-webkit-scrollbar {
 
                 .mriText {
                     background-color: #fff;
-                    width: 95vw;
+                    width: 90vw;
                     height: 340px;
                     border-top-right-radius: 10px;
                     border-bottom-right-radius: 10px;
@@ -2369,14 +2358,14 @@ body::-webkit-scrollbar {
             .preventionImageAnime {
         
                 .preventionImageMask {
-                    width: 97vw !important;
+                    width: 93vw !important;
                     height: 250px;
                     border-top-right-radius: 20px;
                     border-bottom-right-radius: 20px;
                     z-index: 0;
         
                     .preventionImage {
-                        width: 97vw;
+                        width: 93vw;
                         height: 320px;
                         transform: translateY(-30px);
                     }
@@ -2384,13 +2373,13 @@ body::-webkit-scrollbar {
             
                 .preventionImageMask:hover {
                     .preventionImage {
-                        transform: scale(1);
+                        transform: scale(1, 1);
                     }
                 }
             }
             
             .preventionTextMask {
-                width: 95vw;
+                width: 90vw;
                 height: 280px;
                 margin-left: 0;
                 overflow: hidden;
@@ -2399,7 +2388,7 @@ body::-webkit-scrollbar {
         
                 .preventionText {
                     background-color: #fff;
-                    width: 95vw;
+                    width: 90vw;
                     height: 280px;
                     border-top-right-radius: 10px;
                     border-bottom-right-radius: 10px;

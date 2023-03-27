@@ -757,6 +757,7 @@ body::-webkit-scrollbar {
         .aboutContents {
             .aboutFeatureImage {
                 width: 355px;
+                height: auto !important;
             }
         
             h1 {
@@ -857,6 +858,7 @@ body::-webkit-scrollbar {
                 width: 320px;
                 height: 240px;
                 border-radius: 10px;
+                z-index: 1;
             }
         
             h1 {
@@ -1028,6 +1030,7 @@ body::-webkit-scrollbar {
                 overflow: hidden;
                 border-top-left-radius: 10px;
                 border-bottom-left-radius: 10px;
+                z-index: 1;
                 position: relative;
 
                 .mriImage {
@@ -1862,16 +1865,12 @@ body::-webkit-scrollbar {
     }
 
     .aboutText {
-        display: none;
-    }
-
-    .aboutTextSp {
-        display: block;
-        position: static;
         margin-top: 20px;
         margin-left: auto;
         margin-right: auto;
-        width: 313px;
+        width: 75vw;
+        height: auto !important;
+        transform: translate(0);
 
         h3 {
             color: #fff;
@@ -1880,7 +1879,9 @@ body::-webkit-scrollbar {
             line-height: 190%;
             letter-spacing: 0.08rem;
             margin-bottom: 5px;
-
+            width: 75vw !important;
+            
+    
             small {
                 vertical-align: super;
                 font-size: 3px;
@@ -2212,6 +2213,7 @@ body::-webkit-scrollbar {
     padding-top: 60px;
     padding-bottom: 60px;
     position: relative;
+    overflow: hidden;
 
     .flowTitle {
         width: 250px;

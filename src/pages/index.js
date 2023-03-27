@@ -253,9 +253,10 @@ export const Index = () => {
 
     gsap.fromTo(
       '#aboutText0',
-      { y: 100 }, //fromの設定
+      { y: 80, opacity: 0 }, //fromの設定
       {  //toの設定
         y: 0,
+        opacity: 1,
         duration: 0.5,
         scrollTrigger: {
           trigger: '#aboutTriger0',
@@ -266,9 +267,10 @@ export const Index = () => {
 
     gsap.fromTo(
       '#aboutText1',
-      { y: 100 }, //fromの設定
+      { y: 80, opacity: 0 }, //fromの設定
       {  //toの設定
         y: 0,
+        opacity: 1,
         duration: 0.5,
         scrollTrigger: {
           trigger: '#aboutTriger1',
@@ -1079,67 +1081,6 @@ export const Index = () => {
             </div>
           </div>
 
-          <div id="aboutTriger0" className={style.mask}>
-            <div id="aboutText0" className={style.aboutText0Sp}>
-              認知症リスク検査は、島根大学医学部、
-            </div>
-          </div>
-
-
-          <div id="aboutText" className={style.mask}>
-            <div id="aboutText0" className={style.aboutText0Sp}>
-              滋賀医科大学株式会社ERISAで共同開
-            </div>
-          </div>
-
-          <div id="aboutText" className={style.mask}>
-            <div id="aboutText0" className={style.aboutText0Sp}>
-              発された、世界で唯一の脳画像解析技術
-            </div>
-          </div>
-
-          <div id="aboutText" className={style.mask}>
-            <div id="aboutText0" className={style.aboutText0Sp}>
-              で、脳の状態から3年後の認知症リスク
-            </div>
-          </div>
-
-          <div id="aboutText" className={style.mask}>
-            <div id="aboutText0" className={style.aboutText0Sp}>
-              を検査します。脳の一部だけではなく、
-            </div>
-          </div>
-          <div id="aboutText" className={style.mask}>
-            <div id="aboutText0" className={style.aboutText0Sp}>
-              脳全体を膨大なデータと比較すること
-            </div>
-          </div>
-          <div id="aboutText" className={style.mask}>
-            <div id="aboutText0" className={style.aboutText0Sp}>
-              で、脳の状態から3年後の認知症リスク
-            </div>
-          </div>
-          <div id="aboutText" className={style.mask}>
-            <div id="aboutText0" className={style.aboutText0Sp}>
-              で、高い精度を実現。将来を見据えた認
-            </div>
-          </div>
-          <div id="aboutText" className={style.mask}>
-            <div id="aboutText0" className={style.aboutText0Sp}>
-              知症予防に取り組むきっかけを提供し、
-            </div>
-          </div>
-          <div id="aboutText" className={style.mask}>
-            <div id="aboutText0" className={style.aboutText0Sp}>
-              受診者様のライフスタイル見直しに貢
-            </div>
-          </div>
-          <div id="aboutText" className={style.mask}>
-            <div id="aboutText0" className={style.aboutText0Sp}>
-              献します。
-            </div>
-          </div>
-
           <div id="reference" className={style.reference}>
             <div className={style.RMarkContainer}>
               <div id="RMark">
@@ -1150,59 +1091,7 @@ export const Index = () => {
             <div>
               <div id="aboutTriger1" className={style.mask}>
                 <div id="aboutText1" className={style.aboutText1}>
-                  日本における65歳以上の認知症患者数は約600万人。
-                </div>
-              </div>
-              <div className={style.mask}>
-                <div id="aboutText1" className={style.aboutText1}>
-                  高齢者の<font color="#BD0000">6人に1人</font>が発症する身近な問題です。
-                </div>
-              </div>
-              <div className={style.mask}>
-                <div id="aboutText1" className={style.aboutText1}>
-                  症状が現れる20年以上前から徐々に脳の変化が
-                </div>
-              </div>
-              <div className={style.mask}>
-                <div id="aboutText1" className={style.aboutText1}>
-                  始まっているとされ、早期から対策することにより
-                </div>
-              </div>
-              <div className={style.mask}>
-                <div id="aboutText1" className={style.aboutText1}>
-                  ある程度予防できることがわかっています。
-                </div>
-              </div>
-            </div>
-            <div>
-              <div id="aboutTriger1" className={style.mask}>
-                <div id="aboutText1" className={style.aboutText1Sp}>
-                  日本における65歳以上の認知症患者数は
-                </div>
-              </div>
-              <div className={style.mask}>
-                <div id="aboutText1" className={style.aboutText1Sp}>
-                  約600万人。高齢者の<font color="#BD0000">6人に1人</font>が発症す
-                </div>
-              </div>
-              <div className={style.mask}>
-                <div id="aboutText1" className={style.aboutText1Sp}>
-                  る身近な問題です。症状が現れる20年以
-                </div>
-              </div>
-              <div className={style.mask}>
-                <div id="aboutText1" className={style.aboutText1Sp}>
-                  上前から徐々に脳の変化が始まっていると
-                </div>
-              </div>
-              <div className={style.mask}>
-                <div id="aboutText1" className={style.aboutText1Sp}>
-                  され、早期から対策することによりある
-                </div>
-              </div>
-              <div className={style.mask}>
-                <div id="aboutText1" className={style.aboutText1Sp}>
-                  程度予防できることがわかっています。
+                  日本における65歳以上の認知症患者数は約600万人。高齢者の<font color="#BD0000">6人に1人</font>が発症する身近な問題です。症状が現れる20年以上前から徐々に脳の変化が始まっているとされ、早期から対策することによりある程度予防できることがわかっています。
                 </div>
               </div>
             </div>
