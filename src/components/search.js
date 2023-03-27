@@ -13,7 +13,9 @@ const SearchResult = () => {
         }
         setClicked(index);
     };
+
     //ドロップダウンメニューの開閉////////////////
+
     const tempData = useStaticQuery(graphql`
         query SearchData {
             allMicrocmsIntroduce {
@@ -38,6 +40,7 @@ const SearchResult = () => {
         }
     `)
 
+    //絞り込み機能///////////////////////////////
     const className = useState("")
     const allPosts = tempData.allMicrocmsIntroduce.edges
     const emptyQuery = ""
@@ -64,7 +67,8 @@ const SearchResult = () => {
     const { filteredData, query } = state
     const hasSearchResults = filteredData && query !== emptyQuery
     const result = hasSearchResults ? filteredData : allPosts
-
+    //絞り込み機能///////////////////////////////
+    
     return (
         <div className={className}>
             <div className={style.region}>

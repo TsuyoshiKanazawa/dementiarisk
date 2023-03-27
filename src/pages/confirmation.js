@@ -148,10 +148,7 @@ const closeWithClickOutSideMethod = (e, setter) => {
         <header className={style.headerWrapper}>
           <div className={isHeaderShown ? "healthcare-module--container--a37f8" : "healthcare-module--show--ad971"}>
             <div className={style.flexContainer}>
-              < Link
-                target="_blank"
-                rel="noreferrer"
-                to="https://www.erisa.co.jp/">
+              < Link href="/">
                 <img src={logoWhite} className={`healthcare-module--logoWhite--1a568 ${isShow ? "healthcare-module--logoWhite__active--6b468" : ""}`} alt="logo" />
                 <img src={logoColor} className={`healthcare-module--logoColor--9cca1 ${isShow ? "healthcare-module--logoColor__active--0f49d" : ""}`} alt="logo" />
               </Link>

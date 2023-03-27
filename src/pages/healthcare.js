@@ -683,13 +683,10 @@ const setAnimation = () => {
         <header className={style.headerWrapper}>
           <div className={isHeaderShown ? "healthcare-module--container--a37f8" : "healthcare-module--show--ad971"}>
             <div className={style.flexContainer}>
-              <Link
-                to="https://www.erisa.co.jp/"
-                target="_blank"
-                rel="noreferrer">
+              <AnchorLink href="#hero">
                 <img src={logoWhite} className={`healthcare-module--logoWhite--1a568 ${isShow ? "healthcare-module--logoWhite__active--6b468" : ""}`} alt="logo" />
                 <img src={logoColor} className={`healthcare-module--logoColor--9cca1 ${isShow ? "healthcare-module--logoColor__active--0f49d" : ""}`} alt="logo" />
-              </Link>
+              </AnchorLink>
               
               <div className={style.headerRight}>
                 <div ref={dropdownRef} className={style.translation}>
@@ -880,37 +877,8 @@ const setAnimation = () => {
 
             <div className={style.aboutText}>
               <div className={style.mask}>
-                <h3 id="aboutText">認知症リスク検査は、島根大学医学部、滋賀医科</h3>
+                <h3 id="aboutText">認知症リスク検査は、島根大学医学部、滋賀医科大学、株式会社ERISAで共同開発された、世界で唯一の脳画像解析技術で、脳の状態を検査し3年後の認知症リスクを予測します。<small>（1）</small>脳の一部だけではなく、脳全体を膨大なデータと比較することで、高い精度を実現。将来を見据えた認知症予防に取り組むきっかけを提供し、受診者様のライフスタイル見直しに貢献します。</h3>
               </div>
-
-              <div className={style.mask}>
-                <h3 id="aboutText">大学、株式会社ERISAで共同開発された、世界で</h3>
-              </div>
-
-              <div className={style.mask}>
-                <h3 id="aboutText">唯一の脳画像解析技術で、脳の状態を検査し3年</h3>
-              </div>
-
-              <div className={style.mask}>
-                <h3 id="aboutText">後の認知症リスクを予測します。<small>（1）</small>脳の一部だ</h3>
-              </div>
-
-              <div className={style.mask}>
-                <h3 id="aboutText">けではなく、脳全体を膨大なデータと比較するこ</h3>
-              </div>
-
-              <div className={style.mask}>
-                <h3 id="aboutText">とで、高い精度を実現。将来を見据えた認知症予</h3>
-              </div>
-
-              <div className={style.mask}>
-                <h3 id="aboutText">防に取り組むきっかけを提供し、受診者様のライ</h3>
-              </div>
-
-              <div className={style.mask}>
-                <h3 id="aboutText">フスタイル見直しに貢献します。</h3>
-              </div>
-
             </div>
 
             <div className={style.aboutTextSp}>
@@ -1005,7 +973,6 @@ const setAnimation = () => {
             </div>
           </div>
 
-
         </div>
 
         <div id="spec" className={style.spec}>
@@ -1048,6 +1015,7 @@ const setAnimation = () => {
         </div>
 
         <div id="flow" className={style.flow}>
+          <StaticImage src="../healthcareImages/meritBack.png" placeholder=" none" formats={["AUTO", "WEBP", "AVIF"]} className={style.meritBack} loading="lazy" alt="meritBack" />
           <div id="flowTitle" className={style.flowTitle}>
             <h1>導入の流れ</h1>
           </div>

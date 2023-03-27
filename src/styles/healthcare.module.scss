@@ -658,7 +658,7 @@ body::-webkit-scrollbar {
 
     .aboutCopyContainer {
         position: relative;
-        width: 1100px;
+        width: 1220px;
         margin-left: auto;
         margin-right: auto;
     }
@@ -702,22 +702,27 @@ body::-webkit-scrollbar {
     }
 
     .aboutText {
-        margin-left: 66%;
+        margin-left: 65%;
         transform: translateY(-150px);
         height: 50px;
 
-        h3 {
-            font-size: 16px;
-            font-weight: 300;
-            color: #fff;
-            letter-spacing: 0.12rem;
-            margin-bottom: 5px;
-            width: 400px;
-            small {
-                vertical-align: super;
-                font-size: 6px;
+        .mask {
+            width: auto;
+            h3 {
+                font-size: 16px;
+                font-weight: 300;
+                color: #fff;
+                letter-spacing: 0.12rem;
+                margin-bottom: 5px;
+                width: 400px;
+        
+                small {
+                    vertical-align: super;
+                    font-size: 6px;
+                }
             }
         }
+
     }
 
     .aboutTextSp {
@@ -957,7 +962,7 @@ body::-webkit-scrollbar {
         position: absolute;
         top: 0;
         left: -5%;
-        width: 110vw;
+        width: 120vw;
         -webkit-user-drag: none;
         animation-name: huwahuwa;
         animation-timing-function: ease-in-out;
@@ -1304,6 +1309,10 @@ body::-webkit-scrollbar {
         }
     }
 
+    .meritBack {
+        display: none;
+    }
+
 }
 
 .footer {
@@ -1597,6 +1606,19 @@ body::-webkit-scrollbar {
             height: 92vh;
             width: 100vw;
             padding-top: 37px;
+            .menuBack {
+                position: absolute;
+                width: 150vw;
+                top: 10%;
+                right: -35%;
+                -webkit-user-drag: none;
+                animation-name: huwahuwa;
+                animation-timing-function: ease-in-out;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+                animation-duration: 3s;
+
+            }
 
             .menuTop {
                 margin-right: 0;
@@ -2068,6 +2090,10 @@ body::-webkit-scrollbar {
             }
         }
     }
+
+    .meritBack {
+        display: none;
+    }
 }
 
 .spec {
@@ -2185,7 +2211,7 @@ body::-webkit-scrollbar {
     background-color: #fff;
     padding-top: 60px;
     padding-bottom: 60px;
-
+    position: relative;
 
     .flowTitle {
         width: 250px;
@@ -2342,6 +2368,21 @@ body::-webkit-scrollbar {
                 border-color: transparent transparent transparent #2876BE;
             }
         }
+    }
+
+    .meritBack {
+        display: block;
+        position: absolute;
+        top: -25%;
+        left: -30%;
+        opacity: 0.3;
+        width: 300vw;
+        -webkit-user-drag: none;
+        animation-name: huwahuwa;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration: 3s;
     }
 
 

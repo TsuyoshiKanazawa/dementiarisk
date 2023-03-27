@@ -658,7 +658,7 @@ body::-webkit-scrollbar {
         line-height: 190%;
         margin-left: 45%;
         letter-spacing: 0.12em;
-        width: 620px;
+        width: 553px;
     }
 
     .aboutText0Sp {
@@ -1566,11 +1566,12 @@ body::-webkit-scrollbar {
                 margin-left: 40px;
                 letter-spacing: 0.12rem;
                 width: 280px;
+                max-height: 70px;
             }
             h2 {
                 font-size: 14px;
                 color: #595959;
-                margin-top: 15px;
+                margin-top: 10px;
                 margin-left: 40px;
                 letter-spacing: 0.12rem;
             }
@@ -1584,6 +1585,7 @@ body::-webkit-scrollbar {
             h4 {
                 display: none;
             }
+
             .hospitalButton {
                 background-color: white;
                 width: 210px;
@@ -1592,12 +1594,9 @@ body::-webkit-scrollbar {
                 display: flex;
                 justify-content: space-between;
                 z-index: 0;
-                position: absolute;
-                bottom: 10%;
-                left: 0;
+                position: relative;
                 overflow: hidden;
-                margin-left: 35px;
-                margin-right: auto;
+                margin: 15px auto auto 35px;
 
                 p {
                     color: black;
@@ -2829,11 +2828,10 @@ body::-webkit-scrollbar {
                 height: 36px;
                 border-radius: 25px;
                 z-index: 0;
-                bottom: 15%;
-                left: 0;
                 overflow: hidden;
                 margin-left: 35px;
                 margin-right: auto;
+                margin-top: 20px;
 
                 p {
                     font-size: 14px;

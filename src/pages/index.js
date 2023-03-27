@@ -861,31 +861,12 @@ export const Index = () => {
         <header className={style.headerWrapper}>
           <div className={isHeaderShown ? "index-module--container--defd5" : "index-module--show--051e9"}>
             <div className={style.flexContainer}>
-              <Link
-                target="_blank"
-                rel="noreferrer"
-                to="https://www.erisa.co.jp/">
+              <AnchorLink href="#hero">
                 <img src={logoWhite} className={`index-module--logoWhite--2bd0c ${isShow ? "index-module--logoWhite__active--7787c" : ""}`} alt="logo" />
                 <img src={logoColor} className={`index-module--logoColor--f67bf ${isShow ? "index-module--logoColor__active--bad48" : ""}`} alt="logo" />
-              </Link>
+              </AnchorLink>
 
               <div className={style.headerRight}>
-                <div ref={dropdownRef} className={style.translation}>
-                  <span className={style.translationContainer}>
-                    <button translate="no" onClick={() => setIsOpen(!isOpen)} type="button" className={style.translationButton} id="options-menu" aria-haspopup="true" aria-expanded={isOpen}>
-                      Language
-                    </button>
-                  </span>
-                  {isOpen && (
-                    <div className={style.translationMenu}>
-                      <ul>
-                        <li><a href={englishURL} translate="no">English</a></li>
-                        <li><a href={chineseURL} translate="no">Chinese</a></li>
-                      </ul>
-                    </div>
-                  )}
-                </div>
-
                 <Link to="/confirmation">
                   <span className={style.switchButton}>
                     <p>医療関係者の方はこちら</p>
@@ -946,6 +927,7 @@ export const Index = () => {
                       <hr /><p>検査の流れ</p>
                     </AnchorLink>
                     <AnchorLink href="#question"
+                      offset='120'
                       className={style.list}
                       onClick={() => {
                         setIsShow(!isShow);
@@ -954,6 +936,7 @@ export const Index = () => {
                       <hr /><p>よくあるご質問</p>
                     </AnchorLink>
                     <AnchorLink href="#introduce"
+                      offset='30'
                       className={style.list}
                       onClick={() => {
                         setIsShow(!isShow);
@@ -1043,7 +1026,7 @@ export const Index = () => {
 
             <div className={style.mask}>
               <p id="copy" className={style.copy}>
-                3将来を見据えたライフスタイルを
+                将来を見据えたライフスタイルを
               </p>
             </div>
 
@@ -1069,7 +1052,7 @@ export const Index = () => {
 
             <div className={style.mask}>
               <p id="copy" className={style.copy}>
-                3将来を見据えた
+                将来を見据えた
               </p>
             </div>
 
@@ -1092,37 +1075,7 @@ export const Index = () => {
 
           <div id="aboutTriger0" className={style.mask}>
             <div id="aboutText0" className={style.aboutText0}>
-              認知症リスク検査は、島根大学医学部、滋賀医科大学、
-            </div>
-          </div>
-
-          <div id="aboutText" className={style.mask}>
-            <div id="aboutText0" className={style.aboutText0}>
-              株式会社ERISAで共同開発された、世界で唯一の脳画像解析技術で、
-            </div>
-          </div>
-
-          <div id="aboutText" className={style.mask}>
-            <div id="aboutText0" className={style.aboutText0}>
-              脳の状態から3年後の認知症リスクを検査します。
-            </div>
-          </div>
-
-          <div id="aboutText" className={style.mask}>
-            <div id="aboutText0" className={style.aboutText0}>
-              脳の一部だけではなく、脳全体を膨大なデータと比較することで、
-            </div>
-          </div>
-
-          <div id="aboutText" className={style.mask}>
-            <div id="aboutText0" className={style.aboutText0}>
-              高い精度を実現。将来を見据えた認知症予防に取り組むきっかけを提供し、
-            </div>
-          </div>
-
-          <div id="aboutText" className={style.mask}>
-            <div id="aboutText0" className={style.aboutText0}>
-              受診者様のライフスタイル見直しに貢献します。
+              認知症リスク検査は、島根大学医学部、滋賀医科大学、株式会社ERISAで共同開発された、世界で唯一の脳画像解析技術で、脳の状態を検査し3年後の認知症リスクを予測します。脳の一部だけではなく、脳全体を膨大なデータと比較することで、高い精度を実現。将来を見据えた認知症予防に取り組むきっかけを提供し、受診者様のライフスタイル見直しに貢献します。
             </div>
           </div>
 
@@ -1511,7 +1464,7 @@ export const Index = () => {
 
           </div>
         </div>
-
+        
         <div id="introduce" className={style.Introduce} loading="lazy">
 
           <div id="introduceTitle" className={style.title}>
