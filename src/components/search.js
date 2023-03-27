@@ -19,6 +19,7 @@ const SearchResult = () => {
             allMicrocmsIntroduce {
                 edges {
                     node {
+                        prefecture
                         address
                         name
                         number
@@ -26,7 +27,7 @@ const SearchResult = () => {
                     }
                 }
             }
-              allMicrocmsRegion {
+            allMicrocmsRegion {
                 edges {
                     node {
                         prefectures
@@ -44,15 +45,15 @@ const SearchResult = () => {
         filteredData: [],
         query: emptyQuery,
     })
-    const handleInputChange = (event, e) => {
+    const handleInputChange = (event) => {
         console.log(event.target.id)
         const query = event.target.id
         const posts = tempData.allMicrocmsIntroduce.edges || []
 
         const filteredData = posts.filter(post => {
-            const address = post.node.address
+            const prefecture = post.node.prefecture
             return (
-                address.toLowerCase().includes(query.toLowerCase())
+                prefecture.toLowerCase().includes(query.toLowerCase())
             )
         })
         setState({
@@ -113,16 +114,16 @@ const SearchResult = () => {
                                         }
                                         : { height: "0", visibility: "hidden", opacity: "0" }
                                 }>
-                                <p key={index} id={region.node.prefectures[0]} onClick={handleInputChange}>{region.node.prefectures[0]}</p>
-                                <p key={index} id={region.node.prefectures[1]} onClick={handleInputChange}>{region.node.prefectures[1]}</p>
-                                <p key={index} id={region.node.prefectures[2]} onClick={handleInputChange}>{region.node.prefectures[2]}</p>
-                                <p key={index} id={region.node.prefectures[3]} onClick={handleInputChange}>{region.node.prefectures[3]}</p>
-                                <p key={index} id={region.node.prefectures[4]} onClick={handleInputChange}>{region.node.prefectures[4]}</p>
-                                <p key={index} id={region.node.prefectures[5]} onClick={handleInputChange}>{region.node.prefectures[5]}</p>
-                                <p key={index} id={region.node.prefectures[6]} onClick={handleInputChange}>{region.node.prefectures[6]}</p>
-                                <p key={index} id={region.node.prefectures[7]} onClick={handleInputChange}>{region.node.prefectures[7]}</p>
-                                <p key={index} id={region.node.prefectures[8]} onClick={handleInputChange}>{region.node.prefectures[8]}</p>
-                                <p key={index} id={region.node.prefectures[9]} onClick={handleInputChange}>{region.node.prefectures[9]}</p>
+                                <p translate="no" key={index} id={region.node.prefectures[0]} onClick={handleInputChange}>{region.node.prefectures[0]}</p>
+                                <p translate="no" key={index} id={region.node.prefectures[1]} onClick={handleInputChange}>{region.node.prefectures[1]}</p>
+                                <p translate="no" key={index} id={region.node.prefectures[2]} onClick={handleInputChange}>{region.node.prefectures[2]}</p>
+                                <p translate="no" key={index} id={region.node.prefectures[3]} onClick={handleInputChange}>{region.node.prefectures[3]}</p>
+                                <p translate="no" key={index} id={region.node.prefectures[4]} onClick={handleInputChange}>{region.node.prefectures[4]}</p>
+                                <p translate="no" key={index} id={region.node.prefectures[5]} onClick={handleInputChange}>{region.node.prefectures[5]}</p>
+                                <p translate="no" key={index} id={region.node.prefectures[6]} onClick={handleInputChange}>{region.node.prefectures[6]}</p>
+                                <p translate="no" key={index} id={region.node.prefectures[7]} onClick={handleInputChange}>{region.node.prefectures[7]}</p>
+                                <p translate="no" key={index} id={region.node.prefectures[8]} onClick={handleInputChange}>{region.node.prefectures[8]}</p>
+                                <p translate="no" key={index} id={region.node.prefectures[9]} onClick={handleInputChange}>{region.node.prefectures[9]}</p>
                             </div>
                         </div>
                     ))}
@@ -132,6 +133,7 @@ const SearchResult = () => {
                 {result && result.map(({ node: post }) => {
                     return (
                         <div key={post.slug} id="hospital" className={style.hospital}>
+                                <h4 translate="no">{post.prefecture}</h4>
                                 <h1>{post.name}</h1>
                                 <h2>Address：{post.address}</h2>
                                 <h3>Tel：{post.number}</h3>

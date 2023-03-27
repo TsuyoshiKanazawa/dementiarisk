@@ -846,8 +846,6 @@ const setAnimation = () => {
             <StaticImage src="../healthcareImages/about.png" placeholder=" none" formats={["AUTO", "WEBP", "AVIF"]} className={style.aboutImage} loading="lazy" alt="about" />
           </div>
 
-
-          
           <div className={style.aboutCopyContainer}>
             <div id="lineMask" className={style.lineMask}>
               <hr />
@@ -928,8 +926,8 @@ const setAnimation = () => {
 
             <div id="aboutContents" className={style.aboutContents}>
               <StaticImage src="../healthcareImages/evaluation.png" alt=" profile" quality={90} placeholder="none" formats={["AUTO", "WEBP", "AVIF"]} className={style.aboutFeatureImage} />
-              <h1>全脳を解析しリスクを評価</h1>
-              <h2>脳の一部（海馬など）を対象としていた従来の分析方法から、脳全体を解析対象とすることで、高感度に脳の状態を評価。</h2>
+              <h1>海馬や嗅内野を含む全脳を評価</h1>
+              <h2>アルツハイマー型認知症では海馬に萎縮が見られないサブタイプの報告もあり、脳全体を解析対象とすることで、高感度に脳の状態を評価。</h2>
               <hr />
             </div>
             <div id="aboutContents" className={style.aboutContents}>
@@ -974,7 +972,7 @@ const setAnimation = () => {
             <div id="meritContents" className={style.contents}>
               <StaticImage src="../healthcareImages/repeat.jpg" alt=" profile" quality={90} placeholder="none" formats={["AUTO", "WEBP", "AVIF"]} className={style.meritImage} />
               <h1>受検リピート率の向上</h1>
-              <h2>身近で危機感を感じやすい認知症は、受診者様の継続受診率が高く、3年毎を目安とした受検リピートが期待できます。</h2>
+              <h2>将来、誰しもがなりえる認知症に関心を寄せてもらうことで、継続的な受検意欲の向上につながります。</h2>
               <hr />
             </div>
           </div>
