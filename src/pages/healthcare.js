@@ -463,7 +463,6 @@ const setAnimation = () => {
         },
       }
     )
-
     gsap.fromTo(
       '#aboutCopySp',
       { y: 50, opacity: 0 }, //fromの設定
