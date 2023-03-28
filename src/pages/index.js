@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef, useCallback } from "react"
-import { useLocation } from "@reach/router"
 import { Link } from "gatsby"
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { gsap } from 'gsap'
@@ -79,10 +78,6 @@ export const Index = () => {
       setIsOpen(false);
     }
   };
-  const location = useLocation();
-  const URL = location["href"]
-  const englishURL = "https://translate.google.com/translate?sl=ja&tl=en&u=" + URL;
-  const chineseURL = "https://translate.google.com/translate?sl=ja&tl=zh&u=" + URL;
 
   ///////////////////////////////////////////
 
@@ -858,7 +853,7 @@ export const Index = () => {
         <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
       </Helmet>
 
-      <body id="body">
+      <body id="body" className={style.body}>
         <div class="gtranslate_wrapper"></div>
         <header className={style.headerWrapper}>
           <div className={isHeaderShown ? "index-module--container--defd5" : "index-module--show--051e9"}>
@@ -869,7 +864,7 @@ export const Index = () => {
               </AnchorLink>
 
               <div className={style.headerRight}>
-                <Link to="/confirmation">
+                <Link to="/nrlp_default_1">
                   <span className={style.switchButton}>
                     <p>医療関係者の方はこちら</p>
                     <span className={style.playButton}></span>
