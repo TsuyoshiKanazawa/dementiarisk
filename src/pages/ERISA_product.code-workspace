@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../jamstack-site2"
+		},
+		{
+			"path": "../../../ERISA_Corporate"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "波テスト"
+	}
+}

@@ -1,0 +1,15 @@
+{
+    "routes": [
+        {
+            "route": "/html/nrlp/default_1/nrlp_dafault_1.html",
+            "serve": "https://salmon-pond-0af8d4c10.2.azurestaticapps.net",
+            "statusCode": 301
+        }
+    ],
+    "defaultHeaders": {
+        "content-security-policy": "default-src https: 'unsafe-eval' 'unsafe-inline'; object-src 'none'"
+    },
+    "mimeTypes": {
+        "custom": "text/html"
+    }
+}
