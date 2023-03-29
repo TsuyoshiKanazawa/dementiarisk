@@ -1168,6 +1168,7 @@ export const Index = () => {
           </div>
         </div>
 
+
         <div id="voiceMask" className={style.voiceMask} loading="lazy">
           <div id="voice" className={style.voiceContainer}>
             <div id="voiceImageMask" className={style.voiceImageMask}>
