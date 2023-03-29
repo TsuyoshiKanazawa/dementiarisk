@@ -1,0 +1,1083 @@
+@import './variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+
+body {
+    background-color: #ffffff;
+}
+
+.headerWrapper {
+    transition: 0.5s;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+    background-color: transparent;
+
+    .logoColor {
+        transition: 0.2s;
+        transition-delay: 0.2s;
+        width: 80px;
+    }
+
+    .switchButton {
+        background-color: white;
+        width: 240px;
+        height: 36px;
+        border-radius: 25px;
+        border: 1px solid;
+        display: flex;
+        justify-content: space-between;
+        z-index: 0;
+        position: relative;
+        overflow: hidden;
+
+        p {
+            color: black;
+            text-align: center;
+            margin: 0;
+            margin-left: 15px;
+            font-size: 14px;
+            font-weight: 300;
+            letter-spacing: 0.16rem;
+            line-height: 36px;
+            transition: .3s;
+            width: 190px;
+            overflow: hidden;
+        }
+
+        .playButton {
+            width: 26px;
+            height: 26px;
+            background-color: #B0EA0A;
+            border-radius: 25px;
+            border-style: none;
+            position: relative;
+            transform: translate(-20%, 22%);
+            transition: .3s;
+        }
+
+        .playButton::after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 6px 0 6px 12px;
+            border-color: transparent transparent transparent #fff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-40%, -50%);
+            transition: .3s;
+        }
+    }
+
+    .switchButton::after {
+        background-color: #B0EA0A;
+        border-radius: 25px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        width: 100%;
+        height: 100%;
+        transform: scale(0, 1);
+        transform-origin: left top;
+        transition: .3s cubic-bezier(0.45, 0, 0.55, 1);
+        z-index: -1;
+    }
+
+    .switchButton:hover::after {
+        transform: scale(1, 1);
+    }
+
+    .switchButton:hover {
+        transition: 0.3s;
+
+        p {
+            color: #fff;
+        }
+
+        .playButton {
+            background-color: #fff;
+        }
+
+        .playButton::after {
+            border-color: transparent transparent transparent #B0EA0A;
+        }
+    }
+
+    .menuSwitchButton {
+        background-color: white;
+        width: 240px;
+        height: 36px;
+        border-radius: 25px;
+        border: 1px solid;
+        display: flex;
+        justify-content: space-between;
+        z-index: 0;
+        position: relative;
+        overflow: hidden;
+
+        p {
+            color: black;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 300;
+            letter-spacing: 0.16rem;
+            line-height: 36px;
+            margin: 0;
+            margin-left: 15px;
+            transition: .3s;
+            width: 190px;
+            overflow: hidden;
+        }
+
+        .playButton {
+            width: 26px;
+            height: 26px;
+            background-color: #B0EA0A;
+            border-radius: 25px;
+            border-style: none;
+            position: relative;
+            transform: translate(-20%, 22%);
+            transition: .3s;
+        }
+
+        .playButton::after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 6px 0 6px 12px;
+            border-color: transparent transparent transparent #fff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-40%, -50%);
+            transition: .3s;
+        }
+    }
+
+    .menuSwitchButton::after {
+        background-color: #B0EA0A;
+        border-radius: 25px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        width: 100%;
+        height: 100%;
+        transform: scale(0, 1);
+        transform-origin: left top;
+        transition: .3s cubic-bezier(0.45, 0, 0.55, 1);
+        z-index: -1;
+    }
+
+    .menuSwitchButton:hover::after {
+        transform: scale(1, 1);
+    }
+
+    .menuSwitchButton:hover {
+        transition: 0.3s;
+
+        p {
+            color: #fff;
+        }
+
+        .playButton {
+            background-color: #fff;
+        }
+
+        .playButton::after {
+            border-color: transparent transparent transparent #B0EA0A;
+        }
+    }
+
+    .hmb {
+        background-color: transparent;
+        border: none;
+        filter: brightness(0.3);
+        visibility: hidden;
+
+        .hamberger {
+            transition: 0.2s;
+            width: 36px;
+        }
+
+        .hamberger:hover {
+            transform: scale(1.1, 1.1);
+        }
+    }
+
+    .menuWrapper {
+        background-color: transparent;
+        height: 100vh;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        opacity: 0;
+        transform: translateX(100%);
+        transition: 0.8s;
+        border-color: #B0EA0A;
+
+        &__active {
+            transform: translate(-3.5%, 0);
+            opacity: 1;
+            transition: 0.8s;
+        }
+
+        .menu {
+            background-color: #fff;
+            height: 92vh;
+            width: 960px;
+            border-bottom-left-radius: 100px;
+            margin-right: 0;
+            margin-left: auto;
+            padding-top: 40px;
+            position: relative;
+            overflow: hidden;
+            border-left-style: solid;
+            border-bottom-style: solid;
+            border-color: #B0EA0A;
+
+            .menuBack {
+                position: absolute;
+                width: 1300px;
+                height: 110vh;
+                top: -20%;
+                right: -10%;
+                -webkit-user-drag: none;
+                animation-name: huwahuwa;
+                animation-timing-function: ease-in-out;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+                animation-duration: 3s;
+                z-index: 0;
+            }
+
+            .menuTop {
+                margin-right: 0;
+                margin-left: auto;
+                display: flex;
+                justify-content: flex-end;
+                gap: 12px;
+                padding-right: 3.5vw;
+                position: relative;
+                z-index: 1;
+
+                .close {
+                    display: block;
+                    width: 40px;
+                    height: 40px;
+                    position: relative;
+                    margin-top: 3px;
+                    transition: 0.3s;
+                    border: none;
+                    background-color: transparent;
+                }
+
+                .close::before,
+                .close::after {
+                    content: "";
+                    display: block;
+                    width: 100%;
+                    /*バツ線の長さ*/
+                    height: 2px;
+                    /*バツ線の太さ*/
+                    background-color: #595959;
+                    transform: rotate(45deg);
+                    transform-origin: 0% 50%;
+                    position: absolute;
+                    top: calc(14% - 5px);
+                    left: 14%;
+                }
+
+                .close::after {
+                    transform: rotate(-45deg);
+                    transform-origin: 100% 50%;
+                    left: auto;
+                    right: 14%;
+                }
+            }
+
+            .close:hover {
+                transform: scale(1.1, 1.1);
+            }
+
+
+            .menuList {
+                margin: auto;
+                font-size: 30px;
+                letter-spacing: 0.16rem;
+                display: flex;
+                flex-flow: column;
+                gap: 50px;
+                padding-left: 300px;
+                padding-top: 100px;
+                position: relative;
+                z-index: 1;
+
+                .list {
+                    display: flex;
+                    justify-content: flex-start;
+
+                    p {
+                        color: #595959;
+                        transition: 0.3s;
+                        margin: 0;
+                    }
+
+                    p:hover {
+                        transform: scale(1.05, 1.05);
+                    }
+
+                    hr {
+                        border: none;
+                        width: 40px;
+                        height: 1px;
+                        margin: 0;
+                        margin-top: 22px;
+                        margin-right: 20px;
+                        background-color: #595959;
+                    }
+                }
+            }
+
+            .copyright {
+                display: flex;
+                justify-content: flex-start;
+                margin-top: 170px;
+
+                hr {
+                    width: 767px;
+                    height: 1px;
+                    border: none;
+                    background-color: #595959;
+                    margin-left: 0;
+                    margin-right: auto;
+                    margin-top: 17px;
+                }
+
+                p {
+                    margin-right: 90px;
+                    line-height: 12px;
+                    font-size: 12px;
+                    font-family: 'Montserrat', sans-serif;
+                    font-style: italic
+                }
+            }
+
+        }
+    }
+
+    .show {
+        @extend %container;
+        transform: translateY(-100%);
+        opacity: 0;
+        transition: 0.3s;
+        margin-top: 20px;
+
+        .flexContainer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+
+            a {
+                color: inherit;
+                font-weight: 500;
+            }
+
+            ul {
+                display: flex;
+                justify-content: flex-start;
+                gap: 10px;
+            }
+
+            .headerRight {
+                display: flex;
+                justify-content: space-between;
+                gap: 10px;
+            }
+        }
+    }
+
+    .container {
+        margin-top: 20px;
+        transition: 0.3s;
+        @extend %container;
+
+        .flexContainer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+
+            a {
+                color: inherit;
+                font-weight: 500;
+            }
+
+            .headerRight {
+                display: flex;
+                justify-content: space-between;
+                gap: 10px;
+            }
+        }
+    }
+
+}
+
+@keyframes huwahuwa {
+    0% {
+        transform: skew(0);
+    }
+
+    100% {
+        transform: skew(10deg);
+    }
+}
+
+.confirmation {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+    .spText {
+        display: none;
+    }
+
+    h1 {
+        font-size: 20px;
+        text-align: center;
+        font-size: 14px;
+        width: 510px;
+        margin: 35vh auto 0 auto;
+        color: #595959;
+        font-weight: 400;
+        line-height: 190%;
+        letter-spacing: 0.16rem;
+    }
+
+    h2 {
+        margin-top: 20px;
+        font-size: 30px;
+        text-align: center;
+        font-size: 24px;
+        color: #595959;
+        font-weight: 500;
+        letter-spacing: 0.10rem;
+    }
+
+    .buttonContainer {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+
+        .spNo {
+            display: none;
+        }
+
+        .no {
+            p {
+                font-size: 12px;
+                text-align: center;
+                letter-spacing: 0.16rem;
+                font-weight: 400;
+            }
+            .noButton {
+                display: block;
+                width: 380px;
+                height: 50px;
+                border: 2px solid #595959;
+                background-color: #fff;
+                border-radius: 30px;
+                text-align: center;
+                position: relative;
+                overflow: hidden;
+        
+                p {
+                    line-height: 50px;
+                    margin: 0;
+                    color: #595959;
+                    font-size: 14px;
+                    font-weight: 500;
+                    letter-spacing: 0.16rem;
+                    z-index: 1;
+                    position: relative;
+                }
+                .playButton {
+                    display: block;
+                    width: 32px;
+                    height: 32px;
+                    background-color: #595959;
+                    border-radius: 25px;
+                    border-style: none;
+                    position: absolute;
+                    top: 17%;
+                    left: 2%;
+                    transition: .3s;
+                    z-index: 1;
+                }
+        
+                .playButton::after {
+                    content: '';
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 8px 0 8px 14px;
+                    border-color: transparent transparent transparent #fff;
+                    position: absolute;
+                    top: 27%;
+                    left: 23%;
+                    transform: rotate(180deg);
+                    transition: .3s;
+                }
+            }
+            .noButton::after {
+                background-color: #595959;
+                position: absolute;
+                top: 0;
+                left: 0;
+                content: '';
+                width: 380px;
+                height: 50px;
+                transform: scale(0, 1);
+                transform-origin: right top;
+                transition: .4s cubic-bezier(0.45, 0, 0.55, 1);
+                z-index: 0;
+            }
+            .noButton:hover::after {
+                transform: scale(1, 1);
+            }
+            .noButton:hover {
+                transition: 0.4s;
+                border: 2px solid #595959;
+                p {
+                    color: #fff;
+                }
+        
+                .playButton {
+                    background-color: #fff;
+                }
+        
+                .playButton::after {
+                    border-color: transparent transparent transparent #595959;
+                }
+            }
+        }
+
+        .yes {
+            p {
+                font-size: 12px;
+                text-align: center;
+                letter-spacing: 0.16rem;
+                font-weight: 400;
+            }
+
+            .yesButton {
+                display: block;
+                width: 380px;
+                height: 50px;
+                border: 2px solid transparent;
+                background-color: #B0EA0A;
+                border-radius: 30px;
+                text-align: center;
+                position: relative;
+                overflow: hidden;
+
+                p {
+                    line-height: 50px;
+                    margin: 0;
+                    color: #fff;
+                    font-size: 14px;
+                    font-weight: 500;
+                    letter-spacing: 0.16rem;
+                    z-index: 1;
+                    position: relative;
+                    transition: .3s;
+                }
+                .playButton {
+                    display: block;
+                    width: 32px;
+                    height: 32px;
+                    background-color: #fff;
+                    border-radius: 25px;
+                    border-style: none;
+                    position: absolute;
+                    top: 17%;
+                    right: 2%;
+                    transition: .3s;
+                    z-index: 1;
+                }
+        
+                .playButton::after {
+                    content: '';
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 8px 0 8px 14px;
+                    border-color: transparent transparent transparent #B0EA0A;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-40%, -50%);
+                    transition: .3s;
+                }
+            }
+            .yesButton::after {
+                background-color: #ffffff;
+                position: absolute;
+                top: 0;
+                left: 0;
+                content: '';
+                width: 380px;
+                height: 50px;
+                transform: scale(0, 1);
+                transform-origin: left top;
+                transition: .4s cubic-bezier(0.45, 0, 0.55, 1);
+                z-index: 0;
+            }
+            .yesButton:hover::after {
+                transform: scale(1, 1);
+            }
+            .yesButton:hover {
+                transition: 0.4s;
+
+                p {
+                    color: #595959;
+                }
+        
+                .playButton {
+                    background-color: #B0EA0A;
+                }
+        
+                .playButton::after {
+                    border-color: transparent transparent transparent #fff;
+                }
+            }
+        }
+
+    }
+
+    .confirmationBack {
+        position: absolute;
+        top: -60%;
+        left: -10%;
+        width: 120vw;
+        height: 100vw;
+        -webkit-user-drag: none;
+        animation-name: huwahuwa;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration: 6s;
+        pointer-events: none;
+    }
+
+    .copyright {
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 30vh;
+
+        hr {
+            width: 90%;
+            height: 1px;
+            border: none;
+            background-color: #595959;
+            margin: 0;
+        }
+
+        p {
+            font-family: 'Montserrat', sans-serif;
+            font-style: italic;
+            font-size: 12px;
+            margin: 0;
+            margin-left: 2px;
+            line-height: 1px;
+            letter-spacing: 0.05rem;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .headerWrapper {
+        width: 100vw;
+
+        .flexContainer {
+            a {
+                position: relative;
+
+
+                .logoColor {
+                    width: 50px;
+                }
+
+            }
+            .hmb {
+                display: none;
+            }
+        }
+
+        .switchButton {
+            width: 195px;
+
+            p {
+                margin-left: 10px;
+                font-size: 12px;
+                width: 155px;
+            }
+        }
+
+        .switchButton::after {
+            background-color: transparent;
+            transform: scale(1, 1);
+        }
+
+        .switchButton:hover::after {
+            transform: scale(1, 1);
+        }
+
+        .switchButton:hover {
+            transform: scale(1, 1);
+
+            p {
+                color: #000000;
+            }
+
+            .playButton {
+                background-color: #000000;
+            }
+
+            .playButton::after {
+                border-color: transparent transparent transparent #B0EA0A;
+            }
+        }
+
+        .menuSwitchButton {
+            margin-left: 28%;
+            width: 195px;
+
+            p {
+                font-size: 12px;
+                width: 155px;
+                margin-left: 10px;
+            }
+        }
+
+        .menuSwitchButton::after {
+            background-color: transparent;
+            transform: scale(1, 1);
+        }
+
+        .menuSwitchButton:hover::after {
+            transform: none;
+        }
+
+        .menuSwitchButton:hover {
+            transform: scale(1, 1);
+
+            p {
+                color: #000000;
+            }
+
+            .playButton {
+                background-color: #000000;
+            }
+
+            .playButton::after {
+                border-color: transparent transparent transparent #B0EA0A;
+            }
+        }
+
+        .menuSwitchButton:hover {
+            transform: none;
+
+            p {
+                color: #fff;
+            }
+
+            .playButton {
+                background-color: #fff;
+            }
+
+            .playButton::after {
+                border-color: transparent;
+            }
+        }
+
+        .menuWrapper {
+            .menu {
+                height: 92vh;
+                width: 100vw;
+                padding-top: 37px;
+
+                .menuBack {
+                    position: absolute;
+                    width: 150vw;
+                    top: 10%;
+                    right: -35%;
+                    -webkit-user-drag: none;
+                    animation-name: huwahuwa;
+                    animation-timing-function: ease-in-out;
+                    animation-iteration-count: infinite;
+                    animation-direction: alternate;
+                    animation-duration: 3s;
+
+                }
+
+                .menuTop {
+                    margin-right: 0;
+                    padding-right: 5vw;
+
+                    .menuSwitchButton {
+                        margin-left: 0;
+                    }
+
+                    .close {
+                        margin-top: 3px;
+                    }
+                }
+
+                .menuList {
+                    padding-left: 15%;
+                    padding-top: 20%;
+                    font-size: 18px;
+                    gap: 50px;
+
+                    .list {
+                        display: flex;
+                        justify-content: flex-start;
+
+                        p {
+                            color: #595959;
+                            margin-top: 7px;
+                        }
+
+                        hr {
+                            border: none;
+                            width: 40px;
+                            height: 1px;
+                            margin: 0;
+                            margin-top: 22px;
+                            margin-right: 20px;
+                            background-color: #595959;
+                        }
+                    }
+                }
+
+                .copyright {
+                    position: absolute;
+                    bottom: 1%;
+                    left: 0;
+
+                    hr {
+                        width: 260px;
+                        margin-top: 15px;
+                    }
+
+                    p {
+                        font-size: 10px;
+                        margin-right: 0;
+                        margin-left: 2px
+                    }
+                }
+            }
+        }
+
+        .show {
+            @extend %container;
+            transform: translateY(-100%);
+            opacity: 0;
+            transition: 0.3s;
+            margin-top: 20px;
+            padding-left: 5%
+        }
+
+        .container {
+            margin-top: 20px;
+            transition: 0.3s;
+            @extend %container;
+            padding-left: 5%;
+        }
+    }
+
+    .confirmation {
+
+        h1 {
+            width: 75vw;
+            display: block;
+            line-height: 190%;
+            letter-spacing: 0.12rem;
+            margin-top: 25vh;
+        }
+
+        h2 {
+            font-size: 20px;
+        }
+
+        .buttonContainer {
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+            display: block;
+
+            .spNo {
+                display: block;
+                margin-top: 7%;
+
+                p {
+                    font-size: 12px;
+                    text-align: center;
+                    letter-spacing: 0.16rem;
+                    font-weight: 400;
+                }
+            
+                .noButton {
+                    display: block;
+                    width: 90vw;
+                    height: 50px;
+                    border: 2px solid #595959;
+                    border-radius: 30px;
+                    text-align: center;
+                    position: relative;
+                    overflow: hidden;
+                    margin-left: auto;
+                    margin-right: auto;
+                    background-color: #fff;
+            
+                    p {
+                        line-height: 50px;
+                        margin: 0;
+                        color: #595959;
+                        font-size: 14px;
+                        font-weight: 500;
+                        letter-spacing: 0.16rem;
+                        z-index: 1;
+                        position: relative;
+                    }
+            
+                    .playButton {
+                        display: block;
+                        width: 32px;
+                        height: 32px;
+                        background-color: #595959;
+                        border-radius: 25px;
+                        border-style: none;
+                        position: absolute;
+                        top: 17%;
+                        right: 2%;
+                        transition: .3s;
+                        z-index: 1;
+                    }
+            
+                    .playButton::after {
+                        content: '';
+                        width: 0;
+                        height: 0;
+                        border-style: solid;
+                        border-width: 8px 0 8px 14px;
+                        border-color: transparent transparent transparent #fff;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-40%, -50%);
+                        transition: .3s;
+                    }
+                }
+            
+                .noButton::after {
+                    background-color: transparent;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    content: '';
+                    width: 380px;
+                    height: 50px;
+                    transform: scale(0, 1);
+                    transform-origin: right top;
+                    transition: .4s cubic-bezier(0.45, 0, 0.55, 1);
+                    z-index: 0;
+                }
+            
+                .noButton:hover::after {
+                    transform: scale(1, 1);
+                }
+            
+                .noButton:hover {
+                    transition: 0.4s;
+            
+                    p {
+                        color: #595959;
+                    }
+            
+                    .playButton {
+                        background-color: #595959;
+                    }
+            
+                    .playButton::after {
+                        border-color: transparent transparent transparent #fff;
+                    }
+                }
+            }
+            .no {
+                display: none;
+            }
+
+            .yes {
+                p {
+                    font-size: 12px;
+                    text-align: center;
+                    letter-spacing: 0.16rem;
+                    font-weight: 400;
+                }
+
+                .yesButton {
+                    margin-left: auto;
+                    margin-right: auto;
+                    width: 90vw;
+                }
+
+                .yesButton:hover::after {
+                    transform: scale(1, 1);
+                }
+
+                .yesButton:hover {
+                    transition: 0.4s;
+
+                    p {
+                        color: #595959;
+                    }
+
+                    .playButton {
+                        background-color: #B0EA0A;
+                    }
+
+                    .playButton::after {
+                        border-color: transparent transparent transparent #fff;
+                    }
+                }
+            }
+
+        }
+
+        .confirmationBack {
+            position: absolute;
+            top: 10%;
+            left: -60%;
+            width: 180vw;
+            height: 180vw;
+            -webkit-user-drag: none;
+            animation-name: huwahuwa;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-duration: 6s;
+            pointer-events: none;
+        }
+    }
+}

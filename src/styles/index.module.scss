@@ -5,12 +5,9 @@
     background-color: #EDEDED !important;
     margin: 0;
     padding: 0;
-    -ms-overflow-style: none;
     visibility: hidden;
 }
-body::-webkit-scrollbar {
-    display: none;
-}
+
 .mask {
     overflow: hidden;
 }

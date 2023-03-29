@@ -64,23 +64,6 @@ export const Index = () => {
   }, [scrollEvent]);
   ///////////////////////////////////////////
 
-  //翻訳プルダウンメニューの開閉////////////////
-  const [isOpen, setIsOpen] = useState(false);
-  const dropdownRef = useRef();
-
-  useEffect(() => {
-    document.addEventListener("mousedown", handleOutsideClick);
-    return () => document.removeEventListener("mousedown", handleOutsideClick);
-  }, []);
-
-  const handleOutsideClick = (e) => {
-    if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
-      setIsOpen(false);
-    }
-  };
-
-  ///////////////////////////////////////////
-
   //ハンバーガーメニューの開閉////////////////
   const handle = useCallback((e) => { 
     e.preventDefault();
@@ -864,12 +847,12 @@ export const Index = () => {
               </AnchorLink>
 
               <div className={style.headerRight}>
-                <Link to="/nrlp_default_1">
+                <a href="/confirmation">
                   <span className={style.switchButton}>
                     <p>医療関係者の方はこちら</p>
                     <span className={style.playButton}></span>
                   </span>
-                </Link>
+                </a>
 
                 <button
                   className={style.hmb}
