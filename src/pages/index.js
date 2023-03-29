@@ -33,7 +33,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export const Index = () => {
 
-  //ヘッダーが表示・非表示になる/////////////////
+  //ヘッダーが表示・非表示になる////////////////
   const [isHeaderShown, setIsHeaderShown] = useState(true);
   const [lastPosition, setLastPosition] = useState(0);
   const headerHeight = 100;
