@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef, useCallback } from "react"
-import { Link } from "gatsby"
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'

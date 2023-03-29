@@ -48,8 +48,7 @@ const SearchResult = () => {
         filteredData: [],
         query: emptyQuery,
     })
-    const handleInputChange = (event) => {
-        console.log(event.target.id)
+    const handleInputChange = (event, index) => {
         const query = event.target.id
         const posts = tempData.allMicrocmsIntroduce.edges || []
 
@@ -63,14 +62,21 @@ const SearchResult = () => {
             query,
             filteredData,
         })
+        if (clicked === index) {
+            return setClicked(100);
+        }
+        setClicked(index);
     }
     const { filteredData, query } = state
     const hasSearchResults = filteredData && query !== emptyQuery
     const result = hasSearchResults ? filteredData : allPosts
     //絞り込み機能///////////////////////////////
-    
+
+
+
     return (
         <div className={className}>
+            <div className={style.handleContainer} onClick={handleClick}></div>
             <div className={style.region}>
                 <div id="spacey2" className={style.spacey2}>
                     {tempData.allMicrocmsRegion.edges.map((region, index) => (
@@ -100,22 +106,15 @@ const SearchResult = () => {
                             <hr
                                 style={
                                     clicked === index
-                                        ? {
-                                            height: "15px",
-                                            marginBottom: "85px"
-                                        }
-                                        : { height: "0", opacity: "0", transitionDelay: "0.5s" }
+                                        ? { height: "15px", marginBottom: "85px" }
+                                        : { height: "0", opacity: "0", transitionDelay: "0.2s" }
                                 } />
 
                             <div
                                 className={style.menus}
                                 style={
                                     clicked === index
-                                        ? {
-                                            minheight: "85px",
-                                            backgroundColor: "#fff",
-                                            transitionDelay: "0.3s"
-                                        }
+                                        ? { minheight: "85px", backgroundColor: "#fff", transitionDelay: "0.3s" }
                                         : { height: "0", visibility: "hidden", opacity: "0" }
                                 }>
                                 <p translate="no" key={index} id={region.node.prefectures[0]} onClick={handleInputChange}>{region.node.prefectures[0]}</p>
@@ -128,12 +127,14 @@ const SearchResult = () => {
                                 <p translate="no" key={index} id={region.node.prefectures[7]} onClick={handleInputChange}>{region.node.prefectures[7]}</p>
                                 <p translate="no" key={index} id={region.node.prefectures[8]} onClick={handleInputChange}>{region.node.prefectures[8]}</p>
                                 <p translate="no" key={index} id={region.node.prefectures[9]} onClick={handleInputChange}>{region.node.prefectures[9]}</p>
+                                <p translate="no" key={index} id={region.node.prefectures[10]} onClick={handleInputChange}>{region.node.prefectures[10]}</p>
                             </div>
                         </div>
                     ))}
                 </div>
             </div>
-            <div id="hospitalContainer" className={style.hospitalContainer}>
+
+            <div id="hospitalContainer" className={style.hospitalContainer} onClick={handleClick}>
                 {result && result.map(({ node: post }) => {
                     return (
                         <div key={post.slug} id="hospital" className={style.hospital}>
@@ -151,6 +152,7 @@ const SearchResult = () => {
                     )
                 })}
             </div>
+
         </div>
     )
 }

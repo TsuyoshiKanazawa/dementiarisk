@@ -25,8 +25,8 @@ module.exports = {
     {
       resolve: `gatsby-source-microcms`,
       options: {
-        apiKey: `E4IlIqsobIKK67NGUFD8qfb5O0xDVFlse6cX`,
-        serviceId: `erisaproduct`,
+        apiKey: `rG59boDCluT56ECeZi9RsxmU7rwHbNBeplpw`,
+        serviceId: `dementiarisk`,
         apis: [
           {
             endpoint: `introduce`,
@@ -41,7 +41,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
         trackingIds: [
-          "G-8NW68GETB2"
+          "G-49ZNR17NEW"
         ],
         pluginConfig: {
           head: true,
