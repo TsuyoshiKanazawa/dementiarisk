@@ -865,18 +865,18 @@ const setAnimation = () => {
               </div>
 
               <div className={style.mask}>
-                <h2 id="aboutCopy">3年後の認知症リスクを予測する。</h2>
+                <h2 id="aboutCopy">将来の認知症リスクを予測する。</h2>
               </div>
             </div>
 
             <div className={style.aboutCopySp}>
               <h1 id="aboutTitleSp">認知症リスク検査とは？</h1>
-              <h2 id="aboutCopySp">MRI装置で<br />撮像された脳画像を用いて、<br />脳全体の状態から<br />3年後の認知症リスクを<br />予測する。</h2>
+              <h2 id="aboutCopySp">MRI装置で<br />撮像された脳画像を用いて、<br />脳全体の状態から<br />将来の認知症リスクを<br />予測する。</h2>
             </div>
 
             <div className={style.aboutText}>
               <div className={style.mask}>
-                <h3 id="aboutText">認知症リスク検査は、島根大学医学部、滋賀医科大学、株式会社ERISAで共同開発された、世界で唯一の脳画像解析技術で、脳の状態を検査し3年後の認知症リスクを予測します。<small>（1）</small>脳の一部だけではなく、脳全体を膨大なデータと比較することで、高い精度を実現。将来を見据えた認知症予防に取り組むきっかけを提供し、受診者様のライフスタイル見直しに貢献します。</h3>
+                <h3 id="aboutText">認知症リスク検査は、島根大学医学部、滋賀医科大学、株式会社ERISAで共同開発された、世界で唯一の脳画像解析技術で、脳の状態を検査し将来の認知症リスクを予測します。<small>（1）</small>脳の一部だけではなく、脳全体を膨大なデータと比較することで、高い精度を実現。将来を見据えた認知症予防に取り組むきっかけを提供し、受検者のライフスタイル見直しに貢献します。</h3>
               </div>
             </div>
           </div>
@@ -896,12 +896,12 @@ const setAnimation = () => {
             <div id="aboutContents" className={style.aboutContents}>
               <StaticImage src="../healthcareImages/predict.png" alt=" profile" quality={90} placeholder="none" formats={["AUTO", "WEBP", "AVIF"]} className={style.aboutFeatureImage} />
               <h1>将来の認知症リスクを予測</h1>
-              <h2>ディープラーニングを用いた独自のAI解析技術で、将来の認知症リスクを予測。</h2>
+              <h2>経年変化を追跡した脳画像データによるディープラーニングを用いた独自のAI解析技術で、将来の認知症リスクを予測。</h2>
               <hr />
             </div>
             <div id="aboutContents" className={style.aboutContents}>
               <StaticImage src="../healthcareImages/issue.png" alt=" profile" quality={90} placeholder="none" formats={["AUTO", "WEBP", "AVIF"]} className={style.aboutFeatureImage} />
-              <h1>クラウドによる受診者様向けレポートの即時発行</h1>
+              <h1>クラウドによる受検者向けレポートの即時発行</h1>
               <h2>MRI装置で撮像した脳画像をクラウドにアップロードすることで、システムを通じて即時解析し、30分以内でレポートを返却。</h2>
               <hr />
             </div>

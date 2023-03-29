@@ -971,8 +971,8 @@ export const Index = () => {
               <img id="KvText" src={KvTextSpDown} className={style.KvTextSp0} loading="lazy" alt="text" />
             </div>
             <div className={style.mask}>
-              <h3 id="KvText">世界で唯一のAI解析技術で、<br></br>
-                3年後の認知症リスクを知る。</h3>
+              <h3 id="KvText">脳全体を解析するAI技術で、<br></br>
+                将来の認知症リスクを知る。</h3>
             </div>
           </div>
           <StaticImage src="../images/scroll.png" quality={90} placeholder=" blurred" formats={["AUTO", "WEBP", "AVIF"]} className={style.scroll} alt="scroll" />
@@ -993,45 +993,34 @@ export const Index = () => {
           <div id="aboutCopy" className={style.aboutCopy}>
             <div className={style.mask}>
               <p id="copy" className={style.copy}>
-                脳の状態から
+                全脳の状態から
               </p>
             </div>
 
             <div className={style.mask}>
               <p id="copy" className={style.copy}>
-                3年後の認知症リスクを知り、
+                将来の認知症リスクを知り、
               </p>
             </div>
 
             <div className={style.mask}>
               <p id="copy" className={style.copy}>
-                将来を見据えたライフスタイルを
+                ライフスタイルを見直すきっかけに。
               </p>
             </div>
 
-            <div className={style.mask}>
-              <p id="copy" className={style.copy}>
-                見直すきっかけに。
-              </p>
-            </div>
           </div>
 
           <div id="aboutCopy" className={style.aboutCopySp}>
             <div className={style.mask}>
               <p id="copy" className={style.copy}>
-                脳の状態から3年後の
+                全脳の状態から
               </p>
             </div>
 
             <div className={style.mask}>
               <p id="copy" className={style.copy}>
-                認知症リスクを知り、
-              </p>
-            </div>
-
-            <div className={style.mask}>
-              <p id="copy" className={style.copy}>
-                将来を見据えた
+                将来の認知症リスクを知り、
               </p>
             </div>
 
@@ -1054,7 +1043,7 @@ export const Index = () => {
 
           <div id="aboutTriger0" className={style.mask}>
             <div id="aboutText0" className={style.aboutText0}>
-              認知症リスク検査は、島根大学医学部、滋賀医科大学、株式会社ERISAで共同開発された、世界で唯一の脳画像解析技術で、脳の状態を検査し3年後の認知症リスクを予測します。脳の一部だけではなく、脳全体を膨大なデータと比較することで、高い精度を実現。将来を見据えた認知症予防に取り組むきっかけを提供し、受診者様のライフスタイル見直しに貢献します。
+              認知症リスク検査は、島根大学医学部、滋賀医科大学、株式会社ERISAで共同開発された、世界で唯一の脳画像解析技術で、脳の状態を検査し将来の認知症リスクを予測します。脳の一部だけではなく、脳全体を膨大なデータと比較することで、高い精度を実現。将来を見据えた認知症予防に取り組むきっかけを提供し、受検者のライフスタイル見直しに貢献します。
             </div>
           </div>
 
@@ -1068,7 +1057,7 @@ export const Index = () => {
             <div>
               <div id="aboutTriger1" className={style.mask}>
                 <div id="aboutText1" className={style.aboutText1}>
-                  日本における65歳以上の認知症患者数は約600万人。高齢者の<font color="#BD0000">6人に1人</font>が発症する身近な問題です。症状が現れる20年以上前から徐々に脳の変化が始まっているとされ、早期から対策することによりある程度予防できることがわかっています。
+                  日本における65歳以上の認知症患者数は約700万人。高齢者の<font color="#BD0000">5人に1人</font>が発症する身近な問題です。症状が現れる20年以上前から徐々に脳の変化が始まっているとされ、早期から対策することによりある程度予防できることがわかっています。
                 </div>
               </div>
             </div>
@@ -1113,9 +1102,9 @@ export const Index = () => {
                       高精度のMRI画像解析で<br />
                       脳全体の状態を把握</h1>
                     <hr />
-                    <p>脳の一部（海馬）のみならず、脳全体の状態を把握することで、膨大なデータベースと照合し高精度の解析を実現。脳各部位の体積の将来変化を予測することで、これまでの解析以上に正確な脳状態を確認できます。</p>
+                    <p>脳の一部（海馬など）のみならず、脳全体の状態を把握することで、膨大なデータベースと照合し高精度の解析を実現。脳各部位の体積の将来変化を予測することで、これまでの解析以上に正確な脳状態を確認できます。</p>
                     <p className={style.textSp}>
-                      脳の一部（海馬）のみならず、脳全体の状態を把握することで、膨大なデータベースと照合し高精度の解析を実現。脳各部位の体積の将来変化を予測することで、これまでの解析以上に正確な脳状態を確認できます。</p>
+                      脳の一部（海馬など）のみならず、脳全体の状態を把握することで、膨大なデータベースと照合し高精度の解析を実現。脳各部位の体積の将来変化を予測することで、これまでの解析以上に正確な脳状態を確認できます。</p>
                   </div>
                 </div>
               </div>
@@ -1133,7 +1122,7 @@ export const Index = () => {
                     <h1>3年後の脳状態を予測し<br />
                       認知症リスクを検査</h1>
                     <hr />
-                    <p>脳全体の状態から3年後の脳状態を予測することで、受診者様それぞれの認知症リスクを検査。解説付きの検査レポートを通じて、早期対策・予防に活用できます。</p>
+                    <p>脳全体の状態から将来の脳状態を予測することで、受診者様それぞれの認知症リスクを検査。解説付きの検査レポートを通じて、早期対策・予防に活用できます。</p>
                   </div>
                 </div>
               </div>
@@ -1155,8 +1144,8 @@ export const Index = () => {
                 <div className={style.preventionText}>
                   <div className={style.preventionTextContainer}>
                     <h1>
-                      早期対策・予防方針から<br />
-                      生活習慣の見直しに繋がる</h1>
+                      早期対策・予防方針による<br />
+                      ライフスタイルの見直し</h1>
                     <hr />
                     <p>自身の脳状態や将来の認知症リスクを知ることで、レポートや医療機関を通じた早期対策・予防方針から、効果的な生活習慣の見直しを検討することに繋がります。</p>
                     <p className={style.textSp}>自身の脳状態や将来の認知症リスクを知ることで、レポートや医療機関を通じた早期対策・予防方針から、効果的な生活習慣の見直しを検討することに繋がります。</p>
@@ -1167,7 +1156,6 @@ export const Index = () => {
 
           </div>
         </div>
-
 
         <div id="voiceMask" className={style.voiceMask} loading="lazy">
           <div id="voice" className={style.voiceContainer}>
@@ -1240,9 +1228,8 @@ export const Index = () => {
             <div id="circle" className={style.circle}>
               <img src={number3} className={style.number} alt="03" />
               <h3>レポート受取</h3>
-              <h4>解説付きの検査レポートが<br />
-                発行され当日または翌日以降に<br />
-                お送りいたします</h4>
+              <h4>解説付きの検査レポートを<br />
+                医療機関からお渡しいたします</h4>
               <StaticImage src="../images/report.png" alt="report" quality={90} placeholder="none" formats={["AUTO", "WEBP", "AVIF"]} className={style.reportImage} />
             </div>
           </div>
@@ -1299,13 +1286,13 @@ export const Index = () => {
                 <div className={style.mask}>
                   <div id="questionText2" className={style.question}>
                     <h2 className={style.Q}>Q.</h2>
-                    <h3 className={style.title}>この検査で認知症を診断することができますか？</h3>
+                    <h3 className={style.title}>この検査で認知症であることがわかりますか？</h3>
                   </div>
                 </div>
                 <div className={style.mask}>
                   <div id="questionText2" className={style.question}>
                     <h2 className={style.A}>A.</h2>
-                    <h3 className={style.answer}>この検査で認知症を診断することはできません。</h3>
+                    <h3 className={style.answer}>この検査結果のみで認知症と判断されることはありません。この検査の目的は、将来の認知症リスクを知り、ライフスタイルを見直すことで、認知機能低下を予防することです。</h3>
                   </div>
                 </div>
               </div>

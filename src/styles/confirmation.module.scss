@@ -538,36 +538,9 @@ body {
                     transition: .3s;
                 }
             }
-            .noButton::after {
-                background-color: #595959;
-                position: absolute;
-                top: 0;
-                left: 0;
-                content: '';
-                width: 380px;
-                height: 50px;
-                transform: scale(0, 1);
-                transform-origin: right top;
-                transition: .4s cubic-bezier(0.45, 0, 0.55, 1);
-                z-index: 0;
-            }
-            .noButton:hover::after {
-                transform: scale(1, 1);
-            }
             .noButton:hover {
-                transition: 0.4s;
-                border: 2px solid #595959;
-                p {
-                    color: #fff;
-                }
-        
-                .playButton {
-                    background-color: #fff;
-                }
-        
-                .playButton::after {
-                    border-color: transparent transparent transparent #595959;
-                }
+                transition: 0.3s;
+                transform: scale(1.05, 1.05);
             }
         }
 
@@ -629,36 +602,10 @@ body {
                     transition: .3s;
                 }
             }
-            .yesButton::after {
-                background-color: #ffffff;
-                position: absolute;
-                top: 0;
-                left: 0;
-                content: '';
-                width: 380px;
-                height: 50px;
-                transform: scale(0, 1);
-                transform-origin: left top;
-                transition: .4s cubic-bezier(0.45, 0, 0.55, 1);
-                z-index: 0;
-            }
-            .yesButton:hover::after {
-                transform: scale(1, 1);
-            }
-            .yesButton:hover {
-                transition: 0.4s;
 
-                p {
-                    color: #595959;
-                }
-        
-                .playButton {
-                    background-color: #B0EA0A;
-                }
-        
-                .playButton::after {
-                    border-color: transparent transparent transparent #fff;
-                }
+            .yesButton:hover {
+                transition: 0.3s;
+                transform: scale(1.05, 1.05);
             }
         }
 
@@ -936,7 +883,7 @@ body {
                     letter-spacing: 0.16rem;
                     font-weight: 400;
                 }
-            
+
                 .noButton {
                     display: block;
                     width: 90vw;
@@ -989,39 +936,10 @@ body {
                         transition: .3s;
                     }
                 }
-            
-                .noButton::after {
-                    background-color: transparent;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    content: '';
-                    width: 380px;
-                    height: 50px;
-                    transform: scale(0, 1);
-                    transform-origin: right top;
-                    transition: .4s cubic-bezier(0.45, 0, 0.55, 1);
-                    z-index: 0;
-                }
-            
-                .noButton:hover::after {
-                    transform: scale(1, 1);
-                }
-            
+
                 .noButton:hover {
-                    transition: 0.4s;
-            
-                    p {
-                        color: #595959;
-                    }
-            
-                    .playButton {
-                        background-color: #595959;
-                    }
-            
-                    .playButton::after {
-                        border-color: transparent transparent transparent #fff;
-                    }
+                    transition: 0.3s;
+                    transform: scale(1.05, 1.05);
                 }
             }
             .no {
@@ -1042,24 +960,9 @@ body {
                     width: 90vw;
                 }
 
-                .yesButton:hover::after {
-                    transform: scale(1, 1);
-                }
-
                 .yesButton:hover {
-                    transition: 0.4s;
-
-                    p {
-                        color: #595959;
-                    }
-
-                    .playButton {
-                        background-color: #B0EA0A;
-                    }
-
-                    .playButton::after {
-                        border-color: transparent transparent transparent #fff;
-                    }
+                    transition: 0.3s;
+                    transform: scale(1.05, 1.05);
                 }
             }
 
@@ -1078,6 +981,30 @@ body {
             animation-direction: alternate;
             animation-duration: 6s;
             pointer-events: none;
+        }
+
+        .copyright {
+            display: flex;
+            justify-content: flex-start;
+            margin-top: 25vh;
+
+            hr {
+                width: 70%;
+                height: 1px;
+                border: none;
+                background-color: #595959;
+                margin: 0;
+            }
+
+            p {
+                font-family: 'Montserrat', sans-serif;
+                font-style: italic;
+                font-size: 12px;
+                margin: 0;
+                margin-left: 2px;
+                line-height: 1px;
+                letter-spacing: 0.05rem;
+            }
         }
     }
 }

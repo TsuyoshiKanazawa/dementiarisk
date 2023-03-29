@@ -1418,8 +1418,10 @@
         
                     .answer {
                         margin-left: 15px;
+                        margin-bottom: 10px;
                         color: #595959;
                         font-size: 18px;
+                        width: 45vw;
                     }
                 }
             }
@@ -1859,7 +1861,7 @@
             }
     
             .playButton {
-                background-color: #000000;
+                background-color: #fff;
             }
     
             .playButton::after {
@@ -1895,27 +1897,11 @@
             }
     
             .playButton {
-                background-color: #000000;
-            }
-    
-            .playButton::after {
-                border-color: transparent transparent transparent #B0EA0A;
-            }
-        }
-    
-        .menuSwitchButton:hover {
-            transform: none;
-    
-            p {
-                color: #fff;
-            }
-    
-            .playButton {
                 background-color: #fff;
             }
     
             .playButton::after {
-                border-color: transparent;
+                border-color: transparent transparent transparent #B0EA0A;
             }
         }
 
@@ -2118,7 +2104,7 @@
         transform: translateY(-10%);
 
         .copy {
-            font-size: 24px;
+            font-size: 20px;
             font-weight: 500;
             color: #595959;
             margin: 0;
