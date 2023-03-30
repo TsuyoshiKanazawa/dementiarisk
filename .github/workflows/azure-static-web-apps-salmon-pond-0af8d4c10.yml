@@ -10,6 +10,8 @@ on:
       - main
   repository_dispatch:
     types: [update_post]
+    branches:
+      - main
     
 jobs:
   build_and_deploy_job:
