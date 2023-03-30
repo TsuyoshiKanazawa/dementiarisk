@@ -33,11 +33,7 @@ jobs:
           api_location: "" # Api source code path - optional
           output_location: "" # Built app content directory - optional
           ###### End of Repository/Build Configurations ######
-        env:
-          X_API_KEY: ${{ secrets.X_API_KEY }}
-          SERVICE_ID: ${{ secrets.SERVICE_ID }}
-          ###### End of Repository/Build Configurations ######
-          
+
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
     runs-on: ubuntu-latest
