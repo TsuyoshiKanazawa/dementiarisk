@@ -1120,7 +1120,7 @@ export const Index = () => {
               <div id="examinationTextMask" className={style.examinationTextMask}>
                 <div className={style.examinationText}>
                   <div className={style.examinationTextContainer}>
-                    <h1>3年後の脳状態を予測し<br />
+                    <h1>将来の脳状態を予測し<br />
                       認知症リスクを検査</h1>
                     <hr />
                     <p>脳全体の状態から将来の脳状態を予測することで、受検者様それぞれの認知症リスクを検査。解説付きの検査レポートを通じて、早期対策・予防に活用できます。</p>
@@ -1219,7 +1219,7 @@ export const Index = () => {
               <img src={number2} className={style.number} alt="02" />
               <h3>頭部MRI撮影</h3>
               <h4>ご予約の医療機関にて<br />
-                脳ドックを受診いただき<br />
+                脳ドックを受検いただき<br />
                 MRI撮像による脳画像データを取得</h4>
               <StaticImage src="../images/brain.png" alt="brain" quality={90} placeholder="none" formats={["AUTO", "WEBP", "AVIF"]} className={style.brainImage} />
             </div>
