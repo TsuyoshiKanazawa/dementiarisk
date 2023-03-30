@@ -28,7 +28,6 @@ import pointLine from '../images/pointLine.png'
 import logoFooter from '../images/logoFooter.svg'
 import ogpToc from '../images/ogpToc.jpg'
 
-
 gsap.registerPlugin(ScrollTrigger);
 
 export const Index = () => {

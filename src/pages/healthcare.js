@@ -17,7 +17,6 @@ import lineVertical from '../images/line-vertical.png'
 import logoFooter from '../images/logoFooter.svg'
 import ogpTob from '../healthcareImages/ogpTob.jpg'
 
-
 gsap.registerPlugin(ScrollTrigger);
 
 export const Index = () => {

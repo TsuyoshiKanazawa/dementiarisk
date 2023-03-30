@@ -11,7 +11,6 @@ import * as style from "../styles/confirmation.module.scss"
 
 import logoColor from '../images/logoColor.svg'
 import ogpTob from '../healthcareImages/ogpTob.jpg'
-import confirmationBack from '../healthcareImages/confirmationBack.png'
 
 gsap.registerPlugin(ScrollTrigger);
 
