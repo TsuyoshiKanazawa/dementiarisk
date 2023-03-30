@@ -25,7 +25,7 @@ module.exports = {
     {
       resolve: `gatsby-source-microcms`,
       options: {
-        apiKey: `rG59boDCluT56ECeZi9RsxmU7rwHbNBeplpw`,
+        apiKey: process.env.MICROCMS_APIKEY,
         serviceId: `dementiarisk`,
         apis: [
           {
