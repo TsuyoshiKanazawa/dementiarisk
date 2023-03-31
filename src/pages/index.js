@@ -830,10 +830,6 @@ export const Index = () => {
   
   return (
     <Layout>
-      <Helmet>
-        <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
-      </Helmet>
-
       <body id="body" className={style.body}>
         <div class="gtranslate_wrapper"></div>
 
@@ -976,8 +972,6 @@ export const Index = () => {
             </div>
           </div>
           <StaticImage src="../images/scroll.png" quality={90} placeholder=" blurred" formats={["AUTO", "WEBP", "AVIF"]} className={style.scroll} alt="scroll" />
-            
-
         </div>
 
         <div id="about" className={style.about}>
@@ -1398,6 +1392,7 @@ export const Head = () => {
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:title" content="認知症リスク検査 - 株式会社ERISA" />
       <meta name="twitter:description" content="認知症リスクを把握する脳ドックのオプション - MR画像から脳全体をAIが分析し3年後のリスクを予測" />
+      <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
     </>
   )
 }

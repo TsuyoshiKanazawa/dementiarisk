@@ -652,9 +652,6 @@ const setAnimation = () => {
 
   return (
     <Layout>
-      <Helmet>
-        <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
-      </Helmet>
       <body id="body">
         <header className={style.headerWrapper}>
           <div className={isHeaderShown ? "healthcare-module--container--a37f8" : "healthcare-module--show--ad971"}>
@@ -1127,6 +1124,7 @@ export const Head = () => {
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:title" content="認知症リスク検査 - 株式会社ERISA" />
       <meta name="twitter:description" content="認知症リスクを把握する脳ドックのオプション - MR画像から脳全体をAIが分析し3年後のリスクを予測" />
+      <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
     </>
   )
 }
