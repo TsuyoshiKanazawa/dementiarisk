@@ -971,7 +971,7 @@ export const Index = () => {
               <img id="KvText" src={KvTextSpDown} className={style.KvTextSp0} loading="lazy" alt="text" />
             </div>
             <div className={style.mask}>
-              <h3 id="KvText">脳全体を解析するAI技術で、<br></br>
+              <h3 id="KvText" className={style.text}>脳全体を解析するAI技術で、<br></br>
                 将来の認知症リスクを知る。</h3>
             </div>
           </div>
@@ -1043,7 +1043,7 @@ export const Index = () => {
 
           <div id="aboutTriger0" className={style.mask}>
             <div id="aboutText0" className={style.aboutText0}>
-              認知症リスク検査は、島根大学医学部、滋賀医科大学、株式会社ERISAで共同開発された、世界で唯一の脳画像解析技術で、脳の状態を検査し将来の認知症リスクを予測します。脳の一部だけではなく、脳全体を膨大なデータと比較することで、高い精度を実現。将来を見据えた認知症予防に取り組むきっかけを提供し、受検者のライフスタイル見直しに貢献します。
+              認知症リスク検査は、島根大学医学部、滋賀医科大学、株式会社ERISAで共同開発された脳画像解析技術で、脳の状態を検査し将来の認知症リスクを予測します。脳の一部だけではなく、脳全体を膨大なデータと比較することで、高い精度を実現。将来を見据えた認知症予防に取り組むきっかけを提供し、受検者のライフスタイル見直しに貢献します。
             </div>
           </div>
 
@@ -1165,14 +1165,14 @@ export const Index = () => {
             </div>
 
             <div id="voiceTitleSp" className={style.voiceTitleSp}>
-              <h1>受診者の声</h1>
+              <h1>受検者の声</h1>
             </div>
 
             <div className={style.voiceText}>
               <div id="voiceText" className={style.voiceTextContainer}>
                 <p>認知症の今の状態が詳しくわかったので、安心して暮らしていけると思っています。</p>
                 <hr />
-                <h6>80歳代・男性</h6>
+                <h6>80代・男性</h6>
               </div>
               <div id="voiceText" className={style.voiceTextContainer}>
                 <p>認知機能低下予防のために生活習慣の見直しを決心できたので、また3年後に検査を受けたいです。</p>

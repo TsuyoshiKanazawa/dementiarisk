@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef, useCallback } from "react"
-import { useLocation } from "@reach/router"
 import { Link } from "gatsby"
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { gsap } from 'gsap'
@@ -66,26 +65,6 @@ useEffect(() => {
 }, [scrollEvent]);
 ///////////////////////////////////////////
 
-  //翻訳プルダウンメニューの開閉////////////////
-  const [isOpen, setIsOpen] = useState(false);
-  const dropdownRef = useRef();
-
-  useEffect(() => {
-    document.addEventListener("mousedown", handleOutsideClick);
-    return () => document.removeEventListener("mousedown", handleOutsideClick);
-  }, []);
-
-  const handleOutsideClick = (e) => {
-    if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
-      setIsOpen(false);
-    }
-  };
-  const location = useLocation();
-  const URL = location["href"]
-  const englishURL = "https://translate.google.com/translate?sl=ja&tl=en&u=" + URL;
-  const chineseURL = "https://translate.google.com/translate?sl=ja&tl=zh&u=" + URL;
-
-  ///////////////////////////////////////////
 
 
 //ハンバーガーメニューの開閉/////////////////
@@ -687,22 +666,6 @@ const setAnimation = () => {
               </AnchorLink>
               
               <div className={style.headerRight}>
-                <div ref={dropdownRef} className={style.translation}>
-                  <span className={style.translationContainer}>
-                    <button onClick={() => setIsOpen(!isOpen)} type="button" className={style.translationButton} id="options-menu" aria-haspopup="true" aria-expanded={isOpen}>
-                      Language
-                    </button>
-                  </span>
-                  {isOpen && (
-                    <div className={style.translationMenu}>
-                      <ul>
-                        <li><a href={englishURL}>English</a></li>
-                        <li><a href={chineseURL}>Chinese</a></li>
-                      </ul>
-                    </div>
-                  )}
-                </div>
-
                 < Link to="/">
                   <span className={style.switchButton}>
                       <p>一般ページはこちら</p>
@@ -875,7 +838,7 @@ const setAnimation = () => {
 
             <div className={style.aboutText}>
               <div className={style.mask}>
-                <h3 id="aboutText">認知症リスク検査は、島根大学医学部、滋賀医科大学、株式会社ERISAで共同開発された、世界で唯一の脳画像解析技術で、脳の状態を検査し将来の認知症リスクを予測します。<small>（1）</small>脳の一部だけではなく、脳全体を膨大なデータと比較することで、高い精度を実現。将来を見据えた認知症予防に取り組むきっかけを提供し、受検者のライフスタイル見直しに貢献します。</h3>
+                <h3 id="aboutText">認知症リスク検査は、島根大学医学部、滋賀医科大学、株式会社ERISAで共同開発された脳画像解析技術で、脳の状態を検査し将来の認知症リスクを予測します。<small>（1）</small>脳の一部だけではなく、脳全体を膨大なデータと比較することで、高い精度を実現。将来を見据えた認知症予防に取り組むきっかけを提供し、受検者のライフスタイル見直しに貢献します。</h3>
               </div>
             </div>
           </div>
@@ -1088,7 +1051,7 @@ const setAnimation = () => {
 
           <p>ご要望に応じて、施設内に掲載するポスターや施設ホームページに掲載するバナー作成も承ります。</p>
 
-          <Link to="https://www.erisa.co.jp/" target="_blank" rel="noreferrer">
+          <Link to="https://www.erisa.co.jp/#contact" target="_blank" rel="noreferrer">
             <span className={style.switchButton}>
                 <p>検査導入に関する資料請求・お問い合わせはこちら</p>
               <span className={style.playButton}></span>
