@@ -45,7 +45,6 @@ export const Index = () => {
     } else {
       setIsHeaderShown(true);
     }
-
     if (offset < lastPosition) {
       setIsHeaderShown(true);
     }
@@ -837,6 +836,7 @@ export const Index = () => {
 
       <body id="body" className={style.body}>
         <div class="gtranslate_wrapper"></div>
+
         <header className={style.headerWrapper}>
           <div className={isHeaderShown ? "index-module--container--defd5" : "index-module--show--051e9"}>
             <div className={style.flexContainer}>
@@ -976,6 +976,8 @@ export const Index = () => {
             </div>
           </div>
           <StaticImage src="../images/scroll.png" quality={90} placeholder=" blurred" formats={["AUTO", "WEBP", "AVIF"]} className={style.scroll} alt="scroll" />
+            
+
         </div>
 
         <div id="about" className={style.about}>

@@ -656,7 +656,6 @@ const setAnimation = () => {
         <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
       </Helmet>
       <body id="body">
-        <div class="gtranslate_wrapper"></div>
         <header className={style.headerWrapper}>
           <div className={isHeaderShown ? "healthcare-module--container--a37f8" : "healthcare-module--show--ad971"}>
             <div className={style.flexContainer}>
@@ -796,6 +795,10 @@ const setAnimation = () => {
               </span>
             </span>
           </a>
+
+          <div className={style.translate}>
+            <div class="gtranslate_wrapper"></div>
+          </div>
         </div>
 
         <div id="about" className={style.about}>
