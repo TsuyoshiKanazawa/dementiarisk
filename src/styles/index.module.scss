@@ -1762,14 +1762,14 @@
                 text-align: left;
     
                 .list {
-                    width: 247px;
+                    width: 250px;
                     display: flex;
                     justify-content: flex-start;
                     text-align: left;
     
                     p {
                         color: #fff;
-                        font-size: 16px;
+                        font-size: 16px !important;
                         letter-spacing: 0.16rem;
                         text-align: left;
                         margin: 0;
