@@ -1058,7 +1058,7 @@ export const Index = () => {
               </div>
             </div>
 
-            <div className={style.mask}>
+            <div className={style.referenceImagemask}>
               <div id="referenceImage">
                 <StaticImage src="../images/referenceImage.png" alt="referenceImage" quality={90} placeholder="none" formats={["AUTO", "WEBP", "AVIF"]} className={style.referenceImage} />
                 <StaticImage src="../images/referenceImageSp.png" alt="referenceImageSp" quality={90} placeholder="none" formats={["AUTO", "WEBP", "AVIF"]} className={style.referenceImageSp} />

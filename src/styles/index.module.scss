@@ -696,6 +696,10 @@
             width: 429px;
         }
         
+        .referenceImagemask {
+            overflow: hidden;
+            height: 150px;
+        }
         .referenceImage {
             width: 143px;
             height: 143px;
@@ -996,7 +1000,8 @@
                 transform: translate(0%, -90%);
                 border-top-right-radius: 20px;
                 border-bottom-right-radius: 20px;
-                z-index: 1;
+                position: relative;
+                z-index: 2;
 
                 .preventionText {
                     background-color: #fff;
@@ -1535,6 +1540,7 @@
                     transition: 0.3s;
                     margin: 0 0 0 25px;
                     width: 70px;
+                    font-size: 16px;
 
                     p:hover {
                         transform: scale(1.1, 1.1);
@@ -2166,6 +2172,11 @@
             width: 75vw;
             margin: 0;
         }
+    }
+
+    .referenceImagemask {
+        overflow: hidden;
+        height: auto !important;
     }
 
     .referenceImage {
