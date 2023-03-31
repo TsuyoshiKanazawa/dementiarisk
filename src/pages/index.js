@@ -209,7 +209,7 @@ export const Index = () => {
         duration: 0.6,
         scrollTrigger: {
           trigger: '#aboutCopy',
-          start: 'top 50%', //要素のトップが、画面の中央まできたら開始
+          start: 'top 70%', //要素のトップが、画面の中央まできたら開始
         },
       }
     )
