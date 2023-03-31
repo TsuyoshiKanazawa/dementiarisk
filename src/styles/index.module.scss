@@ -698,13 +698,16 @@
         
         .referenceImagemask {
             overflow: hidden;
-            height: 150px;
+            height: 160px;
+            padding-top: 4px;
         }
         .referenceImage {
             width: 143px;
             height: 143px;
-            padding-top: 3px;
-            
+            padding-top: 4px;
+            display: block;
+            margin-top: auto;
+            margin-bottom: auto;
         }
         .referenceImageSp {
             display: none;

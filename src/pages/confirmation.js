@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { Helmet } from "react-helmet"
+import { Helmet } from 'react-helmet'
 
 import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
@@ -117,6 +117,9 @@ const closeWithClickOutSideMethod = (e, setter) => {
 
   return (
     <Layout>
+      <Helmet>
+        <script src="https://cdn.gtranslate.net/widgets/latest/float.js"></script>
+      </Helmet>
       <body id="body">
         <div class="gtranslate_wrapper"></div>
         <header className={style.headerWrapper}>
@@ -127,12 +130,12 @@ const closeWithClickOutSideMethod = (e, setter) => {
               </Link>
               
               <div className={style.headerRight}>
-                < Link to="/">
+                <a href="/">
                   <span className={style.switchButton}>
                       <p>一般ページはこちら</p>
                     <span className={style.playButton}></span>
                   </span>
-                </Link>
+                </a>
 
                 <button
                   className={style.hmb}
@@ -156,9 +159,9 @@ const closeWithClickOutSideMethod = (e, setter) => {
                   <div className={style.menuTop}>
 
                     <div className={style.menuSwitchButton} >
-                      < Link to="/" onClick={scrollLockLift}>
+                      <a href="/" onClick={scrollLockLift}>
                         <p>一般ページはこちら</p>
-                      </Link>
+                      </a>
                       <div className={style.playButton}></div>
                     </div>
 
@@ -245,9 +248,9 @@ const closeWithClickOutSideMethod = (e, setter) => {
           
           <div className={style.buttonContainer}>
             <div className={style.no}>
-              <Link to="/" className={style.noButton}>
+              <a href="/" className={style.noButton}>
                 <span className={style.playButton}></span><p>いいえ、違います</p>
-              </Link>
+              </a>
               <p>一般の方向けページに遷移します</p>
             </div>
             
@@ -290,7 +293,6 @@ export const Head = () => {
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:title" content="認知症リスク検査 - 株式会社ERISA" />
       <meta name="twitter:description" content="認知症リスクを把握する脳ドックのオプション - MR画像から脳全体をAIが分析し3年後のリスクを予測" />
-      <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
     </>
   )
 }

@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { Helmet } from "react-helmet"
+import { Helmet } from 'react-helmet'
 
 import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
@@ -652,6 +652,9 @@ const setAnimation = () => {
 
   return (
     <Layout>
+      <Helmet>
+        <script src="https://cdn.gtranslate.net/widgets/latest/float.js"></script>
+      </Helmet>
       <body id="body">
         <header className={style.headerWrapper}>
           <div className={isHeaderShown ? "healthcare-module--container--a37f8" : "healthcare-module--show--ad971"}>
@@ -662,12 +665,12 @@ const setAnimation = () => {
               </AnchorLink>
               
               <div className={style.headerRight}>
-                < Link to="/">
+                <a href="/">
                   <span className={style.switchButton}>
                       <p>一般ページはこちら</p>
                     <span className={style.playButton}></span>
                   </span>
-                </Link>
+                </a>
 
                 <button
                   className={style.hmb}
@@ -689,12 +692,12 @@ const setAnimation = () => {
               >
                 <div className={style.menu}>
                   <div className={style.menuTop}>
-                    < Link to="/" onClick={scrollLockLift}>
+                    <a href="/" onClick={scrollLockLift}>
                       <div className={style.menuSwitchButton} >
                           <p>一般ページはこちら</p>
                         <div className={style.playButton}></div>
                       </div>
-                    </Link>
+                    </a>
                     <button
                       className={style.close}
                       onClick={() => {
@@ -1124,7 +1127,6 @@ export const Head = () => {
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:title" content="認知症リスク検査 - 株式会社ERISA" />
       <meta name="twitter:description" content="認知症リスクを把握する脳ドックのオプション - MR画像から脳全体をAIが分析し3年後のリスクを予測" />
-      <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
     </>
   )
 }
