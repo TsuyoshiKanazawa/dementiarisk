@@ -1855,78 +1855,78 @@
         }
     }
 
-        .switchButton {
-            width: 195px;
-    
-            p {
-                margin-left: 10px;
-                font-size: 12px;
-                width: 155px;
-                letter-spacing: 0.1rem;
-            }
+    .switchButton {
+        width: 195px;
+
+        p {
+            margin-left: 10px;
+            font-size: 12px;
+            width: 155px;
+            letter-spacing: 0.1rem;
         }
-    
-        .switchButton::after {
-            background-color: transparent;
-            transform: scale(1, 1);
+    }
+
+    .switchButton::after {
+        background-color: transparent;
+        transform: scale(1, 1);
+    }
+
+    .switchButton:hover::after {
+        transform: scale(1, 1);
+    }
+
+    .switchButton:hover {
+        transform: scale(1, 1);
+
+        p {
+            color: #000000;
         }
-    
-        .switchButton:hover::after {
-            transform: scale(1, 1);
+
+        .playButton {
+            background-color: #fff;
         }
-    
-        .switchButton:hover {
-            transform: scale(1, 1);
-    
-            p {
-                color: #000000;
-            }
-    
-            .playButton {
-                background-color: #fff;
-            }
-    
-            .playButton::after {
-                border-color: transparent transparent transparent #B0EA0A;
-            }
+
+        .playButton::after {
+            border-color: transparent transparent transparent #B0EA0A;
         }
-    
-        .menuSwitchButton {
-            margin-left: 28%;
-            width: 195px;
-    
-            p {
-                font-size: 12px;
-                width: 155px;
-                margin-left: 10px;
-                letter-spacing: 0.1rem;
-            }
+    }
+
+    .menuSwitchButton {
+        margin-left: 28%;
+        width: 195px;
+
+        p {
+            font-size: 12px;
+            width: 155px;
+            margin-left: 10px;
+            letter-spacing: 0.1rem;
         }
-    
-        .menuSwitchButton::after {
-            background-color: transparent;
-            transform: scale(1, 1);
+    }
+
+    .menuSwitchButton::after {
+        background-color: transparent;
+        transform: scale(1, 1);
+    }
+
+    .menuSwitchButton:hover::after {
+        transform: none;
+    }
+
+    .menuSwitchButton:hover {
+        transform: scale(1, 1);
+
+        p {
+            color: #000000;
         }
-    
-        .menuSwitchButton:hover::after {
-            transform: none;
+
+        .playButton {
+            background-color: #fff;
         }
-    
-        .menuSwitchButton:hover {
-            transform: scale(1, 1);
-    
-            p {
-                color: #000000;
-            }
-    
-            .playButton {
-                background-color: #fff;
-            }
-    
-            .playButton::after {
-                border-color: transparent transparent transparent #B0EA0A;
-            }
+
+        .playButton::after {
+            border-color: transparent transparent transparent #B0EA0A;
         }
+    }
 
 
     .menuWrapper {
@@ -2914,6 +2914,7 @@
         width: 350vw;
         left: -150%;
         top: 10%;
+        pointer-events: none;
     }
 
     .footerContainer {

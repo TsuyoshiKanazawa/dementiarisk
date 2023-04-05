@@ -19,7 +19,15 @@ import ogpTob from '../healthcareImages/ogpTob.jpg'
 gsap.registerPlugin(ScrollTrigger);
 
 export const Index = () => {
-
+  useEffect(() => {
+    window.gtranslateSettings = {
+      "default_language": "ja",
+      "detect_browser_language": false,
+      "languages": ["ja", "en", "zh-CN"],
+      "wrapper_selector": ".gtranslate_wrapper"
+    }
+  });
+  
 //ページスキップ防止////////////////////////
   useEffect(() => {
     const referrer = document.referrer;
@@ -629,25 +637,7 @@ const setAnimation = () => {
 
 }
 //アニメーション専用/////////////////////////////////////////
-  let script = null;
-  useEffect(() => {
-    // 同じscriptが量産されるのを防ぐため同じscriptタグがある場合は処理しない
-    if (document.querySelector('#crazy_script') === null) {
-      script = document.createElement('script');
-      script.id = 'crazy_script';
 
-      // innerHTMLでやりたい内容を書く
-      script.innerHTML = `
-              window.gtranslateSettings = {"default_language":"ja","detect_browser_language":true,"languages":["ja","en","zh-CN"],"wrapper_selector":".gtranslate_wrapper"}
-          `;
-    }
-  })
-  // reactのレンダリング後にscriptを埋め込みたいのでuseEffectで埋め込む
-  useEffect(() => {
-    if (script !== null) {
-      document.body.appendChild(script);
-    }
-  })
 
 
   return (
