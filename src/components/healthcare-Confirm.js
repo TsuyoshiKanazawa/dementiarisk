@@ -23,9 +23,6 @@ const Confirmation = props => {
   const tel = values.tel; //電話番号
   const message = values.contact; //お問い合わせ内容
 
-  const serviceID = "service_1obp7sd";
-  const templateID = "template_m9b9knw";
-
   const sendMail = () => {
     init("OhzGRqewkPcbhrZ0o");
 
