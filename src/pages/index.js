@@ -588,9 +588,7 @@ export const Index = () => {
           },
         }
       )
-
     });
-
 
     //voice//////////////////////
 
@@ -908,9 +906,7 @@ export const Index = () => {
                       }}>
                       <hr /><p>導入医療機関</p>
                     </AnchorLink>
-                    <a href="https://www.erisa.co.jp/#contact"
-                      target="_blank"
-                      rel="noreferrer"
+                    <a href="/contact"
                       className={style.list}
                       onClick={() => {
                         setIsShow(!isShow);
@@ -1305,13 +1301,11 @@ export const Index = () => {
         </div>
 
         <div id="introduce" className={style.Introduce} loading="lazy">
-
           <div id="introduceTitle" className={style.title}>
             <h1>導入医療機関</h1>
           </div>
           <Search />
           <StaticImage src="../images/search.png" alt="searchImage" quality={90} placeholder="none" formats={["AUTO", "WEBP", "AVIF"]} className={style.searchImage} />
-
         </div>
 
         <footer className={style.footer}>
@@ -1337,7 +1331,7 @@ export const Index = () => {
                   <hr /><AnchorLink href="#flow"><p>検査の流れ</p></AnchorLink>
                 </div>
                 <div className={style.list}>
-                  <hr /><a href="https://www.erisa.co.jp/#contact" target="_blank" rel="noreferrer"><p>お問い合わせ</p></a>
+                  <hr /><a href="/contact"><p>お問い合わせ</p></a>
                 </div>
                 <div className={style.list}>
                   <hr /><AnchorLink href="#question"><p>よくあるご質問</p></AnchorLink>
@@ -1380,7 +1374,6 @@ export const Head = () => {
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:title" content="認知症リスク検査 - 株式会社ERISA" />
       <meta name="twitter:description" content="認知症リスクを把握する脳ドックのオプション - MR画像から脳全体をAIが分析し3年後のリスクを予測" />
-
     </>
   )
 }

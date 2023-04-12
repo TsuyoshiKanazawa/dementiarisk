@@ -35,11 +35,11 @@ export const Index = () => {
       ;
     } else if (referrer.indexOf('translate') !== -1) {
       ;
+    } else if (referrer.indexOf('/healthcare') !== -1) {
+      ;
     } else {
       window.location.href = "/confirmation";
     } 
-
-    console.log(referrer);
   }, );
 ///////////////////////////////////////////
 
@@ -730,9 +730,7 @@ const setAnimation = () => {
                       }}>
                       <hr /><p>導入の流れ</p>
                     </AnchorLink>
-                    <a href="https://www.erisa.co.jp/#contact"
-                      target="_blank"
-                      rel="noreferrer"
+                    <a href="/healthcare/contact"
                       className={style.list}
                       onClick={() => {
                         setIsShow(!isShow);
@@ -1075,7 +1073,7 @@ const setAnimation = () => {
                   <hr /><AnchorLink href="#merit"><p>導入メリット</p></AnchorLink>
                 </div>
                 <div className={style.list}>
-                  <hr /><a href="https://www.erisa.co.jp/#contact" target="_blank" rel="noreferrer"><p>お問い合わせ</p></a>
+                  <hr /><a href="/healthcare/contact"><p>お問い合わせ</p></a>
                 </div>
                 <div className={style.list}>
                   <hr /><AnchorLink href="#spec"><p>ご利用に必要な環境</p></AnchorLink>
