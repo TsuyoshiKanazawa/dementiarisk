@@ -32,15 +32,13 @@ gsap.registerPlugin(ScrollTrigger);
 
 export const Index = () => {
 
-  useEffect(() => {
     window.gtranslateSettings = {
       "default_language": "ja",
       "detect_browser_language": false,
       "languages": ["ja", "en", "zh-CN"],
       "wrapper_selector": ".gtranslate_wrapper"
     }
-  });
-  
+
   //ヘッダーが表示・非表示になる////////////////
   const [isHeaderShown, setIsHeaderShown] = useState(true);
   const [lastPosition, setLastPosition] = useState(0);
@@ -811,7 +809,6 @@ export const Index = () => {
   }
   //アニメーション専用/////////////////////////////////////////
 
-  
   return (
     <Layout>
       <Helmet>

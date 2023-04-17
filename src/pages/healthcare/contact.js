@@ -239,13 +239,13 @@ export const Index = () => {
                 <div className={style.contactContainer} name='scrollTarget'>
                     <StaticImage src="../../healthcareImages/healthcare-contactBack.png" quality={90} placeholder="blurred" formats={["AUTO", "WEBP", "AVIF"]} className={style.contactBack} loading="lazy" alt="background" />
                     <StaticImage src="../../healthcareImages/healthcare-contactBackSP.png" quality={90} placeholder="blurred" formats={["AUTO", "WEBP", "AVIF"]} className={style.contactBackSP} loading="lazy" alt="background" />
-                    
+
                     <h1>医療関係者の方向け</h1>
                     <h2>お問い合わせ</h2>
                     <hr />
                     <h3>本フォームは一般の方向けの<br className={style.br}></br>お問い合わせとなります。<br />
                         一般の方は<a href="/contact">こちら</a>のフォームより<br className={style.br}></br>お問い合わせください。</h3>
-                        
+
                     <div className={style.contact}>
                         <form onSubmit={handleSubmit(onSubmitData)} className={style.contactBox}>
                             {/*onSubmit(入力フォームの送信ボタンがクリックされた時に発生するイベント)で入力された値をhandleSubmitで取り出す*/}

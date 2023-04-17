@@ -4,7 +4,7 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Helmet } from 'react-helmet'
 import { useForm } from 'react-hook-form'
-import { Element, scroller } from 'react-scroll'
+import { scroller } from 'react-scroll'
 import Confirmation from '../components/Confirm'
 
 import { StaticImage } from "gatsby-plugin-image"
@@ -234,7 +234,6 @@ export const Index = () => {
                             </div>
                         </div>
                     </div>
-
                 </header>
 
                 <div className={style.contactContainer} name='scrollTarget'>
@@ -407,16 +406,7 @@ export default Index
 export const Head = () => {
     return (
         <>
-            <title>認知症リスク検査 - 株式会社ERISA</title>
-            <meta name="description" content="認知症リスクを把握する脳ドックのオプション - MR画像から脳全体をAIが分析し3年後のリスクを予測" />
-            <meta property="og:image" content={ogpToc} />
-            <meta property="og:title;" content="認知症リスク検査 - 株式会社ERISA" />
-            <meta property="og:site-name;" content="認知症リスク検査 - 株式会社ERISA" />
-            <meta property="og:type" content="website" />
-            <meta property="og:locale" content="ja_JP" />
-            <meta name="twitter:card" content="summary" />
-            <meta name="twitter:title" content="認知症リスク検査 - 株式会社ERISA" />
-            <meta name="twitter:description" content="認知症リスクを把握する脳ドックのオプション - MR画像から脳全体をAIが分析し3年後のリスクを予測" />
+            <title>株式会社ERISA</title>
         </>
     )
 }

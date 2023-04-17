@@ -27,15 +27,19 @@ const Confirmation = props => {
     init("OhzGRqewkPcbhrZ0o");
 
     const template_param = {
+      site: "医療従事者向け",
       orname: orname,
+      ornameText: "医療機関名・団体名：" + orname,
       name: name,
-      affiliation: affiliation,
+      affiliation: affiliation + ":",
+      affiliationText: affiliation,
+      mailText: "メールアドレス：" + mail,
       mail: mail,
-      tel: tel,
+      tel: "電話番号:" + tel,
       message: message,
     };
 
-    send("service_1obp7sd", "template_m9b9knw", template_param).then(() => {
+    send("service_1obp7sd", "template_ymc522c", template_param).then(() => {
       window.location.href = '/healthcare/contact-completion';
     });
   }

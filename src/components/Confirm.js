@@ -25,9 +25,11 @@ const Confirmation = props => {
     init("OhzGRqewkPcbhrZ0o");
 
     const template_param = {
+      site: "消費者向け",
       name: name,
+      mailText: "メールアドレス：" + mail,
       mail: mail,
-      tel: tel,
+      tel: "電話番号" + tel,
       message: message,
     };
 
