@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback } from "react"
+import React, { useLayoutEffect, useState, useEffect, useRef, useCallback } from "react"
 import { Link } from "gatsby"
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { gsap } from 'gsap'
@@ -19,15 +19,16 @@ import ogpTob from '../healthcareImages/ogpTob.jpg'
 gsap.registerPlugin(ScrollTrigger);
 
 export const Index = () => {
-  useEffect(() => {
+
+  useLayoutEffect = () => {
     window.gtranslateSettings = {
       "default_language": "ja",
       "detect_browser_language": false,
       "languages": ["ja", "en", "zh-CN"],
       "wrapper_selector": ".gtranslate_wrapper"
     }
-  });
-  
+  }
+
 //ページスキップ防止////////////////////////
   useEffect(() => {
     const referrer = document.referrer;

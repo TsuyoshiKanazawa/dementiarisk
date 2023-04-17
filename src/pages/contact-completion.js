@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react"
+import React, { useState, useEffect, useCallback, useLayoutEffect } from "react"
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -17,14 +17,14 @@ gsap.registerPlugin(ScrollTrigger);
 
 export const Index = () => {
 
-    useEffect(() => {
+    useLayoutEffect = () => {
         window.gtranslateSettings = {
             "default_language": "ja",
             "detect_browser_language": false,
             "languages": ["ja", "en", "zh-CN"],
             "wrapper_selector": ".gtranslate_wrapper"
         }
-    });
+    }
 
     //ヘッダーが表示・非表示になる////////////////
     const [isHeaderShown, setIsHeaderShown] = useState(true);
