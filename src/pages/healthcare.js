@@ -20,14 +20,14 @@ gsap.registerPlugin(ScrollTrigger);
 
 export const Index = () => {
 
-  useLayoutEffect = () => {
+  useLayoutEffect(() => {
     window.gtranslateSettings = {
       "default_language": "ja",
       "detect_browser_language": false,
       "languages": ["ja", "en", "zh-CN"],
       "wrapper_selector": ".gtranslate_wrapper"
     }
-  }
+  });
 
 //ページスキップ防止////////////////////////
   useEffect(() => {
