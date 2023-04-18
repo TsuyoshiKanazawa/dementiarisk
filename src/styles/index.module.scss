@@ -2080,11 +2080,15 @@
             opacity: 0;
         }
 
-        .text {
-            font-size: 16px !important;
-            margin-top: 10%;
-            opacity: 0;
+        .mask {
+            
+            .text {
+                font-size: 16px !important;
+                margin-top: 10%!important;
+                opacity: 0;
+            }
         }
+
     }
 
     .scroll {
