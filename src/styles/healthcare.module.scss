@@ -1519,7 +1519,6 @@ body {
                     visibility: hidden;
                 }
             }
-        
             .logoColor {
                 width: 50px;
                 position: absolute;
@@ -1612,9 +1611,10 @@ body {
 
     .menuWrapper {
         .menu {
-            height: 92vh;
+            height: 86vh;
             width: 100vw;
             padding-top: 37px;
+
             .menuBack {
                 position: absolute;
                 width: 150vw;
@@ -1631,6 +1631,7 @@ body {
             .menuTop {
                 margin-right: 0;
                 padding-right: 5vw;
+
                 .menuSwitchButton {
                     margin-left: 0;
                 }
@@ -1641,9 +1642,10 @@ body {
 
             .menuList {
                 padding-left: 15%;
-                padding-top: 6vh;
+                padding-top: 8%;
                 font-size: 18px;
                 gap: 50px;
+
                 .list {
                     display: flex;
                     justify-content: flex-start;
@@ -1729,6 +1731,11 @@ body {
     a {
     position: fixed;
     z-index: 1;
+    right: 0;
+    bottom: 10%;
+    height: 70px;
+    width: 130px;
+    display: none;
 
     .document {
         height: 70px;
@@ -2444,8 +2451,6 @@ body {
 
         .listFooter {
             margin-top: 18%;
-
-
 
             .list {
                 position: relative;

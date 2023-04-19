@@ -228,7 +228,7 @@
 
         .menu {
             background-color: #fff;
-            height: 92vh;
+            height: 86vh;
             width: 960px;
             border-bottom-left-radius: 100px;
             margin-right: 0;
@@ -303,7 +303,6 @@
             .close:hover {
                 transform: scale(1.1, 1.1);
             }
-
 
             .menuList {
                 margin: auto;
@@ -726,6 +725,10 @@
                 font-size: 14px;
                 font-weight: 400;
                 letter-spacing: 0.15rem;
+
+                br {
+                    display: none;
+                }
             }
 
             .forms {
@@ -1298,7 +1301,7 @@
 
     .menuWrapper {
         .menu {
-            height: 92vh;
+            height: 86vh;
             width: 100vw;
             padding-top: 37px;
 
@@ -1331,7 +1334,7 @@
 
             .menuList {
                 padding-left: 15%;
-                padding-top: 20%;
+                padding-top: 10%;
                 font-size: 18px;
                 gap: 50px;
 
@@ -1619,6 +1622,10 @@
                 color: #B20000;
                 font-size: 12px;
                 text-align: center;
+
+                br {
+                    display: block;
+                }
             }
 
             .forms {
@@ -2001,21 +2008,16 @@
         .listFooter {
             margin-top: 18%;
 
-            ul {
-                gap: 35px;
+            .list {
 
-                .list {
-
-                    hr {
-                        width: 25px;
-                        margin-top: 10px;
-                    }
-                    li {
-                        font-size: 14px;
-                    }
+                hr {
+                    width: 25px !important;
+                    margin-top: 10px !important;
+                }
+                p {
+                    font-size: 14px !important;
                 }
             }
-
 
             .toTop {
                 position: absolute;

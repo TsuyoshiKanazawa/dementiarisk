@@ -41,7 +41,7 @@ const Confirmation = props => {
   return (
     <>
       <div className={style.confirmBox}>
-        <h1 className={style.note}>以下の内容でお間違いなければ「送信」ボタンを押してください。</h1>
+        <h1 className={style.note}>以下の内容でお間違いなければ<br />「送信」ボタンを押してください。</h1>
         <div className={style.forms}>
           <h1>氏名<span>※</span></h1>
           <p translate="no">{values.name}</p>
