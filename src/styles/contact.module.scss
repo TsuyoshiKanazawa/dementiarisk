@@ -565,6 +565,8 @@
                     line-height: 45px;
                     color: #000000;
                     font-weight: 500;
+                    overflow: hidden;
+                    white-space: nowrap;
 
                     span {
                         color: #B20000;
@@ -611,7 +613,7 @@
                     height: 50px;
                     border: 2px solid #595959;
                     border-radius: 25px;
-                    background-color: white;
+                    background-color: transparent;
                     margin: auto;
                     cursor: pointer;
                     font-family: 'Noto Sans JP', sans-serif;
@@ -620,6 +622,24 @@
                     color: #595959;
                     line-height: 47px;
                     letter-spacing: 0.16rem;
+                    position: relative;
+                    z-index: 1;
+                }
+
+                p {
+                    margin: 0;
+                    text-align: center;
+                    width: 380px;
+                    font-family: 'Noto Sans JP', sans-serif;
+                    font-size: 14px;
+                    font-weight: 700;
+                    color: #595959;
+                    line-height: 47px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    z-index: 0;
+                    transform: translate(-50%, -50%);
                 }
 
                 .playButton {
@@ -690,6 +710,8 @@
                     margin: 0 !important;
                     text-align: left !important;
                     color: #000;
+                    overflow: hidden;
+                    white-space: nowrap;
 
                     span {
                         color: #B20000;
@@ -788,7 +810,7 @@
                         height: 50px;
                         border: 2px solid #595959;
                         border-radius: 25px;
-                        background-color: white;
+                        background-color: transparent;
                         margin: 0;
                         padding: 0;
                         cursor: pointer;
@@ -797,6 +819,24 @@
                         font-weight: 700;
                         color: #595959;
                         letter-spacing: 0.16rem;
+                        position: relative;
+                        z-index: 1;
+                    }
+
+                    p {
+                        margin: 0;
+                        text-align: center;
+                        width: 380px;
+                        font-family: 'Noto Sans JP', sans-serif;
+                        font-size: 14px;
+                        font-weight: 700;
+                        color: #595959;
+                        line-height: 47px;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        z-index: 0;
+                        transform: translate(-50%, -50%);
                     }
 
                     .playButton {
@@ -822,7 +862,7 @@
                         border-width: 8px 0 8px 14px;
                         border-color: transparent transparent transparent #fff;
                         position: absolute;
-                        top: 27.5%;
+                        top: 26.5%;
                         left: 27.5%;
                         transform: rotate(180deg);
                         transition: .3s;
@@ -981,8 +1021,10 @@
             background-color: #595959;
             border-radius: 25px;
             border-style: none;
-            position: relative;
-            transform: translate(345%, 27%);
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translate(-25%, 25%);
             transition: .3s;
         }
         .playButton::after {
@@ -1503,7 +1545,7 @@
                     height: 50px;
                     border: 2px solid #595959;
                     border-radius: 25px;
-                    background-color: white;
+                    background-color: transparent;
                     margin: auto;
                     cursor: pointer;
                     font-size: 14px;
@@ -1511,6 +1553,24 @@
                     color: #595959;
                     line-height: 47px;
                     letter-spacing: 0.16rem;
+                    position: relative;
+                    z-index: 1;
+                }
+
+                p {
+                    margin: 0;
+                    text-align: center;
+                    width: 380px;
+                    font-family: 'Noto Sans JP', sans-serif;
+                    font-size: 14px;
+                    font-weight: 700;
+                    color: #595959;
+                    line-height: 47px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    z-index: 0;
+                    transform: translate(-50%, -50%);
                 }
 
                 .playButton {
@@ -1680,7 +1740,7 @@
                         height: 50px;
                         border: 2px solid #595959;
                         border-radius: 25px;
-                        background-color: white;
+                        background-color: transparent;
                         margin: 0;
                         padding: 0;
                         cursor: pointer;
@@ -1689,6 +1749,24 @@
                         font-weight: 700;
                         color: #595959;
                         letter-spacing: 0.16rem;
+                        z-index: 1;
+                        position: relative;
+                    }
+
+                    p {
+                        margin: 0;
+                        text-align: center;
+                        width: 380px;
+                        font-family: 'Noto Sans JP', sans-serif;
+                        font-size: 14px;
+                        font-weight: 700;
+                        color: #595959;
+                        line-height: 47px;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        z-index: 0;
+                        transform: translate(-50%, -50%);
                     }
 
                     .playButton {
@@ -1802,6 +1880,7 @@
 .contactCompletion {
     text-align: center;
     padding-top: 170px;
+    overflow: hidden;
 
     h1 {
         font-size: 24px;
@@ -1856,8 +1935,6 @@
             background-color: #595959;
             border-radius: 25px;
             border-style: none;
-            position: relative;
-            transform: translate(200%, 27%);
             transition: .3s;
         }
 
@@ -1882,96 +1959,96 @@
     }
 }
 
-    .footer {
-        background-image: url("../images/footerSp.jpg");
-        width: 100%;
-        height: 550px;
-        margin-top: 0;
-        padding-top: 10%;
-        position: relative;
-        overflow: hidden;
+.footer {
+    background-image: url("../images/footerSp.jpg");
+    width: 100%;
+    height: 550px;
+    margin-top: 0;
+    padding-top: 10%;
+    position: relative;
+    overflow: hidden;
 
-        .footerBack {
-            width: 350vw;
-            left: -150%;
-            top: 10%;
-            pointer-events: none;
+    .footerBack {
+        width: 350vw;
+        left: -150%;
+        top: 10%;
+        pointer-events: none;
+    }
+
+    .footerContainer {
+        display: block;
+        width: 65%;
+        margin-top: 0;
+        margin-left: 10%;
+        gap: 250px;
+
+        .listStyle {
+            gap: 30px !important;
         }
 
-        .footerContainer {
-            display: block;
-            width: 65%;
-            margin-top: 0;
-            margin-left: 10%;
-            gap: 250px;
-
-            .listStyle {
-                gap: 30px !important;
+        .logoFooter {
+            .logo {
+                width: 70px;
             }
-
-            .logoFooter {
-                .logo {
-                    width: 70px;
-                }
-                h1 {
-                    font-size: 14px;
-                    color: #fff;
-                    font-weight: 400;
-                    letter-spacing: 0.12rem;
-                    line-height: 160%;
-                    margin-top: 7%;
-                }
+            h1 {
+                font-size: 14px;
+                color: #fff;
+                font-weight: 400;
+                letter-spacing: 0.12rem;
+                line-height: 160%;
+                margin-top: 7%;
             }
+        }
 
-            .listFooter {
-                margin-top: 18%;
+        .listFooter {
+            margin-top: 18%;
 
-                ul {
-                    gap: 35px;
+            ul {
+                gap: 35px;
 
-                    .list {
+                .list {
 
-                        hr {
-                            width: 25px;
-                            margin-top: 10px;
-                        }
-                        li {
-                            font-size: 14px;
-                        }
+                    hr {
+                        width: 25px;
+                        margin-top: 10px;
+                    }
+                    li {
+                        font-size: 14px;
                     }
                 }
-
-
-                .toTop {
-                    position: absolute;
-                    top: 7%;
-                    right: 7%;
-                }
-            }
-        }
-
-        .copyright {
-            display: flex;
-            justify-content: flex-start;
-            margin-top: 10%;
-
-            hr {
-                width: 70%;
-                height: 1px;
-                background-color: #fff;
-                border: 0;
-                margin-left: 0;
-                margin-right: 0;
             }
 
-            p {
-                color: #fff;
-                line-height: 10px;
-                font-size: 10px;
-                font-family: 'Montserrat', sans-serif;
-                margin-left: 4px;
-                margin-top: 8px;
+
+            .toTop {
+                position: absolute;
+                top: 7%;
+                right: 7%;
             }
         }
     }
+
+    .copyright {
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 10%;
+
+        hr {
+            width: 70%;
+            height: 1px;
+            background-color: #fff;
+            border: 0;
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        p {
+            color: #fff;
+            line-height: 10px;
+            font-size: 10px;
+            font-family: 'Montserrat', sans-serif;
+            margin-left: 4px;
+            margin-top: 8px;
+        }
+    }
+}
 }

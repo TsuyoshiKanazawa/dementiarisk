@@ -333,9 +333,10 @@ export const Index = () => {
                             <div className={style.nextbuttonContainer}>
                                 <input
                                     type='submit'
-                                    value='確認に進む'
+                                    value=' '
                                     className={style.nextButton}>
                                 </input>
+                                <p>確認に進む</p>
                                 <span className={style.playButton}></span>
                             </div>
 
