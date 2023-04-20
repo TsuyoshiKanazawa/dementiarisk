@@ -1983,10 +1983,10 @@
 }
 
 .footer {
-    background-image: url("../images/footerSp.jpg");
+    background-image: url("../healthcareImages/footerSp.jpg") !important;
     width: 100%;
     height: 550px;
-    margin-top: 0;
+    margin-top: 10%;
     padding-top: 10%;
     position: relative;
     overflow: hidden;
@@ -2005,14 +2005,11 @@
         margin-left: 10%;
         gap: 250px;
 
-        .listStyle {
-            gap: 30px !important;
-        }
-
         .logoFooter {
             .logo {
                 width: 70px;
             }
+
             h1 {
                 font-size: 14px;
                 color: #fff;
@@ -2026,14 +2023,52 @@
         .listFooter {
             margin-top: 18%;
 
-            .list {
+            .listStyle {
+                gap: 30px !important;
 
-                hr {
-                    width: 25px !important;
-                    margin-top: 10px !important;
+                .list {
+                    position: relative;
+                    z-index: 5;
+
+                    hr {
+                        width: 25px !important;
+                        margin-top: 10px;
+                    }
+
+                    p {
+                        font-size: 14px !important;
+                    }
                 }
-                p {
-                    font-size: 14px !important;
+
+                .list:nth-child(1) {
+                    order: 1;
+                }
+
+                .list:nth-child(2) {
+                    order: 4;
+                }
+
+                .list:nth-child(3) {
+                    order: 2;
+                }
+
+                .list:nth-child(4) {
+                    order: 5;
+                }
+
+                .list:nth-child(5) {
+                    order: 3;
+                }
+
+                .list:nth-child(6) {
+                    order: 6;
+                }
+
+                .list:hover {
+                    p {
+                        color: white !important;
+                        transition: 0.3s;
+                    }
                 }
             }
 
@@ -2043,6 +2078,7 @@
                 right: 7%;
             }
         }
+
     }
 
     .copyright {

@@ -2926,10 +2926,6 @@
         margin-left: 10%;
         gap: 250px;
 
-        .listStyle {
-            gap: 30px !important;
-        }
-
         .logoFooter {
             .logo {
                 width: 70px;
@@ -2947,23 +2943,54 @@
         .listFooter {
             margin-top: 18%;
 
-            .list {
-                hr {
-                    width: 25px !important;
-                    margin-top: 11px !important;
+            .listStyle {
+                gap: 30px !important;
+                .list {
+                    hr {
+                        width: 25px !important;
+                        margin-top: 11px !important;
+                    }
+            
+                    p {
+                        font-size: 14px !important;
+                    }
                 }
-                p {
-                    font-size: 14px !important;
+                .list:hover {
+                    p {
+                        color: white !important;
+                    }
+                }
+
+                .list:nth-child(1) {
+                    order: 1;
+                }
+            
+                .list:nth-child(2) {
+                    order: 4;
+                }
+            
+                .list:nth-child(3) {
+                    order: 2;
+                }
+            
+                .list:nth-child(4) {
+                    order: 5;
+                }
+            
+                .list:nth-child(5) {
+                    order: 3;
+                }
+            
+                .list:nth-child(6) {
+                    order: 6;
+                }
+
+                .list:hover {
+                    p {
+                        color: white !important;
+                    }
                 }
             }
-
-            .list:hover {
-                p {
-                    color: white !important;
-                }
-            }
-
-
 
             .toTop {
                 position: absolute;
@@ -2971,6 +2998,9 @@
                 right: 7%;
             }
         }
+
+
+
     }
 
     .copyright {
