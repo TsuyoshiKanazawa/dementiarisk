@@ -2,7 +2,6 @@ import React, { useState} from "react"
 import "../styles/input.css"
 import * as style from "../styles/healthcare-contact.module.scss"
 import { init, send } from 'emailjs-com'
-import { StaticImage } from "gatsby-plugin-image"
 
 const Confirmation = props => {
   const { values, hideConfirmation } = props
@@ -10,9 +9,9 @@ const Confirmation = props => {
 
   //チェックボックス
   const [isChecked, setIsChecked] = useState(false)
-  const toggleCheckbox = () => {
-    setIsChecked(!isChecked)
-  }
+  //const toggleCheckbox = () => {
+  //  setIsChecked(!isChecked)
+  //}
 
 
  //メール送信/////
@@ -24,7 +23,7 @@ const Confirmation = props => {
   const message = values.contact; //お問い合わせ内容
 
   const sendMail = () => {
-    init("OhzGRqewkPcbhrZ0o");
+    init("YDhr2yz42Wq5BPUL0");
 
     const template_param = {
       site: "医療従事者向け",
@@ -39,7 +38,7 @@ const Confirmation = props => {
       message: message,
     };
 
-    send("service_1obp7sd", "template_ymc522c", template_param).then(() => {
+    send("Erisa_info_1", "template_0vx0s4e", template_param).then(() => {
       window.location.href = '/healthcare/contact-completion';
     });
   }
@@ -78,11 +77,13 @@ const Confirmation = props => {
           <p className={style.contactText}>{values.contact}</p>
         </div>
 
+        {/*
         <div className={style.terms}>
           <input type="checkbox" name="agree" id="agreeCheck" onChange={() => toggleCheckbox()}/>
           <label htmlFor="agreeCheck">「<a href="/">個人情報の取り扱い</a>」同意の上、<br />申込みます。</label>
           <a href="/"><StaticImage src="../images/linkIcon.png" quality={90} placeholder="blurred" formats={["AUTO", "WEBP", "AVIF"]} className={style.linkIcon} loading="lazy" alt="background" /></a>
         </div>
+        */}
 
         <div className={style.buttonContainer}>
 
@@ -100,7 +101,7 @@ const Confirmation = props => {
             <button 
               className={style.sendButton}
               onClick={sendMail}
-              disabled={!isChecked}><p>送信</p></button>
+              ><p>送信</p></button>
             <span className={style.playButton}></span>
           </div>
 

@@ -56,6 +56,7 @@ export const Index = () => {
             window.removeEventListener('scroll', scrollEvent);
         };
     }, [scrollEvent]);
+    
     ///////////////////////////////////////////
 
     //ハンバーガーメニューの開閉////////////////
