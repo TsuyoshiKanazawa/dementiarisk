@@ -51,7 +51,7 @@ const Confirmation = props => {
           <h1>医療機関名・団体名<span>※</span></h1>
           <p>{values.orname}</p>
         </div>
-        <p>例) 株式会社〇〇〇〇</p>
+        <p>例) 〇〇病院、〇〇クリニック</p>
         <div className={style.forms}>
           <h1>氏名<span>※</span></h1>
           <p>{values.name}</p>

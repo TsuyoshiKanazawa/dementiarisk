@@ -261,7 +261,7 @@ export const Index = () => {
                                     placeholder=''
                                     ref={register({ required: true })} />
                             </div>
-                            <p>例) 株式会社〇〇〇〇</p>
+                            <p>例) 〇〇病院、〇〇クリニック</p>
                             {errors.orname && <p className={style.caveat}> 医療機関名・団体名を入力して下さい</p>}{/*nameが正しく入力されていない時に表示される*/}
 
                             <div className={style.forms}>

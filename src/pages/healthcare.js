@@ -775,7 +775,7 @@ const setAnimation = () => {
           </div>
           <StaticImage src="../images/scroll.png" quality={90} placeholder=" blurred" formats={["AUTO", "WEBP", "AVIF"]} className={style.scroll} alt="scroll" />
           
-          <a href="/contact">
+          <a href="/healthcare/contact">
             <span className={style.document}>
               <span className={style.documentLine}>
                 <p>資料請求は</p><p>こちら</p>
@@ -1041,7 +1041,7 @@ const setAnimation = () => {
 
           <p>ご要望に応じて、施設内に掲載するポスターや施設ホームページに掲載するバナー作成も承ります。</p>
 
-          <Link to="/contact">
+          <Link to="/healthcare/contact">
             <span className={style.switchButton}>
                 <p>検査導入に関する資料請求・お問い合わせはこちら</p>
               <span className={style.playButton}></span>
