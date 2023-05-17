@@ -5,14 +5,16 @@ import { init, send } from 'emailjs-com'
 import { StaticImage } from "gatsby-plugin-image"
 
 const Confirmation = props => {
+  const [isSendButton, setisSendButton] = useState(true);
   const { values, hideConfirmation } = props
   //propsで渡ってきたvaluesを受けとって入力内容確認画面で表示
 
   //チェックボックス
   const [isChecked, setIsChecked] = useState(false)
-  //const toggleCheckbox = () => {
-  //  setIsChecked(!isChecked)
-  //}
+  const toggleCheckbox = () => {
+    setIsChecked(!isChecked)
+    setisSendButton(!isSendButton)
+  }
 
 
  //メール送信/////
@@ -62,13 +64,13 @@ const Confirmation = props => {
           <p className={style.contactText} translate="no">{values.contact}</p>
         </div>
 
-        {/*
+
         <div className={style.terms}>
           <input type="checkbox" name="agree" id="agreeCheck" onChange={() => toggleCheckbox()}/>
-          <label htmlFor="agreeCheck">「<a href="/">個人情報の取り扱い</a>」同意の上、<br />申込みます。</label>
-          <a href="/"><StaticImage src="../images/linkIcon.png" quality={90} placeholder="blurred" formats={["AUTO", "WEBP", "AVIF"]} className={style.linkIcon} loading="lazy" alt="background" /></a>
+          <label htmlFor="agreeCheck">「<a href="https://www.erisa.co.jp/privacypolicy" target="_blank" rel="noopener noreferrer">個人情報の取り扱い</a>」同意の上、<br />申込みます。</label>
+          <a href="https://www.erisa.co.jp/privacypolicy" target="_blank" rel="noopener noreferrer"><StaticImage src="../images/linkIcon.png" quality={90} placeholder="blurred" formats={["AUTO", "WEBP", "AVIF"]} className={style.linkIcon} loading="lazy" alt="background" /></a>
         </div>
-        */}
+
 
         <div className={style.buttonContainer}>
 
@@ -83,12 +85,12 @@ const Confirmation = props => {
               <span className={style.playButton}></span>
           </div>
 
-          <div className={style.sendButtonContainer}>
+          <div className={isSendButton ? "contact-module--sendButtonContainer--39688" : "contact-module--sendButtonContainer_visible--66c2b"}>
             <button 
               className={style.sendButton}
               onClick={sendMail}
+              disabled={!isChecked}
               ><p>送信</p></button>
-            {/*disabled={!isChecked}*/}
             <span className={style.playButton}></span>
           </div>
 
