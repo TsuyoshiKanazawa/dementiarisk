@@ -24,6 +24,8 @@ const Confirmation = props => {
   const message = values.contact; //お問い合わせ内容
 
   const sendMail = () => {
+    setIsChecked(!isChecked)
+    setisSendButton(!isSendButton)
     init("YDhr2yz42Wq5BPUL0");
 
     const template_param = {
