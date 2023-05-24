@@ -6,6 +6,7 @@ import { StaticImage } from "gatsby-plugin-image"
 
 const Confirmation = props => {
   const [isSendButton, setisSendButton] = useState(true);
+  const [isTermBox, setisTermBox] = useState(true);
   const { values, hideConfirmation } = props
   //propsで渡ってきたvaluesを受けとって入力内容確認画面で表示
 
@@ -24,9 +25,10 @@ const Confirmation = props => {
   const message = values.contact; //お問い合わせ内容
 
   const sendMail = () => {
-    setIsChecked(!isChecked)
-    setisSendButton(!isSendButton)
-    init("YDhr2yz42Wq5BPUL0");
+    setIsChecked(!isChecked);
+    setisSendButton(!isSendButton);
+    setisTermBox(!isTermBox);
+    init("OhzGRqewkPcbhrZ0o");
 
     const template_param = {
       site: "消費者向け",
@@ -37,7 +39,7 @@ const Confirmation = props => {
       message: message,
     };
 
-    send("Erisa_info_1", "template_0vx0s4e", template_param).then(() => {
+    send("service_1obp7sd", "template_ggft61b", template_param).then(() => {
       window.location.href = '/contact-completion';;
     });
   }
@@ -66,13 +68,11 @@ const Confirmation = props => {
           <p className={style.contactText} translate="no">{values.contact}</p>
         </div>
 
-
-        <div className={style.terms}>
+        <div className={isTermBox ? "contact-module--terms--af73e" : "contact-module--terms_none--8741e"}>
           <input type="checkbox" name="agree" id="agreeCheck" onChange={() => toggleCheckbox()}/>
           <label htmlFor="agreeCheck">「<a href="https://www.erisa.co.jp/privacypolicy" target="_blank" rel="noopener noreferrer">個人情報の取り扱い</a>」同意の上、<br />申込みます。</label>
           <a href="https://www.erisa.co.jp/privacypolicy" target="_blank" rel="noopener noreferrer"><StaticImage src="../images/linkIcon.png" quality={90} placeholder="blurred" formats={["AUTO", "WEBP", "AVIF"]} className={style.linkIcon} loading="lazy" alt="background" /></a>
         </div>
-
 
         <div className={style.buttonContainer}>
 

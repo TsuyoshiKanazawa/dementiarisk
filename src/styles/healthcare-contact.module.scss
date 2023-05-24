@@ -827,6 +827,66 @@
                 }
             }
 
+            .terms_none {
+                width: 400px;
+                height: 65px;
+                background-color: #f0f0f0;
+                margin: 60px auto;
+                position: relative;
+                pointer-events: none;
+
+                label {
+                    font-size: 12px;
+                    font-weight: 500;
+                    position: absolute;
+                    top: 50%;
+                    left: 17%;
+                    transform: translateY(-50%);
+
+                    a {
+                        text-decoration: underline;
+                        color: #000;
+                    }
+
+                    br {
+                        display: none;
+                    }
+                }
+
+                input {
+                    border: 2px solid #595959;
+                    width: 30px;
+                    height: 30px;
+                    appearance: none;
+                    cursor: pointer;
+                    margin: 17px 15px auto 25px;
+                }
+
+                input:checked {
+                    border: 2px solid #B20000;
+                    background-color: #B20000;
+                    position: relative;
+                }
+
+                input:checked::after {
+                    content: "";
+                    width: 15px;
+                    height: 7px;
+                    border-left: 2px solid #fff;
+                    border-bottom: 2px solid #fff;
+                    transform: rotate(-45deg);
+                    position: absolute;
+                    left: 20%;
+                    top: 20%;
+                }
+
+                .linkIcon {
+                    position: absolute;
+                    right: 13%;
+                    top: 42%;
+                }
+            }
+
             .buttonContainer {
                 display: flex;
                 justify-content: center;
@@ -893,6 +953,7 @@
                     position: relative;
                     transition: 0.3s;
                     opacity: 0.3;
+                    pointer-events: none;
 
                     .sendButton {
                         width: 380px;
