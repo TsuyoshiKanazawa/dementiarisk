@@ -27,7 +27,7 @@ const Confirmation = props => {
   const message = values.contact; //お問い合わせ内容
 
   const sendMail = () => {
-    setIsChecked(!isChecked);
+    setIsChecked(!isChecked)
     setisSendButton(!isSendButton);
     setisTermBox(!isTermBox);
     init("OhzGRqewkPcbhrZ0o");
@@ -50,7 +50,6 @@ const Confirmation = props => {
     });
   }
 
-  
   return (
     <>
       <div className={style.confirmBox}>
