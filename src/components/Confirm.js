@@ -28,7 +28,7 @@ const Confirmation = props => {
     setIsChecked(!isChecked);
     setisSendButton(!isSendButton);
     setisTermBox(!isTermBox);
-    init("OhzGRqewkPcbhrZ0o");
+    init("YDhr2yz42Wq5BPUL0");
 
     const template_param = {
       site: "消費者向け",
@@ -39,7 +39,7 @@ const Confirmation = props => {
       message: message,
     };
 
-    send("service_1obp7sd", "template_ggft61b", template_param).then(() => {
+    send("Erisa_info_1", "template_0vx0s4e", template_param).then(() => {
       window.location.href = '/contact-completion';;
     });
   }
