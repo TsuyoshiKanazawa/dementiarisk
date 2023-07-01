@@ -172,7 +172,7 @@ const closeWithClickOutSideMethod = (e, setter) => {
                         setIsShow(!isShow);
                         scrollLockLift();
                       }}>
-                      <hr /><p>認知症リスク検査とは？</p>
+                      <hr /><p>Support Brainとは？</p>
                     </AnchorLink>
                     <AnchorLink href="#flow"
                       className={style.list}

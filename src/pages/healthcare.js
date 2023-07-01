@@ -703,7 +703,7 @@ const setAnimation = () => {
                         setIsShow(!isShow);
                         scrollLockLift();
                       }}>
-                      <hr /><p>認知症リスク検査とは？</p>
+                      <hr /><p>Support Brainとは？</p>
                     </AnchorLink>
                     <AnchorLink href="#merit"
                       className={style.list}
@@ -801,7 +801,7 @@ const setAnimation = () => {
 
             <div className={style.aboutCopy}>
               <div className={style.mask}>
-                <h1 id="aboutTitle">認知症リスク検査とは？</h1>
+                <h1 id="aboutTitle">Support Brainとは？</h1>
               </div>
               
               <div className={style.mask}>
@@ -822,19 +822,19 @@ const setAnimation = () => {
             </div>
 
             <div className={style.aboutCopySp}>
-              <h1 id="aboutTitleSp">認知症リスク検査とは？</h1>
+              <h1 id="aboutTitleSp">Support Brainとは？</h1>
               <h2 id="aboutCopySp">MRI装置で<br />撮像された脳画像を用いて、<br />脳全体の状態から<br />将来の認知症リスクを<br />予測する。</h2>
             </div>
 
             <div className={style.aboutText}>
               <div className={style.mask}>
-                <h3 id="aboutText">認知症リスク検査は、島根大学医学部、滋賀医科大学、株式会社ERISAで共同開発された脳画像解析技術で、脳の状態を検査し将来の認知症リスクを予測します。<small>（1）</small>脳の一部だけではなく、脳全体を膨大なデータと比較することで、高い精度を実現。将来を見据えた認知症予防に取り組むきっかけを提供し、受検者のライフスタイル見直しに貢献します。</h3>
+                <h3 id="aboutText">Support Brainは、島根大学医学部、滋賀医科大学、株式会社ERISAで共同開発された脳画像解析技術で、脳の状態を検査し将来の認知症リスクを予測します。<small>（1）</small>脳の一部だけではなく、脳全体を膨大なデータと比較することで、高い精度を実現。将来を見据えた認知症予防に取り組むきっかけを提供し、受検者のライフスタイル見直しに貢献します。</h3>
               </div>
             </div>
           </div>
           
           <div id="aboutFeatureTitle" className={style.aboutFeatureTitle}>
-            <h1>認知症リスク検査の特徴</h1>
+            <h1>Support Brainの特徴</h1>
           </div>
 
           <div className={style.aboutFeature}>
@@ -1063,7 +1063,7 @@ const setAnimation = () => {
             <div className={style.listFooter}>
               <div className={style.listStyle}>
                 <div className={style.list}>
-                  <hr /><AnchorLink href="#about"><p>認知症リスク検査とは？</p></AnchorLink>
+                  <hr /><AnchorLink href="#about"><p>Support Brainとは？</p></AnchorLink>
                 </div>
                 <div className={style.list}>
                   <hr /><AnchorLink href="#flow"><p>導入の流れ</p></AnchorLink>

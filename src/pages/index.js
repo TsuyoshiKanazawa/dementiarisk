@@ -878,7 +878,7 @@ export const Index = () => {
                         setIsShow(!isShow);
                         scrollLockLift();
                       }}>
-                      <hr /><p>認知症リスク検査とは？</p>
+                      <hr /><p>Support Brainとは？</p>
                     </AnchorLink>
                     <AnchorLink href="#flow"
                       className={style.list}
@@ -963,7 +963,7 @@ export const Index = () => {
 
           <div id="aboutTitleMask" className={style.mask}>
             <h1 id="aboutTitle" className={style.aboutTitle}>
-              認知症リスク検査とは？
+              Support Brainとは？
             </h1>
           </div>
 
@@ -1024,7 +1024,7 @@ export const Index = () => {
 
           <div id="aboutTriger0" className={style.mask}>
             <div id="aboutText0" className={style.aboutText0}>
-              認知症リスク検査は、島根大学医学部、滋賀医科大学、株式会社ERISAで共同開発された脳画像解析技術で、脳の状態を検査し将来の認知症リスクを予測します。脳の一部だけではなく、脳全体を膨大なデータと比較することで、高い精度を実現。将来を見据えた認知症予防に取り組むきっかけを提供し、受検者のライフスタイル見直しに貢献します。
+              Support Brainは、島根大学医学部、滋賀医科大学、株式会社ERISAで共同開発された脳画像解析技術で、脳の状態を検査し将来の認知症リスクを予測します。脳の一部だけではなく、脳全体を膨大なデータと比較することで、高い精度を実現。将来を見据えた認知症予防に取り組むきっかけを提供し、受検者のライフスタイル見直しに貢献します。
             </div>
           </div>
 
@@ -1066,7 +1066,7 @@ export const Index = () => {
             </div>
 
             <div id="featureTitle" className={style.featureTitle}>
-              <h1>認知症リスク検査の特徴</h1>
+              <h1>Support Brainの特徴</h1>
             </div>
 
             <div id="mri" className={style.mri}>
@@ -1322,7 +1322,7 @@ export const Index = () => {
             <div className={style.listFooter}>
               <div className={style.listStyle}>
                 <div className={style.list}>
-                  <hr /><AnchorLink href="#about"><p>認知症リスク検査とは？</p></AnchorLink>
+                  <hr /><AnchorLink href="#about"><p>Support Brainとは？</p></AnchorLink>
                 </div>
                 <div className={style.list}>
                   <hr /><AnchorLink href="#introduce"><p>導入医療機関</p></AnchorLink>
