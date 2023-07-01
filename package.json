@@ -33,7 +33,8 @@
     "react-router-dom": "5",
     "react-scroll": "^1.8.9",
     "react-svg": "^16.1.4",
-    "sass": "^1.57.1"
+    "sass": "^1.57.1",
+    "sharp": "^0.32.1"
   },
   "devDependencies": {
     "@netlify/plugin-gatsby": "^3.6.0",

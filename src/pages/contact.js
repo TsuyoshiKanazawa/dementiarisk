@@ -408,7 +408,16 @@ export default Index
 export const Head = () => {
     return (
         <>
-            <title>株式会社ERISA</title>
+            <title>認知症リスク検査 - 株式会社ERISA</title>
+            <meta name="description" content="認知症リスクを把握する脳ドックのオプション - MR画像から脳全体をAIが分析し3年後のリスクを予測" />
+            <meta property="og:image" content={ogpToc} />
+            <meta property="og:title;" content="認知症リスク検査 - 株式会社ERISA" />
+            <meta property="og:site-name;" content="認知症リスク検査 - 株式会社ERISA" />
+            <meta property="og:type" content="website" />
+            <meta property="og:locale" content="ja_JP" />
+            <meta name="twitter:card" content="summary" />
+            <meta name="twitter:title" content="認知症リスク検査 - 株式会社ERISA" />
+            <meta name="twitter:description" content="認知症リスクを把握する脳ドックのオプション - MR画像から脳全体をAIが分析し3年後のリスクを予測" />
         </>
     )
 }
