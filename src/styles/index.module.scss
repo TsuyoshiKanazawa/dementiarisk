@@ -496,7 +496,7 @@
     -webkit-user-drag: none;
     background-image: url("../images/KV.jpg");
     background-size: cover;
-    background-position: center center;
+    background-position: 0% center;
 
     .uneune {
         position: absolute;
@@ -522,7 +522,7 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(10%, -50%);
+        transform: translate(3%, -50%);
         color: white;
         padding: 0rem 2rem 1rem;
         border-radius: 5px;
@@ -545,7 +545,7 @@
 
         .lineVertical {
             width: 1px;
-            margin-left: -350px;
+            margin-left: -200px;
             margin-top: 20px;
             margin-bottom: 20px;
             opacity: 0;
@@ -2064,22 +2064,19 @@
 
         .KvTextSp0 {
             display: block;
-            width: 250px;
+            width: 280px;
             opacity: 0;
         }
 
         .KvTextSp1 {
             display: block;
-            width: 180px;
+            width: 280px;
             opacity: 0;
+            margin-bottom: 15px;
         }
 
         .lineVertical {
-            height: 25px;
-            margin: 0;
-            margin-left: 80px;
-            width: 2px;
-            opacity: 0;
+            display: none;
         }
 
         .mask {

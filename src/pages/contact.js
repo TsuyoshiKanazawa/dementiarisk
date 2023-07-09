@@ -104,10 +104,10 @@ export const Index = () => {
     const Name = watch('name')
     const Email = watch('email')
     const Contact = watch('contact')
-    //watchに各フォーム部品のnameの値を引数で渡すとでタイムリーで入力状態を監視してる
+    //watchに各フォーム部品のnameの値を引数で渡すとこでタイムリーで入力状態を監視してる
 
     useEffect(() => {
-        if (isConfirmationVisible == true){
+        if (isConfirmationVisible === true){
             scroller.scrollTo('scrollTarget', {
                 duration: 0,
             })

@@ -12,6 +12,7 @@ import * as style from "../styles/healthcare.module.scss"
 import logoWhite from '../images/logoWhite.svg'
 import logoColor from '../images/logoColor.svg'
 import KvText from '../healthcareImages/KvText.svg'
+import KvTextSP from '../healthcareImages/KvTextSP.svg'
 import lineVertical from '../images/line-vertical.png'
 import logoFooter from '../images/logoFooter.svg'
 import ogpTob from '../healthcareImages/ogpTob.jpg'
@@ -764,6 +765,7 @@ const setAnimation = () => {
           <div className={style.textContainer}>
             <div className={style.mask}>
               <img id="KvText" src={KvText} className={style.KvText} loading="lazy" alt="text" />
+              <img id="KvText" src={KvTextSP} className={style.KvTextSP} loading="lazy" alt="text" />
             </div>
             <div className={style.mask}>
               <img src={lineVertical} id="KvText" className={style.lineVertical} loading="lazy" alt="text" />

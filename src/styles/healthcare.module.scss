@@ -533,9 +533,13 @@ body {
             display: inline-block;
         }
         .KvText {
-            width: 533px;
+            width: 684px;
             opacity: 0;
             will-change: transform, opacity;
+        }
+
+        .KvTextSP {
+            display: none;
         }
 
         .KvTextSp0 {
@@ -558,7 +562,7 @@ body {
         h3 {
             font-size: 28px;
             font-weight: 300;
-            text-align: left;
+            text-align: center;
             line-height: 170%;
             letter-spacing: 0.16em;
             opacity: 0;
@@ -1710,13 +1714,28 @@ body {
 
     .textContainer {
         .KvText {
-            width: 296px;
+            display: none;
+        }
+
+        .KvTextSP {
+            display: block;
+            width: 330px;
+        }
+
+        .lineVertical {
+            width: 1px;
+            height: 30px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            opacity: 0;
         }
 
         h3 {
             font-size: 16px;
             width: 320px;
             text-align: center;
+            display: block;
+            margin: auto;
         }
     }
 
@@ -1729,40 +1748,39 @@ body {
     }
 
     a {
-
-    .document {
-        height: 70px;
-        width: 130px;
-        position: fixed;
-        right: 0;
-        bottom: 10%;
-        background-color: #fff;
-        text-align: left;
-        border-top-left-radius: 45px;
-        border-bottom-left-radius: 45px;
-        z-index: 1;
-
-        .documentLine {
-            display: block;
-            height: 57px;
-            width: 127px;
-            border-style: solid;
-            border-width: 1px;
+        .document {
+            height: 70px;
+            width: 130px;
+            position: fixed;
+            right: 0;
+            bottom: 10%;
+            background-color: #fff;
+            text-align: left;
             border-top-left-radius: 45px;
             border-bottom-left-radius: 45px;
-            border-color: #74B6F2;
-            margin: 2px 2px;
-            padding-top: 7px;
+            z-index: 1;
 
-            p {
-                font-size: 16px;
-                color: #74B6F2;
+            .documentLine {
                 display: block;
-                margin: 0 0 auto 25px;
-                font-weight: 500;
+                height: 57px;
+                width: 127px;
+                border-style: solid;
+                border-width: 1px;
+                border-top-left-radius: 45px;
+                border-bottom-left-radius: 45px;
+                border-color: #74B6F2;
+                margin: 2px 2px;
+                padding-top: 7px;
+
+                p {
+                    font-size: 16px;
+                    color: #74B6F2;
+                    display: block;
+                    margin: 0 0 auto 25px;
+                    font-weight: 500;
+                }
             }
         }
-    }
     }
 
 
