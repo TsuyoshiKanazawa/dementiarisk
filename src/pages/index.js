@@ -26,7 +26,6 @@ import number2 from '../images/02.png'
 import number3 from '../images/03.png'
 import pointLine from '../images/pointLine.png'
 import logoFooter from '../images/logoFooter.svg'
-import ogpToc from '../images/ogpToc.jpg'
 
 gsap.registerPlugin(ScrollTrigger);
 
