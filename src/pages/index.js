@@ -1365,7 +1365,7 @@ export const Head = () => {
     <>
       <title>認知症リスク検査 - 株式会社ERISA</title>
       <meta name="description" content="認知症リスクを把握する脳ドックのオプション - MR画像から脳全体をAIが分析し3年後のリスクを予測" />
-      <meta property="og:image" content="https://delightful-pebble-0d00b2010.2.azurestaticapps.net/images/ogpToc.jpg" />
+      <meta property="og:image" content="https://delightful-pebble-0d00b2010.2.azurestaticapps.net/ogpToc.jpg" />
       <meta property="og:title;" content="認知症リスク検査 - 株式会社ERISA" />
       <meta property="og:site-name;" content="認知症リスク検査 - 株式会社ERISA" />
       <meta property="og:type" content="website" />
