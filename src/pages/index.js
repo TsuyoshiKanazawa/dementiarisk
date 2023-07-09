@@ -815,6 +815,7 @@ export const Index = () => {
     <Layout>
       <Helmet>
         <script src="https://cdn.gtranslate.net/widgets/latest/float.js"></script>
+        <meta property="og:image" content={ogpToc} />
       </Helmet>
       
       <body id="body" className={style.body}>
@@ -1366,7 +1367,6 @@ export const Head = () => {
     <>
       <title>認知症リスク検査 - 株式会社ERISA</title>
       <meta name="description" content="認知症リスクを把握する脳ドックのオプション - MR画像から脳全体をAIが分析し3年後のリスクを予測" />
-      <meta property="og:image" content='../images/ogpToc.jpg' />
       <meta property="og:title;" content="認知症リスク検査 - 株式会社ERISA" />
       <meta property="og:site-name;" content="認知症リスク検査 - 株式会社ERISA" />
       <meta property="og:type" content="website" />
