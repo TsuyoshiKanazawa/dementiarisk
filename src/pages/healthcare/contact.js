@@ -177,7 +177,7 @@ export const Index = () => {
                                                 setIsShow(!isShow);
                                                 scrollLockLift();
                                             }}>
-                                            <hr /><p>Support Brainとは？</p>
+                                            <hr /><p>SupportBrainとは？</p>
                                         </a>
                                         <a href="/healthcare#merit"
                                             className={style.list}
@@ -391,7 +391,7 @@ export const Index = () => {
                         <div className={style.listFooter}>
                             <div className={style.listStyle}>
                                 <div className={style.list}>
-                                    <hr /><a href="/healthcare#about"><p>Support Brainとは？</p></a>
+                                    <hr /><a href="/healthcare#about"><p>SupportBrainとは？</p></a>
                                 </div>
                                 <div className={style.list}>
                                     <hr /><a href="/healthcare#flow"><p>導入の流れ</p></a>

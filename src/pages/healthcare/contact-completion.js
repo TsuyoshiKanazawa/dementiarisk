@@ -11,7 +11,6 @@ import * as style from "../../styles/healthcare-contact.module.scss"
 
 import logoColor from '../../images/logoColor.svg'
 import logoFooter from '../../images/logoFooter.svg'
-import ogpToc from '../../images/ogpToc.jpg'
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -95,7 +94,7 @@ export const Index = () => {
                 <header className={style.headerWrapper}>
                     <div className={isHeaderShown ? "healthcare-contact-module--container--6ae6c" : "healthcare-contact-module--show--82542"}>
                         <div className={style.flexContainer}>
-                            <a href="/">
+                            <a href="/healthcare">
                                 <img src={logoColor} className={style.logoColor} alt="logo" />
                             </a>
 
@@ -149,7 +148,7 @@ export const Index = () => {
                                                 setIsShow(!isShow);
                                                 scrollLockLift();
                                             }}>
-                                            <hr /><p>Support Brainとは？</p>
+                                            <hr /><p>SupportBrainとは？</p>
                                         </a>
                                         <a href="/#flow"
                                             className={style.list}
@@ -235,7 +234,7 @@ export const Index = () => {
                         <div className={style.listFooter}>
                             <div className={style.listStyle}>
                                 <div className={style.list}>
-                                    <hr /><a href="/#about"><p>Support Brainとは？</p></a>
+                                    <hr /><a href="/#about"><p>SupportBrainとは？</p></a>
                                 </div>
                                 <div className={style.list}>
                                     <hr /><a href="/#introduce"><p>導入医療機関</p></a>
